@@ -150,3 +150,11 @@
 - [x] Hero၊ route cards၊ buttons၊ decorative pattern၊ footer နှင့် text contrast အတွက် specificity conflicts ပြင်ရန်။
 - [x] Dark/light toggle၊ localStorage persistence နှင့် mobile rendering ပြန်စစ်ရန်။
 - [ ] Production build နှင့် desktop/mobile screenshots အောင်မြင်ပြီးနောက် checkpoint အသစ် သိမ်းရန်။
+
+## GitHub tag and description
+
+- [ ] Latest local commit နှင့် GitHub branch state ကို စစ်ဆေးရန်။
+- [ ] Descriptive repository description သတ်မှတ်ရန်။
+- [ ] Homepage Dark Mode fix အတွက် version tag အသစ် ဖန်တီးရန်။
+- [ ] Branch နှင့် tag ကို GitHub သို့ push လုပ်ရန်။
+- [ ] Remote commit၊ tag နှင့် repository description ကို ပြန်လည်အတည်ပြုရန်။
