@@ -38,3 +38,19 @@ The repository also contains dedicated bilingual sources for async boundaries, a
 | Project practice | `BENCHMARK_HARNESS_EN.md`, `COMPATIBILITY_CHANGE_TEMPLATE_EN.md`, `ECOSYSTEM.md` | matching bilingual files where available |
 
 These families are the remaining lesson candidates beyond the already integrated beginner, language, advanced runtime, and basic tooling routes. They should be grouped into beginner lessons, reference lessons, and contributor/developer lessons rather than exposing every internal planning document as a beginner tutorial.
+
+## Complete Docs directory audit
+
+The current official `docs/` directory contains 120 entries. For the website curriculum, learner-facing documents should be promoted into lesson/reference routes, while internal status, planning, patch, and historical release notes should be grouped into a separate contributor and release archive rather than presented as beginner lessons.
+
+| Curriculum group | Sources to promote into lessons or reference pages |
+|---|---|
+| Core language | `LANGUAGE_SPEC_EN/MM`, `CORE_SPEC`, `SYNTAX_GUIDE_EN`, `LEARN_ZAP_EN/MM`, `LANGUAGE_GUIDE`, `DEFAULT_PARAMETERS_EN/MM`, `TYPE_NARROWING_EN/MM`, `TYPECHECK_GENERIC_DESIGN_EN/MM`, `TYPECHECK_CONFORMANCE_MATRIX_EN/MM`, `MEMORY_MODEL_EN/MM` |
+| Async and runtime | `ASYNC_BOUNDARIES_EN/MM`, `ASYNC_LSP_EN/MM`, `ASYNC_RUNTIME_EN/MM`, `P005_ASYNC_BOUNDARY_STATUS_MM`, `P005B_RESOURCE_LIMIT_PLAN_EN/MM`, `P005C_CROSS_PLATFORM_PLAN_EN/MM`, `NATIVE`, `P004_MEMORY_CONTRACT_STATUS_MM` |
+| Standard library | `STDLIB_INDEX_EN/MM`, `STDLIB_TEXT_MATH_COLLECTION_EN/MM`, `STDLIB_FILESYSTEM_JSON_EN/MM`, `STDLIB_LOGGING_EN/MM`, `STDLIB_TIME_EN/MM` |
+| Packages and ecosystem | `PACKAGE_EN`, `PACKAGE`, `PACKAGES`, `REGISTRY_AUTH_EN/MM`, `ECOSYSTEM`, `SPEC_OWNERSHIP_EN/MM`, `SPEC_OWNERSHIP_INDEX.tsv` |
+| Diagnostics, security, and operations | `DIAGNOSTIC_MODEL_EN/MM`, `SECURITY_AUDIT_EN/MM`, `BENCHMARK_HARNESS_EN/MM`, `DEPLOYMENT_EN/MM`, `COMPATIBILITY_CHANGE_TEMPLATE_EN/MM` |
+| Releases and delivery | `RELEASE_VERSION_POLICY_EN/MM`, `RELEASE_SIGNING_EN/MM`, `RELEASE_ROLLBACK_RUNBOOK_EN/MM`, `RELEASE_2.1.0` through `RELEASE_2.1.9` bilingual pairs, and historical release notes |
+| Contributor and project history | `DESIGN`, `NEXT_TODO_PLAN_EN/MM`, `P0_FOUNDATION_STATUS_EN`, `P1_PROGRESS`, `P1_PROGRESS_MM`, `P2_PROGRESS`, `P2_PROGRESS_MM`, `P3_ROADMAP_EN/MM`, `V2.1_ROADMAP_EN/MM`, `AUDIT_LANGUAGE_COMPARISON_2026-08`, `TODO_ZAP_MM`, and roadmap files |
+
+The website should not claim that every planning/status document is a stable language feature. Each route will therefore show a source category such as `Learn`, `Reference`, `Runtime`, `Tooling`, `Release`, or `Contributor`, plus the exact official source link and version context.

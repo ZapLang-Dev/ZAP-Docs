@@ -39,3 +39,14 @@
 - [x] Burmese official source links ကို lesson အလိုက် ချိတ်ဆက်ရန်။
 - [x] Advanced Runtime/LSP Burmese routes ကို desktop/mobile preview၊ playground နှင့် navigation ဖြင့် စစ်ဆေးရန်။
 - [ ] Translation expansion checkpoint အသစ် သိမ်းရန်။
+
+## Complete official Zap Docs lesson import
+
+- [x] Docs directory ဖိုင်အားလုံးကို beginner၊ language reference၊ standard library၊ runtime၊ tooling၊ delivery၊ security နှင့် contributor groups အဖြစ် map လုပ်ရန်။
+- [x] Internal planning/status/release files နှင့် learner-facing lessons ကို ခွဲခြားပြီး သင့်တော်သော lesson/reference format သတ်မှတ်ရန်။
+- [x] ကျန် Language Spec၊ Core Spec၊ Memory Model၊ Package/Registry၊ Deployment၊ Release၊ Security၊ Compatibility၊ Benchmark နှင့် roadmap docs များကို routes အဖြစ် ထည့်ရန်။
+- [x] Lesson တစ်ခုချင်းစီတွင် objective၊ syntax/reference table၊ official example၊ expected output၊ explanation၊ mistakes၊ exercise၊ quiz နှင့် source link ထည့်ရန်။
+- [x] English/Burmese source link mapping ကို document တစ်ခုချင်းစီအလိုက် ပြင်ဆင်ရန်။
+- [x] Search index၊ sidebar section counts၊ previous/next navigation နှင့် mobile menu ကို update လုပ်ရန်။
+- [x] All added routes၊ language toggle၊ playground၊ quiz၊ desktop/mobile layout နှင့် production build ကို စစ်ဆေးရန်။
+- [ ] Complete official-docs lesson checkpoint အသစ် သိမ်းရန်။
