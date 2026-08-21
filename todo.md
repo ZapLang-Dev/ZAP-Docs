@@ -1,8 +1,8 @@
-# Playground output fix checklist
+# Official runtime integration checklist
 
-- [x] Identify example patterns that currently produce no output.
-- [x] Support common Zap CLI commands with useful simulated status output.
-- [x] Add simple loop and condition handling for teaching examples.
-- [x] Guarantee a completion message when a snippet has no printed output.
-- [x] Validate representative code examples on desktop and mobile.
-- [ ] Save a publish-ready checkpoint after verification.
+- [x] Inspect the official Zap repository for a browser runtime, WASM build, API, or embeddable execution interface.
+- [x] Record the authoritative runtime source and any security or deployment constraints.
+- [x] Confirm that no safe public native-runtime interface is currently documented; do not add an unsafe connection.
+- [x] Preserve the lightweight fallback when native execution is unavailable.
+- [x] Validate the existing fallback execution, error notes, and responsive playground UX.
+- [x] Save a publish-ready checkpoint after verification.
