@@ -174,3 +174,16 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .correct-text { color: #14765f; }
 .incorrect-text { color: #a24d3c; }
 @media (max-width: 700px) { .lesson-output-row { grid-template-columns: 1fr; } .practice-panel { flex-direction: column; gap: 8px; } .syntax-table th, .syntax-table td { padding: 9px 10px; } }
+
+/* Voltage Editorial search layer: filters are quiet utility controls; cyan marks active discovery and amber keeps result count editorial. */
+.search-filter-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding: 12px 18px 14px; border-top: 1px solid rgba(18, 61, 80, .09); border-bottom: 1px solid rgba(18, 61, 80, .09); background: #f7fbfb; }
+.search-filter-grid label { color: #6c858d; font-size: .63rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.search-filter-grid select { display: block; width: 100%; margin-top: 5px; padding: 8px 7px; border: 1px solid rgba(18, 61, 80, .14); background: #fff; color: #173a51; font: inherit; font-size: .72rem; outline: none; }
+.search-filter-grid select:focus { border-color: #10a9bd; box-shadow: 0 0 0 2px rgba(16,169,189,.12); }
+.search-result-summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 18px 5px; color: #70878d; font-size: .7rem; }
+.search-result-summary strong { color: #bd6b1f; }
+.search-result-summary button { border: 0; background: transparent; color: #0b91a4; cursor: pointer; font: inherit; font-size: .7rem; font-weight: 800; }
+.search-hint { padding: 22px 18px; color: #66818b; font-size: .82rem; line-height: 1.6; }
+.search-hint strong { display: block; margin-bottom: 4px; color: #173a51; font-size: .92rem; }
+.search-hint p { margin: 0; }
+@media (max-width: 680px) { .search-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline: 12px; } .search-result-summary { padding-inline: 12px; } }

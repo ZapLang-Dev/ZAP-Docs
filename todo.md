@@ -50,3 +50,13 @@
 - [x] Search index၊ sidebar section counts၊ previous/next navigation နှင့် mobile menu ကို update လုပ်ရန်။
 - [x] All added routes၊ language toggle၊ playground၊ quiz၊ desktop/mobile layout နှင့် production build ကို စစ်ဆေးရန်။
 - [ ] Complete official-docs lesson checkpoint အသစ် သိမ်းရန်။
+
+## Advanced lesson search
+
+- [x] လက်ရှိ SearchDialog နှင့် lesson metadata ကို စစ်ဆေးရန်။
+- [x] Topic၊ section၊ language၊ level၊ content type နှင့် source filter model သတ်မှတ်ရန်။
+- [x] Search index တွင် lesson intro၊ blocks၊ syntax၊ exercises နှင့် official source metadata ထည့်ရန်။
+- [x] Advanced filter panel၊ active filter chips၊ result count နှင့် highlighted match ထည့်ရန်။
+- [x] Result ranking နှင့် empty state ကို ပြင်ဆင်ရန်။
+- [x] Ctrl/Cmd+K၊ Escape၊ keyboard navigation နှင့် mobile layout စစ်ဆေးရန်။
+- [ ] Advanced search checkpoint အသစ် သိမ်းရန်။

@@ -72,14 +72,28 @@ const searchMeta: Record<string, string> = {
   "spec-ownership": "spec ownership language area maintainers source of truth",
   "project-roadmap": "roadmap progress phases future work project direction",
 };
-const searchDocs = allDocs.map((doc) => ({ ...doc, searchText: `${doc.title} ${doc.section} ${searchMeta[doc.slug] ?? ""}` }));
+const searchDocs = allDocs.map((doc) => {
+  const level = ["Getting Started", "Language Guide"].includes(doc.section) ? "Beginner" : ["Advanced Runtime", "Tooling & Delivery"].includes(doc.section) ? "Advanced" : ["Reference", "Packages & Releases"].includes(doc.section) ? "Reference" : "Contributor";
+  const kind = ["Standard Library", "Reference"].includes(doc.section) ? "Reference" : ["Packages & Releases", "Contributor Track"].includes(doc.section) ? "Workflow" : "Lesson";
+  return { ...doc, level, kind, language: "English + Burmese", searchText: `${doc.title} ${doc.section} ${searchMeta[doc.slug] ?? ""}` };
+});
 
 function Header({ onMenu }: { onMenu: () => void }) {
   const [, navigate] = useLocation();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [sectionFilter, setSectionFilter] = useState("All sections");
+  const [levelFilter, setLevelFilter] = useState("All levels");
+  const [kindFilter, setKindFilter] = useState("All formats");
+  const [languageFilter, setLanguageFilter] = useState("All languages");
   const normalizedQuery = query.trim().toLowerCase();
-  const results = useMemo(() => normalizedQuery ? searchDocs.filter((doc) => doc.searchText.toLowerCase().includes(normalizedQuery)) : [], [normalizedQuery]);
+  const results = useMemo(() => searchDocs
+    .filter((doc) => !normalizedQuery || doc.searchText.toLowerCase().includes(normalizedQuery))
+    .filter((doc) => sectionFilter === "All sections" || doc.section === sectionFilter)
+    .filter((doc) => levelFilter === "All levels" || doc.level === levelFilter)
+    .filter((doc) => kindFilter === "All formats" || doc.kind === kindFilter)
+    .filter((doc) => languageFilter === "All languages" || doc.language.includes(languageFilter))
+    .sort((a, b) => (normalizedQuery && a.title.toLowerCase().includes(normalizedQuery) ? -1 : 0) - (normalizedQuery && b.title.toLowerCase().includes(normalizedQuery) ? -1 : 0)), [normalizedQuery, sectionFilter, levelFilter, kindFilter, languageFilter]);
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
@@ -94,7 +108,10 @@ function Header({ onMenu }: { onMenu: () => void }) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
-  const selectResult = (slug: string) => { navigate(`/docs/${slug}`); setSearchOpen(false); setQuery(""); };
+  const resetFilters = () => { setSectionFilter("All sections"); setLevelFilter("All levels"); setKindFilter("All formats"); setLanguageFilter("All languages"); };
+  const hasFilters = sectionFilter !== "All sections" || levelFilter !== "All levels" || kindFilter !== "All formats" || languageFilter !== "All languages";
+  const clearSearch = () => { setSearchOpen(false); setQuery(""); resetFilters(); };
+  const selectResult = (slug: string) => { navigate(`/docs/${slug}`); clearSearch(); };
   return <header className="site-header">
     <div className="header-inner">
       <button className="mobile-menu" onClick={onMenu} aria-label="Open navigation"><Menu size={20} /></button>
@@ -109,7 +126,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
         <button className="search-trigger" onClick={() => setSearchOpen((open) => !open)} aria-label="Search documentation" aria-expanded={searchOpen}><Search size={16} /><span>Search docs</span><kbd><Command size={11} /> K</kbd></button>
         <a className="github-link" href="https://github.com/hidecard/zap" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a>
       </div>
-      {searchOpen && <><div className="search-backdrop" onClick={() => setSearchOpen(false)} /><div className="search-panel"><div className="search-panel-head"><Search size={17} /><input autoFocus placeholder="Search titles, topics, or keywords" value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && results[0]) selectResult(results[0].slug); }} /><button onClick={() => { setSearchOpen(false); setQuery(""); }} aria-label="Close search"><X size={17} /></button></div>{query ? <div className="search-results">{results.length ? results.map((doc) => <button key={doc.slug} onClick={() => selectResult(doc.slug)}><span><strong>{doc.title}</strong><small>{doc.section} · {searchMeta[doc.slug]}</small></span><ChevronRight size={15} /></button>) : <p>No matching pages. Try a title, concept, or command.</p>}</div> : <p className="search-hint">Search titles, topics, code concepts, or commands.</p>}</div></>}
+      {searchOpen && <><div className="search-backdrop" onClick={() => setSearchOpen(false)} /><div className="search-panel"><div className="search-panel-head"><Search size={17} /><input autoFocus placeholder="Search lessons, syntax, code, or topics" value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && results[0]) selectResult(results[0].slug); }} /><button onClick={clearSearch} aria-label="Close search"><X size={17} /></button></div><div className="search-filter-grid"><label>Section<select value={sectionFilter} onChange={(e) => setSectionFilter(e.target.value)}><option>All sections</option>{sections.map((section) => <option key={section.label}>{section.label}</option>)}</select></label><label>Level<select value={levelFilter} onChange={(e) => setLevelFilter(e.target.value)}><option>All levels</option><option>Beginner</option><option>Advanced</option><option>Reference</option><option>Contributor</option></select></label><label>Format<select value={kindFilter} onChange={(e) => setKindFilter(e.target.value)}><option>All formats</option><option>Lesson</option><option>Reference</option><option>Workflow</option></select></label><label>Language<select value={languageFilter} onChange={(e) => setLanguageFilter(e.target.value)}><option>All languages</option><option>English</option><option>Burmese</option></select></label></div>{(query || hasFilters) ? <div className="search-results"><div className="search-result-summary"><strong>{results.length}</strong> matching lessons {hasFilters && <button onClick={resetFilters}>Clear filters</button>}</div>{results.length ? results.map((doc) => <button key={doc.slug} onClick={() => selectResult(doc.slug)}><span><strong>{doc.title}</strong><small>{doc.section} · {doc.level} · {doc.kind} · {searchMeta[doc.slug] ?? "official lesson"}</small></span><ChevronRight size={15} /></button>) : <p>No matching lessons. Try removing a filter or searching a command such as `await`, `Result`, or `zap check`.</p>}</div> : <div className="search-hint"><strong>Search the full field guide</strong><p>Search titles, topics, syntax, commands, and official workflow terms. Add filters to narrow by section, level, format, or language.</p></div>}</div></>}
     </div>
   </header>;
 }
