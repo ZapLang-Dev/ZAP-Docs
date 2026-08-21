@@ -9,6 +9,7 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
+  const logoPath = process.env.NODE_ENV === "production" ? "/ZAP-Docs/logo.jpg" : "/logo.jpg";
   const allPaths = getAllDocPaths();
   const filteredPaths = searchQuery
     ? allPaths.filter((path) => {
@@ -21,7 +22,7 @@ export function Header() {
     <header className="site-header">
       <div className="header-inner">
         <button onClick={() => navigate("/")} className="brand" aria-label="Go to Zap Docs home">
-          <span className="brand-mark"><img src="/logo.jpg" alt="Zap logo" /></span>
+          <span className="brand-mark"><img src={logoPath} alt="Zap logo" /></span>
           <span className="brand-copy"><span className="brand-name">Zap</span><span className="brand-label">Documentation</span></span>
         </button>
 
