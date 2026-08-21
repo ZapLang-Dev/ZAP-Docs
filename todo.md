@@ -70,3 +70,12 @@
 - [x] Homepage၊ lesson pages၊ sidebar၊ search panel၊ playground နှင့် quiz cards ကို dark theme ဖြင့် ပြည့်စုံစွာ style လုပ်ရန်။
 - [x] Reduced motion၊ keyboard focus၊ mobile layout နှင့် build/preview ကို စစ်ဆေးရန်။
 - [ ] Dark Mode checkpoint အသစ် သိမ်းရန်။
+
+## Remaining lesson gap audit
+
+- [x] Official Docs filename inventory နှင့် current sidebar/search routes ကို တိုက်ဆိုင်စစ်ဆေးရန်။
+- [x] Language Spec၊ Memory၊ Type Conformance၊ Standard Library၊ Package/Registry၊ Release၊ Security၊ Benchmark၊ Compatibility နှင့် Roadmap အတွင်း မပါသေးသော subtopics များကို စာရင်းပြုစုရန်။
+- [x] Historical release notes နှင့် internal planning/status documents ကို learner lesson မဟုတ်ဘဲ Release Archive/Contributor Reference အဖြစ် ခွဲခြားရန်။
+- [x] ကျန် subtopics တစ်ခုချင်းစီအတွက် Burmese/English objective၊ syntax၊ examples၊ output၊ mistakes၊ exercises၊ quizzes နှင့် source links ပြင်ဆင်ရန်။
+- [x] Lesson counts၊ search metadata၊ previous/next navigation၊ dark mode နှင့် mobile UX ကို gap additions အပြီး ပြန်လည်စစ်ဆေးရန်။
+- [ ] Remaining lesson expansion checkpoint အသစ် သိမ်းရန်။
