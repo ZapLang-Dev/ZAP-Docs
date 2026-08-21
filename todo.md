@@ -19,3 +19,14 @@
 - [ ] Add quiz/check-answer interactions without fabricating runtime behavior.
 - [ ] Validate playground examples, search, navigation, mobile layout, and production build.
 - [ ] Save a new checkpoint for the W3Schools-style redesign.
+
+## Remaining official Zap lesson expansion
+
+- [x] Official docs folder ထဲရှိ advanced၊ standard-library၊ async၊ LSP၊ package၊ release၊ audit နှင့် compatibility docs များကို ထပ်မံစာရင်းပြုစုရန်။
+- [x] ကျန် lesson တစ်ခုချင်းစီအတွက် objective၊ definition၊ syntax table၊ examples၊ output၊ mistakes၊ exercise နှင့် quiz data ပြင်ဆင်ရန်။
+- [x] Standard library ကို text၊ math၊ collections၊ filesystem၊ JSON နှင့် system lesson များအဖြစ် ခွဲထည့်ရန်။
+- [x] Async runtime၊ LSP/editor၊ packages/registry၊ lockfile၊ diagnostics၊ compatibility နှင့် release workflow lessons ထည့်ရန်။
+- [x] Burmese content ကို advanced နှင့် standard-library lessons များအထိ ချဲ့ထည့်ရန်။
+- [x] Lesson index၊ chapter progress နှင့် previous/next learning path ကို update လုပ်ရန်။
+- [x] Playground၊ quiz၊ search၊ mobile layout နှင့် production build ကို ပြန်လည်စစ်ဆေးရန်။
+- [ ] အသေးစိတ် lesson expansion အတွက် checkpoint အသစ်သိမ်းရန်။
