@@ -18,3 +18,16 @@ Authoritative learning content comes from:
 The official English learning guide covers Hello World with `say`, comments and indentation-based blocks, variables and core values, optional type annotations, operators, conditions, lists/maps/JSON, loops, functions, closures, classes, files/paths/environment, modules/exports, Result/Option, `?` propagation, tests/assertions, CLI workflow, diagnostics, typed Result/Option payloads, async foundations, and a mini project. The syntax reference adds default parameters, `async fn`/`await`, `raise`/`try`/`catch`, modules/workspaces, diagnostics, and tooling commands.
 
 The official Burmese learning guide is available and should be used as the basis for a future Burmese switch rather than inventing translations. Its lessons include installation and Hello World, comments, variables/types, operators, if/else, lists, maps/JSON, loops, functions, closures, file/path/time, modules, testing/formatting, a task-tracker mini project, OOP, and standard-library helpers.
+
+## v2.0.4 release assets
+
+Release page: https://github.com/hidecard/zap/releases/tag/v2.0.4
+
+Linux x86_64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz
+Linux checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz.sha256
+macOS ARM64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz
+macOS checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz.sha256
+Windows x86_64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip
+Windows checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip.sha256
+Full changelog comparison: https://github.com/hidecard/zap/compare/v2.0.3...v2.0.4
+Repository changelog: https://github.com/hidecard/zap/blob/master/CHANGELOG_EN.md

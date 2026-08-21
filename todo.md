@@ -1,7 +1,7 @@
-# Official Zap content sync checklist
+# Release links checklist
 
-- [x] Inspect the official repository README, releases, install assets, and lesson/source files.
-- [x] Record authoritative URLs, version information, and content mapping notes.
-- [x] Replace site installation and lesson content with repository-grounded material.
-- [x] Add source links and version labels where appropriate.
-- [x] Validate representative routes and save a publish-ready checkpoint.
+- [x] Inspect official v2.0.4 release asset URLs and changelog links.
+- [x] Add Linux, macOS, and Windows direct download links to Installation.
+- [x] Render release and changelog references as clickable links.
+- [x] Validate the Installation page and confirm no reported TypeScript or LSP errors.
+- [ ] Save a publish-ready checkpoint.
