@@ -1,7 +1,7 @@
-# Test-case panel checklist
+# Arithmetic playground fix checklist
 
-- [x] Detect simple `let` variables from the current example and expose editable test inputs.
-- [x] Apply test-case overrides before running the playground code.
-- [x] Add reset, run, and output feedback for changed test values.
-- [x] Validate score changes across conditional branches on desktop and mobile.
+- [x] Diagnose why `count + 1` and related expressions produce preview notes.
+- [x] Add numeric arithmetic evaluation for common Zap operators.
+- [x] Support loop updates and output for simple while examples.
+- [x] Validate the corrected output and test-case panel on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.

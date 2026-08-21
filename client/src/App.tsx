@@ -170,7 +170,21 @@ function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
       }
     }
     if (value in values) return values[value];
-    if (value.includes(" + ")) return value.split(" + ").map((part) => evaluate(part)).join("");
+    const arithmetic = value.match(/^(.+?)\s*([+\-*/%])\s*(.+)$/);
+    if (arithmetic) {
+      const left = evaluate(arithmetic[1]);
+      const right = evaluate(arithmetic[3]);
+      if (arithmetic[2] === "+" && (typeof left === "string" || typeof right === "string")) return String(left) + String(right);
+      const a = Number(left);
+      const b = Number(right);
+      if (Number.isFinite(a) && Number.isFinite(b)) {
+        if (arithmetic[2] === "+") return a + b;
+        if (arithmetic[2] === "-") return a - b;
+        if (arithmetic[2] === "*") return a * b;
+        if (arithmetic[2] === "/") return b === 0 ? "division by zero" : a / b;
+        if (arithmetic[2] === "%") return a % b;
+      }
+    }
     if (value.startsWith("[") || value.startsWith("{")) {
       try { return JSON.parse(value.replace(/'/g, '"')); } catch { return value; }
     }
@@ -226,7 +240,25 @@ function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
     }
     const say = trimmed.match(/^say\s+(.+)$/);
     if (say) { output.push(format(evaluate(say[1]))); continue; }
-    if (/^(fn|class|module|import|export|while|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
+    const whileMatch = trimmed.match(/^while\s+(.+):$/);
+    if (whileMatch) {
+      let bodyEnd = index + 1;
+      while (bodyEnd < lines.length && /^\s+/.test(lines[bodyEnd]) && lines[bodyEnd].trim()) bodyEnd += 1;
+      const body = lines.slice(index + 1, bodyEnd).map((line) => line.trim());
+      let guard = 0;
+      while (Boolean(evaluate(whileMatch[1])) && guard < 20) {
+        body.forEach((bodyLine) => {
+          const bodyAssignment = bodyLine.match(/^([A-Za-z_][\w]*)\s*=\s*(.+)$/);
+          const bodySay = bodyLine.match(/^say\s+(.+)$/);
+          if (bodyAssignment) values[bodyAssignment[1]] = evaluate(bodyAssignment[2]);
+          else if (bodySay) output.push(format(evaluate(bodySay[1])));
+        });
+        guard += 1;
+      }
+      index = bodyEnd - 1;
+      continue;
+    }
+    if (/^(fn|class|module|import|export|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
     else output.push(`Preview note · recognized line: ${trimmed}`);
   }
   if (!output.length) output.push("Preview completed · no console output in this snippet.");
