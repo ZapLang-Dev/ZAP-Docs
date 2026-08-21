@@ -1,6 +1,7 @@
-# Bug-fix checklist
+# Documentation content checklist
 
-- [x] Make the mobile lesson drawer fully opaque and prevent page content from showing through underneath it.
-- [x] Ensure tapping a lesson updates the URL, active sidebar state, and article content immediately.
-- [x] Validate the mobile drawer and lesson transitions at phone viewport size.
+- [x] Define a consistent lesson schema for title, introduction, concepts, examples, and next steps.
+- [x] Replace placeholder content across the existing Zap documentation routes with actual lessons.
+- [x] Add practical Zap code examples and explanatory sections for each lesson.
+- [x] Validate desktop and mobile reading layouts across representative routes.
 - [ ] Save a publish-ready checkpoint after verification.
