@@ -128,3 +128,17 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
   .test-cases-heading { align-items: flex-start; flex-direction: column; gap: 0.18rem; }
   .test-cases-grid { grid-template-columns: 1fr; }
 }
+
+/* Voltage Editorial reminder: lesson pages use an editorial reading column, cyan signal accents, navy type, amber emphasis, and compact controls that stay usable on narrow screens. */
+.doc-tools { display: flex; align-items: flex-end; gap: 14px; flex-direction: column; }
+.language-toggle { display: inline-flex; padding: 3px; border: 1px solid rgba(20, 54, 74, .16); background: rgba(238, 247, 249, .72); border-radius: 999px; }
+.language-toggle button { border: 0; background: transparent; color: #315568; font: inherit; font-size: .72rem; font-weight: 800; letter-spacing: .04em; padding: 7px 11px; border-radius: 999px; cursor: pointer; transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.language-toggle button:hover { transform: translateY(-1px); }
+.language-toggle button.active { background: #08243c; color: #f5fbfc; }
+.doc-source-link { display: inline-flex; align-items: center; gap: 7px; color: #0d8292; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-decoration: none; margin: 4px 0 22px; }
+.doc-source-link:hover { color: #c67727; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) {
+  .doc-tools { width: 100%; align-items: flex-start; gap: 10px; }
+  .doc-title-row { gap: 16px; flex-direction: column; }
+  .language-toggle button { padding: 7px 10px; }
+}
