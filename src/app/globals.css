@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zap-50: #f0fdf4;
+  --color-zap-100: #dcfce7;
+  --color-zap-200: #bbf7d0;
+  --color-zap-300: #86efac;
+  --color-zap-400: #4ade80;
+  --color-zap-500: #22c55e;
+  --color-zap-600: #16a34a;
+  --color-zap-700: #15803d;
+  --color-zap-800: #166534;
+  --color-zap-900: #14532d;
+  --color-zap-950: #052e16;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+.prose pre {
+  @apply bg-slate-900 text-slate-100 rounded-lg p-4 overflow-x-auto text-sm;
+}
+
+.prose code {
+  @apply bg-slate-100 text-zap-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-slate-100;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold tracking-tight text-slate-900 mb-4;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold tracking-tight text-slate-900 mt-10 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold tracking-tight text-slate-900 mt-8 mb-3;
+}
+
+.prose p {
+  @apply text-slate-600 leading-relaxed mb-4;
+}
+
+.prose ul {
+  @apply list-disc list-inside text-slate-600 mb-4 space-y-1;
+}
+
+.prose ol {
+  @apply list-decimal list-inside text-slate-600 mb-4 space-y-1;
+}
+
+.prose a {
+  @apply text-zap-700 underline decoration-zap-300 underline-offset-2 hover:text-zap-800;
+}
+
+.prose table {
+  @apply w-full text-sm text-left border-collapse mb-6;
+}
+
+.prose th {
+  @apply border border-slate-200 px-3 py-2 bg-slate-50 font-semibold text-slate-700;
+}
+
+.prose td {
+  @apply border border-slate-200 px-3 py-2 text-slate-600;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-zap-300 pl-4 italic text-slate-600 my-4;
+}
+
+.prose strong {
+  @apply font-semibold text-slate-900;
+}
