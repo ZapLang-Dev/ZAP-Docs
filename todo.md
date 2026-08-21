@@ -30,3 +30,12 @@
 - [x] Lesson index၊ chapter progress နှင့် previous/next learning path ကို update လုပ်ရန်။
 - [x] Playground၊ quiz၊ search၊ mobile layout နှင့် production build ကို ပြန်လည်စစ်ဆေးရန်။
 - [ ] အသေးစိတ် lesson expansion အတွက် checkpoint အသစ်သိမ်းရန်။
+
+## Advanced Runtime & LSP Burmese translation
+
+- [x] Official Burmese sources များမှ Result/Option၊ Structured Errors၊ Async/Await၊ Default Parameters၊ Diagnostics နှင့် Typed Payloads content ကို ပြန်လည်စစ်ဆေးရန်။
+- [x] LSP/Editor lesson အတွက် installation၊ language server၊ diagnostics၊ completion၊ hover၊ formatting နှင့် CLI cross-check content ပြင်ဆင်ရန်။
+- [x] Burmese lesson တစ်ခုချင်းစီတွင် objective၊ syntax table၊ examples၊ expected output၊ mistakes၊ exercises နှင့် quizzes ထည့်ရန်။
+- [x] Burmese official source links ကို lesson အလိုက် ချိတ်ဆက်ရန်။
+- [x] Advanced Runtime/LSP Burmese routes ကို desktop/mobile preview၊ playground နှင့် navigation ဖြင့် စစ်ဆေးရန်။
+- [ ] Translation expansion checkpoint အသစ် သိမ်းရန်။
