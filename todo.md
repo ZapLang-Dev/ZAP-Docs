@@ -139,7 +139,14 @@
 
 ## GitHub push
 
-- [ ] Git repository၊ remote URL၊ current branch နှင့် working tree ကို စစ်ဆေးရန်။
-- [ ] Verified project changes၊ generated files နှင့် sensitive files များကို review လုပ်ရန်။
-- [ ] Changes များကို descriptive commit တစ်ခုဖြင့် commit လုပ်ရန်။
-- [ ] Configured GitHub remote သို့ push လုပ်ပြီး commit/branch result စစ်ဆေးရန်။
+- [x] Git repository၊ remote URL၊ current branch နှင့် working tree ကို စစ်ဆေးရန်။
+- [x] Verified project changes၊ generated files နှင့် sensitive files များကို review လုပ်ရန်။
+- [x] Changes များကို descriptive commit တစ်ခုဖြင့် commit လုပ်ရန်။
+- [x] Configured GitHub remote သို့ push လုပ်ပြီး commit/branch result စစ်ဆေးရန်။
+
+## Homepage Dark Mode CSS audit
+
+- [x] Homepage markup ထဲရှိ inline background၊ hard-coded light colors နှင့် Tailwind/utility classes ကို စာရင်းပြုစုရန်။
+- [x] Hero၊ route cards၊ buttons၊ decorative pattern၊ footer နှင့် text contrast အတွက် specificity conflicts ပြင်ရန်။
+- [x] Dark/light toggle၊ localStorage persistence နှင့် mobile rendering ပြန်စစ်ရန်။
+- [ ] Production build နှင့် desktop/mobile screenshots အောင်မြင်ပြီးနောက် checkpoint အသစ် သိမ်းရန်။
