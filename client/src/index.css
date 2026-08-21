@@ -266,3 +266,20 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .diagram-step strong { color: #f4fbfd; }
 @media (max-width: 720px) { .concept-diagram { margin-left: -.2rem; margin-right: -.2rem; padding: 1rem; } .concept-diagram-head { display: block; } .diagram-badge { display: inline-block; margin-top: .75rem; } .diagram-flow { flex-direction: column; overflow-x: visible; } .diagram-step-wrap { display: grid; grid-template-columns: 1fr; gap: .25rem; } .diagram-step { width: auto; min-height: 0; } .diagram-arrow { display: block; transform: rotate(90deg); width: 1rem; margin: 0 auto; } }
 @media (prefers-reduced-motion: reduce) { .concept-diagram *, .concept-diagram { scroll-behavior: auto; transition: none !important; } }
+
+/* Animated trace controls: deliberate, low-motion feedback for the Core-to-Runtime path. */
+.trace-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; margin-top: 1rem; }
+.trace-controls button { border: 1px solid rgba(16,42,67,.18); background: rgba(255,255,255,.78); color: var(--foreground); padding: .42rem .62rem; font: 700 .72rem/1 inherit; cursor: pointer; transition: background .16s ease, border-color .16s ease, transform .16s ease; }
+.trace-controls button:hover, .trace-controls button:focus-visible { border-color: #0b9db3; background: rgba(226,249,251,.95); outline: 2px solid rgba(11,157,179,.24); outline-offset: 2px; }
+.trace-controls button:active { transform: scale(.97); }
+.trace-status { margin-left: auto; color: var(--muted-foreground); font: 700 .7rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; }
+.trace-progress { height: 4px; margin-top: .8rem; background: rgba(16,42,67,.12); overflow: hidden; }
+.trace-progress span { display: block; height: 100%; background: linear-gradient(90deg, #0b9db3, #e6a42d); transition: width .28s cubic-bezier(.23,1,.32,1); }
+.diagram-step { transition: border-color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease; }
+.diagram-step.is-active { border-color: #0b9db3; background: rgba(223,249,251,.98); box-shadow: 0 0 0 3px rgba(11,157,179,.14), 0 12px 20px rgba(11,157,179,.12); transform: translateY(-3px); }
+.dark .trace-controls button { border-color: rgba(130,215,227,.24); background: rgba(16,43,62,.92); color: #f4fbfd; }
+.dark .trace-controls button:hover, .dark .trace-controls button:focus-visible { border-color: #82d7e3; background: rgba(28,69,86,.95); }
+.dark .trace-progress { background: rgba(130,215,227,.18); }
+.dark .diagram-step.is-active { border-color: #82d7e3; background: rgba(22,77,91,.94); box-shadow: 0 0 0 3px rgba(130,215,227,.16), 0 12px 24px rgba(0,0,0,.24); }
+@media (max-width: 720px) { .trace-status { width: 100%; margin-left: 0; margin-top: .15rem; } .trace-controls button { min-height: 2.25rem; } }
+@media (prefers-reduced-motion: reduce) { .trace-controls button, .diagram-step, .trace-progress span { transition: none; } }

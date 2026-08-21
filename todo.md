@@ -104,3 +104,11 @@
 - [x] English/Burmese labels၊ legend၊ step-by-step explanation နှင့် accessible text alternative ထည့်ရန်။
 - [x] Dark mode၊ mobile horizontal scrolling/stacking၊ keyboard focus နှင့် reduced-motion behavior စစ်ဆေးရန်။
 - [ ] Diagram visualizations checkpoint အသစ် သိမ်းရန်။
+
+## Animated Core-to-Runtime trace
+
+- [x] Core Specification → Native Runtime အဆင့်များနှင့် active-stage state model သတ်မှတ်ရန်။
+- [x] English/Burmese stage explanation၊ Play/Pause၊ Step၊ Reset နှင့် progress indicator ထည့်ရန်။
+- [x] Existing Core/Native diagrams နှင့် trace mode ကို ချိတ်ရန်။
+- [x] Reduced-motion fallback၊ keyboard controls၊ dark mode နှင့် mobile layout စစ်ဆေးရန်။
+- [ ] Animated trace checkpoint အသစ် သိမ်းရန်။
