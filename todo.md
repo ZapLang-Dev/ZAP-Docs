@@ -1,6 +1,7 @@
-# Conditional playground fix checklist
+# Test-case panel checklist
 
-- [x] Diagnose why skipped if/else branches are emitted as preview notes.
-- [x] Implement one-branch-only handling for if, else-if, and else blocks.
-- [x] Validate the score example and other conditional snippets on desktop and mobile.
+- [x] Detect simple `let` variables from the current example and expose editable test inputs.
+- [x] Apply test-case overrides before running the playground code.
+- [x] Add reset, run, and output feedback for changed test values.
+- [x] Validate score changes across conditional branches on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.

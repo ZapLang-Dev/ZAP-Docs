@@ -134,7 +134,18 @@ function highlightZap(code: string) {
   });
 }
 
-function runZapPreview(code: string) {
+function extractTestInputs(code: string) {
+  return code.split(/\n/).flatMap((line) => {
+    const match = line.trim().match(/^let\s+([A-Za-z_][\w]*)\s*(?::\s*([A-Za-z_][\w]*))?\s*=\s*(.+)$/);
+    if (!match) return [];
+    const [, name, annotation, raw] = match;
+    const value = raw.trim();
+    const type = annotation === "bool" || value === "true" || value === "false" ? "boolean" : (annotation === "text" || /^['\"]/.test(value) ? "text" : "number");
+    return [{ name, type, defaultValue: value.replace(/^['\"]|['\"]$/g, "") }];
+  }).slice(0, 4);
+}
+
+function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
   const values: Record<string, unknown> = {};
   const output: string[] = [];
   const evaluate = (expression: string): unknown => {
@@ -183,7 +194,7 @@ function runZapPreview(code: string) {
       continue;
     }
     const declaration = trimmed.match(/^let\s+([A-Za-z_][\w]*)\s*(?::[^=]+)?=\s*(.+)$/);
-    if (declaration) { values[declaration[1]] = evaluate(declaration[2]); continue; }
+    if (declaration) { values[declaration[1]] = Object.prototype.hasOwnProperty.call(overrides, declaration[1]) ? overrides[declaration[1]] : evaluate(declaration[2]); continue; }
     const assignment = trimmed.match(/^([A-Za-z_][\w]*)\s*=\s*(.+)$/);
     if (assignment) { values[assignment[1]] = evaluate(assignment[2]); continue; }
     const loop = trimmed.match(/^for\s+([A-Za-z_][\w]*)\s+in\s+(\[.*\]|range\((\d+)\)):/);
@@ -227,6 +238,11 @@ function CodeBlock({ code }: { code: string }) {
   const [playgroundOpen, setPlaygroundOpen] = useState(false);
   const [draft, setDraft] = useState(code);
   const [output, setOutput] = useState<string[] | null>(null);
+  const testInputs = useMemo(() => extractTestInputs(code), [code]);
+  const [testValues, setTestValues] = useState<Record<string, unknown>>(() => Object.fromEntries(testInputs.map((input) => [input.name, input.type === "number" ? Number(input.defaultValue) : input.type === "boolean" ? input.defaultValue === "true" : input.defaultValue])));
+  useEffect(() => {
+    setTestValues(Object.fromEntries(testInputs.map((input) => [input.name, input.type === "number" ? Number(input.defaultValue) : input.type === "boolean" ? input.defaultValue === "true" : input.defaultValue])));
+  }, [testInputs]);
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);
@@ -236,9 +252,9 @@ function CodeBlock({ code }: { code: string }) {
       setCopied(false);
     }
   };
-  const runExample = () => setOutput(runZapPreview(draft));
-  const resetExample = () => { setDraft(code); setOutput(null); };
-  return <div className="inline-code"><div className="inline-code-top"><span className="code-label">ZAP</span><div className="code-actions"><button className="run-code" onClick={() => setPlaygroundOpen((open) => !open)} type="button" aria-expanded={playgroundOpen}>{playgroundOpen ? <><X size={13} /> Close</> : <><Play size={13} /> Run example</>}</button><button className="copy-code" onClick={handleCopy} type="button" aria-label={copied ? "Code copied" : "Copy code"}>{copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}</button></div></div><pre><code>{highlightZap(code)}</code></pre>{playgroundOpen && <div className="playground"><div className="playground-head"><span>LIGHTWEIGHT PREVIEW</span><button className="playground-reset" onClick={resetExample} type="button"><RotateCcw size={12} /> Reset</button></div><textarea value={draft} onChange={(event) => { setDraft(event.target.value); setOutput(null); }} spellCheck={false} aria-label="Editable Zap example" /><div className="playground-run"><button className="button-primary" onClick={runExample} type="button"><Play size={14} /> Run code</button><span>Browser preview · not the native runtime</span></div>{output && <pre className="playground-output"><code>{output.length ? output.join("\n") : "No output produced."}</code></pre>}</div>}</div>;
+  const runExample = () => setOutput(runZapPreview(draft, testValues));
+  const resetExample = () => { setDraft(code); setOutput(null); setTestValues(Object.fromEntries(testInputs.map((input) => [input.name, input.type === "number" ? Number(input.defaultValue) : input.type === "boolean" ? input.defaultValue === "true" : input.defaultValue]))); };
+  return <div className="inline-code"><div className="inline-code-top"><span className="code-label">ZAP</span><div className="code-actions"><button className="run-code" onClick={() => setPlaygroundOpen((open) => !open)} type="button" aria-expanded={playgroundOpen}>{playgroundOpen ? <><X size={13} /> Close</> : <><Play size={13} /> Run example</>}</button><button className="copy-code" onClick={handleCopy} type="button" aria-label={copied ? "Code copied" : "Copy code"}>{copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}</button></div></div><pre><code>{highlightZap(code)}</code></pre>{playgroundOpen && <div className="playground"><div className="playground-head"><span>LIGHTWEIGHT PREVIEW</span><button className="playground-reset" onClick={resetExample} type="button"><RotateCcw size={12} /> Reset</button></div>{testInputs.length > 0 && <div className="test-cases"><div className="test-cases-heading"><span>TEST CASE</span><small>Change inputs, then run again</small></div><div className="test-cases-grid">{testInputs.map((input) => <label className="test-case-field" key={input.name}><span>{input.name}</span>{input.type === "boolean" ? <select value={String(testValues[input.name])} onChange={(event) => setTestValues((current) => ({ ...current, [input.name]: event.target.value === "true" }))}><option value="true">true</option><option value="false">false</option></select> : <input type={input.type === "number" ? "number" : "text"} value={String(testValues[input.name] ?? "")} onChange={(event) => setTestValues((current) => ({ ...current, [input.name]: input.type === "number" ? Number(event.target.value) : event.target.value }))} />}</label>)}</div></div>}<textarea value={draft} onChange={(event) => { setDraft(event.target.value); setOutput(null); }} spellCheck={false} aria-label="Editable Zap example" /><div className="playground-run"><button className="button-primary" onClick={runExample} type="button"><Play size={14} /> Run code</button><span>Browser preview · not the native runtime</span></div>{output && <pre className="playground-output"><code>{output.length ? output.join("\n") : "No output produced."}</code></pre>}</div>}</div>;
 }
 
 function DocsPage() {
