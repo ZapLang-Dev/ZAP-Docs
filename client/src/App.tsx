@@ -147,6 +147,7 @@ function extractTestInputs(code: string) {
 
 function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
   const values: Record<string, unknown> = {};
+  const functions: Record<string, { params: string[]; body: string[] }> = {};
   const output: string[] = [];
   const evaluate = (expression: string): unknown => {
     const value = expression.trim();
@@ -170,6 +171,16 @@ function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
       }
     }
     if (value in values) return values[value];
+    const call = value.match(/^([A-Za-z_][\w]*)\((.*)\)$/);
+    if (call && functions[call[1]]) {
+      const args = call[2].trim() ? call[2].split(/\s*,\s*/).map((part) => evaluate(part)) : [];
+      const previous: Record<string, unknown> = {};
+      functions[call[1]].params.forEach((param, position) => { previous[param] = values[param]; values[param] = args[position]; });
+      const returnLine = functions[call[1]].body.find((line) => line.startsWith("return "));
+      const result = returnLine ? evaluate(returnLine.slice(7)) : "none";
+      functions[call[1]].params.forEach((param) => { if (previous[param] === undefined) delete values[param]; else values[param] = previous[param]; });
+      return result;
+    }
     const arithmetic = value.match(/^(.+?)\s*([+\-*/%])\s*(.+)$/);
     if (arithmetic) {
       const left = evaluate(arithmetic[1]);
@@ -205,6 +216,14 @@ function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
       else if (argument.startsWith("test")) output.push("Test preview complete · no test failures reported");
       else if (argument.startsWith("init")) output.push("Project scaffold preview created");
       else output.push(`Command preview · would run: zap ${argument}`);
+      continue;
+    }
+    const functionDeclaration = trimmed.match(/^fn\s+([A-Za-z_][\w]*)\((.*?)\)(?:\s*->\s*[^:]+)?\s*:/);
+    if (functionDeclaration) {
+      let bodyEnd = index + 1;
+      while (bodyEnd < lines.length && /^\s+/.test(lines[bodyEnd]) && lines[bodyEnd].trim()) bodyEnd += 1;
+      functions[functionDeclaration[1]] = { params: functionDeclaration[2].split(/\s*,\s*/).filter(Boolean).map((param) => param.split(":")[0].trim()), body: lines.slice(index + 1, bodyEnd).map((line) => line.trim()) };
+      index = bodyEnd - 1;
       continue;
     }
     const declaration = trimmed.match(/^let\s+([A-Za-z_][\w]*)\s*(?::[^=]+)?=\s*(.+)$/);

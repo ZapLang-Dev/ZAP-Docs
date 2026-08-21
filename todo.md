@@ -1,7 +1,7 @@
-# Playground output cleanup checklist
+# Function-call playground fix checklist
 
-- [x] Locate every unsupported-syntax preview-note output path.
-- [x] Stop emitting repeated preview notes for skipped lines.
-- [x] Preserve real output and the editable code textarea.
-- [x] Validate edited examples and empty-output behavior on desktop and mobile.
+- [x] Diagnose why user-defined calls such as `add(4, 6)` are not evaluated.
+- [x] Register simple `fn` definitions with parameters and return expressions.
+- [x] Evaluate function calls with literals, variables, and arithmetic.
+- [x] Validate function examples and preserve existing playground behavior.
 - [ ] Save a publish-ready checkpoint after verification.
