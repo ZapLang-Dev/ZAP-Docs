@@ -1,7 +1,7 @@
-# Homepage and footer redesign checklist
+# GitHub link update checklist
 
-- [x] Define the refreshed homepage layout, interaction flow, and footer content.
-- [x] Implement the updated hero, card grid, and code-band UI on the homepage.
-- [x] Add a comprehensive branded footer with navigation, release, and community links.
-- [x] Validate the responsive homepage and footer layout across desktop and mobile.
-- [ ] Save a publish-ready checkpoint after verification.
+- [x] Locate every user-facing GitHub link in the site.
+- [x] Replace documentation-repository links with https://github.com/hidecard/zap.
+- [x] Preserve official release, changelog, and asset links.
+- [x] Verify the header and footer links in preview.
+- [ ] Save a publish-ready checkpoint.
