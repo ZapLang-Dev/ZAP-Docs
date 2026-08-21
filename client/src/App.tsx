@@ -1,7 +1,7 @@
 // Voltage Editorial design: navigation-first layout, navy ink, Zap cyan, amber wayfinding, and DM Mono metadata.
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ArrowUpRight, BookOpen, ChevronRight, Command, Menu, Search, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Search, X } from "lucide-react";
 
 const logoSrc = "/manus-storage/zap-logo_dbceddfd.jpg";
 const heroTexture = "/manus-storage/zap-hero-field_fa9e733f.png";
@@ -119,6 +119,35 @@ function renderBody(text: string) {
   });
 }
 
+function highlightZap(code: string) {
+  const tokenPattern = /(#[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:let|fn|if|else|for|in|while|break|continue|return|class|extends|new|module|import|as|export|async|await|try|catch|raise|and|or|not)\b|\b(?:text|number|bool|list|map|none|any|Result|Option|result|option)\b|\b(?:true|false)\b|\b\d+(?:\.\d+)?\b)/g;
+  return code.split(tokenPattern).map((part, index) => {
+    if (!part) return null;
+    let className = "";
+    if (part.startsWith("#")) className = "zap-comment";
+    else if (part.startsWith("\"") || part.startsWith("'")) className = "zap-string";
+    else if (/^\d/.test(part)) className = "zap-number";
+    else if (/^(true|false)$/.test(part)) className = "zap-bool";
+    else if (/^(text|number|bool|list|map|none|any|Result|Option|result|option)$/.test(part)) className = "zap-type";
+    else if (/^(let|fn|if|else|for|in|while|break|continue|return|class|extends|new|module|import|as|export|async|await|try|catch|raise|and|or|not)$/.test(part)) className = "zap-keyword";
+    return className ? <span key={part + "-" + index} className={className}>{part}</span> : <span key={part + "-" + index}>{part}</span>;
+  });
+}
+
+function CodeBlock({ code }: { code: string }) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+  return <div className="inline-code"><div className="inline-code-top"><span className="code-label">ZAP</span><button className="copy-code" onClick={handleCopy} type="button" aria-label={copied ? "Code copied" : "Copy code"}>{copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}</button></div><pre><code>{highlightZap(code)}</code></pre></div>;
+}
+
 function DocsPage() {
   const [location] = useLocation();
   const slug = location.split("/")[2] || "introduction";
@@ -153,7 +182,7 @@ function DocsPage() {
     ecosystem: { intro: "The Zap ecosystem includes the official CLI, the VS Code extension, and a growing collection of community libraries and templates.", blocks: [["Editor support", "The official Zap Language Support extension provides syntax highlighting, snippets, diagnostics, and LSP integration. Install it in VS Code, then open a .zp file to confirm the language mode activates.", "code --install-extension ArkarYan.zap-language-support"], ["Registry and packages", "Zap P2 provides deterministic registry resolution with exact and compatible version ranges over HTTPS. Prefer a pinned version for reproducible builds and read the package's supported Zap range.", "zap install"], ["Community channels", "Use the Discord or Telegram communities to ask questions, share examples, and follow language development. When asking for help, include the Zap version and a minimal source file.", "https://discord.gg/j9DHdCtJE"], ["Practice", "Choose one small command-line tool, describe its inputs and outputs, then decide whether it belongs in one file, a module, or a reusable package. Document that decision for the next contributor."]] },
   };
   const content: Lesson = lessonContent[slug] ?? { intro: `${doc.title} is part of the Zap field guide. This page collects the concepts, examples, and decisions you need to move forward with confidence.`, blocks: [["Keep it practical", "Read one concept, try one example, then use the adjacent pages to deepen your understanding."], ["Follow the route", "The sidebar keeps related topics close so you always have a clear next step."]] };
-  return <div className="docs-page"><div className="docs-breadcrumb"><span>DOCS</span><ChevronRight size={14} /><span>{doc.section.toUpperCase()}</span><ChevronRight size={14} /><strong>{doc.title}</strong></div><div className="doc-title-row"><div><span className="eyebrow">{doc.section} / {String(allDocs.indexOf(doc) + 1).padStart(2, "0")}</span><h1>{doc.title}</h1></div><span className="read-time">6 min read · v2.1.0 syntax</span></div><p className="doc-intro">{content.intro}</p><div className="doc-rule" />{content.blocks.map(([title, body, code], index) => <section className="doc-section" key={title}><span className="doc-number">0{index + 1}</span><div><h2>{title}</h2><p>{renderBody(body)}</p>{code && <div className="inline-code"><span className="code-label">ZAP</span><code>{code}</code></div>}</div></section>)}<div className="doc-nav">{prev ? <Link href={`/docs/${prev.slug}`}><small>PREVIOUS</small><span>← {prev.title}</span></Link> : <span />}{next ? <Link href={`/docs/${next.slug}`}><small>NEXT</small><span>{next.title} →</span></Link> : <span />}</div></div>;
+  return <div className="docs-page"><div className="docs-breadcrumb"><span>DOCS</span><ChevronRight size={14} /><span>{doc.section.toUpperCase()}</span><ChevronRight size={14} /><strong>{doc.title}</strong></div><div className="doc-title-row"><div><span className="eyebrow">{doc.section} / {String(allDocs.indexOf(doc) + 1).padStart(2, "0")}</span><h1>{doc.title}</h1></div><span className="read-time">6 min read · v2.1.0 syntax</span></div><p className="doc-intro">{content.intro}</p><div className="doc-rule" />{content.blocks.map(([title, body, code], index) => <section className="doc-section" key={title}><span className="doc-number">0{index + 1}</span><div><h2>{title}</h2><p>{renderBody(body)}</p>{code && <CodeBlock code={code} />}</div></section>)}<div className="doc-nav">{prev ? <Link href={`/docs/${prev.slug}`}><small>PREVIOUS</small><span>← {prev.title}</span></Link> : <span />}{next ? <Link href={`/docs/${next.slug}`}><small>NEXT</small><span>{next.title} →</span></Link> : <span />}</div></div>;
 }
 
 function DocsLayout({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => void }) {

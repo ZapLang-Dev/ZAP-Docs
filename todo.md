@@ -1,8 +1,7 @@
-# Detailed lesson content checklist
+# Code example enhancement checklist
 
-- [x] Define a reusable detailed lesson structure with overview, syntax, accepted forms, examples, mistakes, and practice.
-- [x] Expand Getting Started and core language lessons, including variables and data types.
-- [x] Expand control flow, functions, classes, modules, and error-handling lessons.
-- [x] Expand standard-library, JSON, HTTP, filesystem, testing, roadmap, and ecosystem lessons.
-- [x] Validate representative detailed lessons on desktop and mobile.
+- [x] Inspect the current code-block renderer and define Zap token categories.
+- [x] Add syntax highlighting for comments, strings, numbers, keywords, types, and built-ins.
+- [x] Add copy buttons with copied-state feedback and keyboard accessibility.
+- [x] Validate highlighted examples and copy controls on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.
