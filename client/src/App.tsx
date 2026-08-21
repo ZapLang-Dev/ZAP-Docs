@@ -1,7 +1,8 @@
 // Voltage Editorial design: navigation-first layout, navy ink, Zap cyan, amber wayfinding, and DM Mono metadata.
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Play, RotateCcw, Search, X } from "lucide-react";
+import { useTheme } from "./contexts/ThemeContext";
+import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Moon, Play, RotateCcw, Search, Sun, X } from "lucide-react";
 
 const logoSrc = "/manus-storage/zap-logo_dbceddfd.jpg";
 const heroTexture = "/manus-storage/zap-hero-field_fa9e733f.png";
@@ -80,6 +81,7 @@ const searchDocs = allDocs.map((doc) => {
 
 function Header({ onMenu }: { onMenu: () => void }) {
   const [, navigate] = useLocation();
+  const { theme, toggleTheme } = useTheme();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [sectionFilter, setSectionFilter] = useState("All sections");
@@ -123,6 +125,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
         <Link href="/docs/introduction">Introduction</Link><Link href="/docs/syntax">Syntax Basics</Link><Link href="/docs/built-ins">Standard Library</Link><Link href="/docs/roadmap">Roadmap</Link>
       </nav>
       <div className="header-actions">
+        <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"} title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}>{theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}<span className="theme-toggle-label">{theme === "dark" ? "Light" : "Dark"}</span></button>
         <button className="search-trigger" onClick={() => setSearchOpen((open) => !open)} aria-label="Search documentation" aria-expanded={searchOpen}><Search size={16} /><span>Search docs</span><kbd><Command size={11} /> K</kbd></button>
         <a className="github-link" href="https://github.com/hidecard/zap" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a>
       </div>

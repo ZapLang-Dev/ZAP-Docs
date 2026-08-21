@@ -60,3 +60,13 @@
 - [x] Result ranking နှင့် empty state ကို ပြင်ဆင်ရန်။
 - [x] Ctrl/Cmd+K၊ Escape၊ keyboard navigation နှင့် mobile layout စစ်ဆေးရန်။
 - [ ] Advanced search checkpoint အသစ် သိမ်းရန်။
+
+## Dark Mode reading theme
+
+- [x] လက်ရှိ global theme tokens နှင့် header action layout ကို စစ်ဆေးရန်။
+- [x] Dark background၊ text၊ muted text၊ borders၊ cards၊ code blocks နှင့် cyan/amber accents အတွက် contrast palette သတ်မှတ်ရန်။
+- [x] Header Light/Dark toggle နှင့် accessible label ထည့်ရန်။
+- [x] Theme preference ကို localStorage ဖြင့် သိမ်းပြီး reload ပြီးနောက် ပြန်အသုံးပြုရန်။
+- [x] Homepage၊ lesson pages၊ sidebar၊ search panel၊ playground နှင့် quiz cards ကို dark theme ဖြင့် ပြည့်စုံစွာ style လုပ်ရန်။
+- [x] Reduced motion၊ keyboard focus၊ mobile layout နှင့် build/preview ကို စစ်ဆေးရန်။
+- [ ] Dark Mode checkpoint အသစ် သိမ်းရန်။
