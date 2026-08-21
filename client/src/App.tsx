@@ -258,8 +258,7 @@ function runZapPreview(code: string, overrides: Record<string, unknown> = {}) {
       index = bodyEnd - 1;
       continue;
     }
-    if (/^(fn|class|module|import|export|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
-    else output.push(`Preview note · recognized line: ${trimmed}`);
+    continue;
   }
   if (!output.length) output.push("Preview completed · no console output in this snippet.");
   return output;

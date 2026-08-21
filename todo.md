@@ -1,7 +1,7 @@
-# Arithmetic playground fix checklist
+# Playground output cleanup checklist
 
-- [x] Diagnose why `count + 1` and related expressions produce preview notes.
-- [x] Add numeric arithmetic evaluation for common Zap operators.
-- [x] Support loop updates and output for simple while examples.
-- [x] Validate the corrected output and test-case panel on desktop and mobile.
+- [x] Locate every unsupported-syntax preview-note output path.
+- [x] Stop emitting repeated preview notes for skipped lines.
+- [x] Preserve real output and the editable code textarea.
+- [x] Validate edited examples and empty-output behavior on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.
