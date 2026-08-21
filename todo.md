@@ -1,7 +1,6 @@
-# GitHub link update checklist
+# Route card overlap fix checklist
 
-- [x] Locate every user-facing GitHub link in the site.
-- [x] Replace documentation-repository links with https://github.com/hidecard/zap.
-- [x] Preserve official release, changelog, and asset links.
-- [x] Verify the header and footer links in preview.
-- [ ] Save a publish-ready checkpoint.
+- [x] Identify the desktop and mobile layout rules causing the route cards to overlap.
+- [x] Apply stable grid rows, gaps, and card height behavior.
+- [x] Validate the route section at desktop and phone widths.
+- [ ] Save a publish-ready checkpoint after verification.
