@@ -112,3 +112,11 @@
 - [x] Existing Core/Native diagrams နှင့် trace mode ကို ချိတ်ရန်။
 - [x] Reduced-motion fallback၊ keyboard controls၊ dark mode နှင့် mobile layout စစ်ဆေးရန်။
 - [ ] Animated trace checkpoint အသစ် သိမ်းရန်။
+
+## Trace detail panels and deep links
+
+- [x] Core/Native trace stage တစ်ခုချင်းစီအတွက် official-style code snippet၊ diagnostic၊ explanation နှင့် lesson anchor သတ်မှတ်ရန်။
+- [x] Active stage card ကို click/keyboard ဖြင့် ရွေးနိုင်ပြီး သက်ဆိုင်ရာ lesson section သို့ scroll လုပ်ရန်။
+- [x] Selected stage အောက်တွင် code block၊ diagnostic panel၊ copy/run action နှင့် Burmese/English text ထည့်ရန်။
+- [x] Section anchors၊ focus management၊ mobile layout၊ dark mode နှင့် reduced-motion behavior စစ်ဆေးရန်။
+- [ ] Trace detail feature checkpoint အသစ် သိမ်းရန်။

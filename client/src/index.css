@@ -283,3 +283,15 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .diagram-step.is-active { border-color: #82d7e3; background: rgba(22,77,91,.94); box-shadow: 0 0 0 3px rgba(130,215,227,.16), 0 12px 24px rgba(0,0,0,.24); }
 @media (max-width: 720px) { .trace-status { width: 100%; margin-left: 0; margin-top: .15rem; } .trace-controls button { min-height: 2.25rem; } }
 @media (prefers-reduced-motion: reduce) { .trace-controls button, .diagram-step, .trace-progress span { transition: none; } }
+
+/* Trace detail panel: the selected stage carries one concrete snippet and one diagnostic cue. */
+.diagram-step { border: 0; text-align: left; cursor: pointer; font: inherit; }
+.diagram-step:focus-visible { outline: 2px solid #0b9db3; outline-offset: 3px; }
+.trace-detail { display: grid; grid-template-columns: minmax(12rem, .75fr) minmax(0, 1.25fr); gap: .9rem; margin-top: 1rem; padding: .85rem; border: 1px solid rgba(16,42,67,.14); background: rgba(255,255,255,.72); }
+.trace-detail-copy { display: flex; flex-direction: column; justify-content: center; gap: .45rem; }
+.trace-detail-copy strong { color: var(--foreground); font-size: .94rem; line-height: 1.5; }
+.trace-detail-copy small { color: #9a6812; font: 700 .72rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.trace-detail .inline-code { margin: 0; }
+.dark .trace-detail { border-color: rgba(130,215,227,.22); background: rgba(10,35,52,.78); }
+.dark .trace-detail-copy small { color: #f2c76b; }
+@media (max-width: 720px) { .trace-detail { grid-template-columns: 1fr; } }
