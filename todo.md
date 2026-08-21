@@ -96,3 +96,11 @@
 - [x] ကျန် lesson တစ်ခုချင်းစီအတွက် English/Burmese objective၊ explanation၊ syntax၊ examples၊ mistakes၊ exercises၊ quizzes နှင့် official source mapping ထည့်ရန်။
 - [x] Search metadata၊ sidebar counts၊ previous/next navigation၊ language toggle၊ dark mode နှင့် mobile reading ကို ပြန်လည်စစ်ဆေးရန်။
 - [ ] Remaining lesson expansion checkpoint အသစ် သိမ်းရန်။
+
+## Core Specification & Native Runtime visualizations
+
+- [x] Core Specification အတွက် source → parser → checker → runtime → CLI/LSP flow diagram ပြင်ဆင်ရန်။
+- [x] Native Runtime အတွက် source → executable → OS/process/filesystem → output/error architecture diagram ပြင်ဆင်ရန်။
+- [x] English/Burmese labels၊ legend၊ step-by-step explanation နှင့် accessible text alternative ထည့်ရန်။
+- [x] Dark mode၊ mobile horizontal scrolling/stacking၊ keyboard focus နှင့် reduced-motion behavior စစ်ဆေးရန်။
+- [ ] Diagram visualizations checkpoint အသစ် သိမ်းရန်။

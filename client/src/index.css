@@ -245,3 +245,24 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .quiz-options button:hover { border-color:var(--cyan); background:#1b3e4e; }
 .dark .doc-section h2,.dark .section-lead h2,.dark .code-band h2,.dark .launch-card h3 { color:var(--ink); }
 @media (max-width:900px) { .theme-toggle-label { display:none; } .theme-toggle { width:38px; justify-content:center; padding:0; } }
+
+/* Voltage Editorial visual guide: compact, high-contrast flow diagrams for Core Specification and Native Runtime lessons. */
+.concept-diagram { margin: 2rem 0 2.5rem; padding: 1.25rem; border: 1px solid rgba(16, 42, 67, .16); background: linear-gradient(135deg, rgba(232, 249, 250, .92), rgba(255, 251, 239, .92)); box-shadow: 0 14px 28px rgba(16, 42, 67, .08); }
+.concept-diagram-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.concept-diagram-head h2 { margin: .35rem 0 .4rem; font-size: clamp(1.15rem, 2vw, 1.55rem); letter-spacing: -.035em; }
+.concept-diagram-head p { max-width: 44rem; margin: 0; color: var(--muted-foreground); line-height: 1.65; }
+.diagram-badge { flex: 0 0 auto; padding: .35rem .55rem; border: 1px solid rgba(230, 164, 45, .5); color: #9a6812; font-size: .64rem; font-weight: 800; letter-spacing: .16em; }
+.diagram-flow { display: flex; align-items: stretch; gap: .45rem; margin-top: 1.2rem; overflow-x: auto; padding-bottom: .35rem; }
+.diagram-step-wrap { display: flex; align-items: center; gap: .45rem; min-width: 0; }
+.diagram-step { width: 9.4rem; min-height: 7rem; padding: .75rem; border: 1px solid rgba(16, 42, 67, .14); background: rgba(255,255,255,.84); display: flex; flex-direction: column; gap: .4rem; }
+.diagram-number { color: #d28c16; font: 700 .72rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; }
+.diagram-step strong { color: var(--foreground); font-size: .9rem; }
+.diagram-step small { color: var(--muted-foreground); line-height: 1.45; }
+.diagram-arrow { color: #0b9db3; font-size: 1.2rem; font-weight: 700; }
+.concept-diagram figcaption { margin-top: .9rem; color: var(--muted-foreground); font-size: .78rem; line-height: 1.55; }
+.dark .concept-diagram { border-color: rgba(130, 215, 227, .22); background: linear-gradient(135deg, rgba(9, 28, 45, .96), rgba(32, 32, 30, .96)); box-shadow: 0 18px 34px rgba(0,0,0,.22); }
+.dark .diagram-badge { color: #f2c76b; border-color: rgba(242, 199, 107, .5); }
+.dark .diagram-step { border-color: rgba(130, 215, 227, .2); background: rgba(16, 43, 62, .9); }
+.dark .diagram-step strong { color: #f4fbfd; }
+@media (max-width: 720px) { .concept-diagram { margin-left: -.2rem; margin-right: -.2rem; padding: 1rem; } .concept-diagram-head { display: block; } .diagram-badge { display: inline-block; margin-top: .75rem; } .diagram-flow { flex-direction: column; overflow-x: visible; } .diagram-step-wrap { display: grid; grid-template-columns: 1fr; gap: .25rem; } .diagram-step { width: auto; min-height: 0; } .diagram-arrow { display: block; transform: rotate(90deg); width: 1rem; margin: 0 auto; } }
+@media (prefers-reduced-motion: reduce) { .concept-diagram *, .concept-diagram { scroll-behavior: auto; transition: none !important; } }
