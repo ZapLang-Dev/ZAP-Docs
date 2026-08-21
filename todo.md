@@ -79,3 +79,11 @@
 - [x] ကျန် subtopics တစ်ခုချင်းစီအတွက် Burmese/English objective၊ syntax၊ examples၊ output၊ mistakes၊ exercises၊ quizzes နှင့် source links ပြင်ဆင်ရန်။
 - [x] Lesson counts၊ search metadata၊ previous/next navigation၊ dark mode နှင့် mobile UX ကို gap additions အပြီး ပြန်လည်စစ်ဆေးရန်။
 - [ ] Remaining lesson expansion checkpoint အသစ် သိမ်းရန်။
+
+## New lessons Burmese full translation
+
+- [x] Trusted Registry၊ Release Archive၊ PDF Workflow၊ Resource Limits၊ Cross-platform၊ Parity Matrix၊ Replay နှင့် Planning & Progress အတွက် official Burmese source content ကို စစ်ဆေးရန်။
+- [x] Lesson တစ်ခုချင်းစီတွင် မြန်မာ objective၊ terminology၊ explanation၊ syntax/reference၊ examples၊ expected behavior၊ mistakes၊ exercise နှင့် quiz ထည့်ရန်။
+- [x] အသစ်ထည့် lesson တစ်ခုချင်းစီ၏ Burmese official source link ကို မှန်ကန်စွာ ချိတ်ရန်။
+- [x] Burmese toggle၊ source link၊ dark mode၊ advanced search၊ previous/next navigation နှင့် mobile reading ကို ပြန်လည်စစ်ဆေးရန်။
+- [ ] Burmese full-translation checkpoint အသစ် သိမ်းရန်။
