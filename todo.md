@@ -1,7 +1,7 @@
-# Documentation content checklist
+# Search feature checklist
 
-- [x] Define a consistent lesson schema for title, introduction, concepts, examples, and next steps.
-- [x] Replace placeholder content across the existing Zap documentation routes with actual lessons.
-- [x] Add practical Zap code examples and explanatory sections for each lesson.
-- [x] Validate desktop and mobile reading layouts across representative routes.
+- [x] Define searchable lesson metadata and matching behavior.
+- [x] Add a keyboard-friendly search dialog with result previews.
+- [x] Navigate to the selected lesson and preserve the active documentation state.
+- [x] Validate desktop, mobile, keyboard shortcut, empty-state, and result flows.
 - [ ] Save a publish-ready checkpoint after verification.

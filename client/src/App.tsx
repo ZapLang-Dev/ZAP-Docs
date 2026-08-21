@@ -1,5 +1,5 @@
 // Voltage Editorial design: navigation-first layout, navy ink, Zap cyan, amber wayfinding, and DM Mono metadata.
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ArrowUpRight, BookOpen, ChevronRight, Command, Menu, Search, X } from "lucide-react";
 
@@ -16,12 +16,47 @@ const sections = [
 ];
 
 const allDocs = sections.flatMap((section) => section.items.map(([title, slug]) => ({ title, slug, section: section.label })));
+const searchMeta: Record<string, string> = {
+  introduction: "beginner guide language overview learning path",
+  installation: "install cli setup version doctor toolchain",
+  "quick-start": "hello world first program run command tutorial",
+  syntax: "variables values expressions braces types",
+  "control-flow": "if else for loops decisions repetition conditions",
+  functions: "fn parameters return composition reuse",
+  types: "strings integers floats booleans arrays optional values",
+  classes: "state behavior constructor invariants objects",
+  modules: "imports exports public api files organization",
+  "built-ins": "standard library print inspect collections map filter reduce",
+  "data-json": "json decode encode payload response api data",
+  http: "http client requests headers timeout status api",
+  filesystem: "files read write paths configuration storage",
+  contributing: "issues pull requests tests community development",
+  roadmap: "milestones priorities diagnostics tooling future",
+  ecosystem: "libraries packages editor templates integrations tools",
+};
+const searchDocs = allDocs.map((doc) => ({ ...doc, searchText: `${doc.title} ${doc.section} ${searchMeta[doc.slug] ?? ""}` }));
 
 function Header({ onMenu }: { onMenu: () => void }) {
   const [, navigate] = useLocation();
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const results = useMemo(() => query ? allDocs.filter((doc) => `${doc.title} ${doc.section}`.toLowerCase().includes(query.toLowerCase())) : [], [query]);
+  const normalizedQuery = query.trim().toLowerCase();
+  const results = useMemo(() => normalizedQuery ? searchDocs.filter((doc) => doc.searchText.toLowerCase().includes(normalizedQuery)) : [], [normalizedQuery]);
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setSearchOpen(true);
+      }
+      if (event.key === "Escape") {
+        setSearchOpen(false);
+        setQuery("");
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+  const selectResult = (slug: string) => { navigate(`/docs/${slug}`); setSearchOpen(false); setQuery(""); };
   return <header className="site-header">
     <div className="header-inner">
       <button className="mobile-menu" onClick={onMenu} aria-label="Open navigation"><Menu size={20} /></button>
@@ -33,10 +68,10 @@ function Header({ onMenu }: { onMenu: () => void }) {
         <Link href="/docs/introduction">Introduction</Link><Link href="/docs/syntax">Syntax Basics</Link><Link href="/docs/built-ins">Standard Library</Link><Link href="/docs/roadmap">Roadmap</Link>
       </nav>
       <div className="header-actions">
-        <button className="search-trigger" onClick={() => setSearchOpen((open) => !open)}><Search size={16} /><span>Search docs</span><kbd><Command size={11} /> K</kbd></button>
+        <button className="search-trigger" onClick={() => setSearchOpen((open) => !open)} aria-label="Search documentation" aria-expanded={searchOpen}><Search size={16} /><span>Search docs</span><kbd><Command size={11} /> K</kbd></button>
         <a className="github-link" href="https://github.com/hidecard/ZAP-Docs" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a>
       </div>
-      {searchOpen && <><div className="search-backdrop" onClick={() => setSearchOpen(false)} /><div className="search-panel"><div className="search-panel-head"><Search size={17} /><input autoFocus placeholder="Search the Zap docs" value={query} onChange={(e) => setQuery(e.target.value)} /><button onClick={() => setSearchOpen(false)} aria-label="Close search"><X size={17} /></button></div>{query ? <div className="search-results">{results.length ? results.map((doc) => <button key={doc.slug} onClick={() => { navigate(`/docs/${doc.slug}`); setSearchOpen(false); setQuery(""); }}><span>{doc.title}</span><small>{doc.section}</small></button>) : <p>No matching pages.</p>}</div> : <p className="search-hint">Search by page title or topic.</p>}</div></>}
+      {searchOpen && <><div className="search-backdrop" onClick={() => setSearchOpen(false)} /><div className="search-panel"><div className="search-panel-head"><Search size={17} /><input autoFocus placeholder="Search titles, topics, or keywords" value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && results[0]) selectResult(results[0].slug); }} /><button onClick={() => { setSearchOpen(false); setQuery(""); }} aria-label="Close search"><X size={17} /></button></div>{query ? <div className="search-results">{results.length ? results.map((doc) => <button key={doc.slug} onClick={() => selectResult(doc.slug)}><span><strong>{doc.title}</strong><small>{doc.section} · {searchMeta[doc.slug]}</small></span><ChevronRight size={15} /></button>) : <p>No matching pages. Try a title, concept, or command.</p>}</div> : <p className="search-hint">Search titles, topics, code concepts, or commands.</p>}</div></>}
     </div>
   </header>;
 }

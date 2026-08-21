@@ -32,9 +32,11 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .search-panel-head input { border:0; outline:0; flex:1; color:var(--ink); font-size:13px; }
 .search-panel-head button { border:0; background:none; color:#8c9aa3; display:grid; place-items:center; }
 .search-hint,.search-results p { margin:0; padding:17px; color:#788995; font-size:12px; }
-.search-results button { border:0; background:white; width:100%; padding:12px 17px; display:flex; justify-content:space-between; text-align:left; color:var(--ink); font-size:12px; }
+.search-results button { border:0; background:white; width:100%; padding:12px 17px; display:flex; align-items:center; justify-content:space-between; gap:14px; text-align:left; color:var(--ink); font-size:12px; }
+.search-results button > span { min-width:0; display:flex; flex-direction:column; gap:4px; }
 .search-results button:hover { background:var(--paper); }
-.search-results small { color:#93a0aa; font:10px var(--mono); }
+.search-results strong { font-weight:800; }
+.search-results small { overflow:hidden; color:#93a0aa; font:10px var(--mono); text-overflow:ellipsis; white-space:nowrap; }
 .hero { min-height:598px; background-size:cover; background-position:center; border-bottom:1px solid rgba(11,32,56,.09); }
 .hero-inner { max-width:1440px; margin:auto; min-height:598px; padding:58px 90px 42px; position:relative; }
 .hero-kicker,.eyebrow,.kicker-code,.code-label { font:500 10px var(--mono); letter-spacing:.14em; text-transform:uppercase; }
