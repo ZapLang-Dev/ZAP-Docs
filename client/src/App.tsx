@@ -144,6 +144,20 @@ function runZapPreview(code: string) {
     if (value === "false") return false;
     if (value === "none") return "none";
     if (/^-?\d+(?:\.\d+)?$/.test(value)) return Number(value);
+    const comparison = value.match(/^(.+?)\s*(===|==|!=|>=|<=|>|<)\s*(.+)$/);
+    if (comparison) {
+      const left = evaluate(comparison[1]);
+      const right = evaluate(comparison[3]);
+      switch (comparison[2]) {
+        case "===":
+        case "==": return left === right;
+        case "!=": return left !== right;
+        case ">=": return Number(left) >= Number(right);
+        case "<=": return Number(left) <= Number(right);
+        case ">": return Number(left) > Number(right);
+        case "<": return Number(left) < Number(right);
+      }
+    }
     if (value in values) return values[value];
     if (value.includes(" + ")) return value.split(" + ").map((part) => evaluate(part)).join("");
     if (value.startsWith("[") || value.startsWith("{")) {
@@ -179,15 +193,29 @@ function runZapPreview(code: string) {
       if (body?.startsWith("say ")) (Array.isArray(items) ? items : [items]).forEach((item) => { values[loop[1]] = item; output.push(format(evaluate(body.slice(4)))); });
       continue;
     }
-    const condition = trimmed.match(/^if\s+(.+):$/);
-    if (condition) {
-      const body = lines[index + 1]?.trim();
-      if (evaluate(condition[1]) === true && body?.startsWith("say ")) output.push(format(evaluate(body.slice(4))));
+    if (/^(if|else if|else)\b/.test(trimmed)) {
+      let cursor = index;
+      let selected = false;
+      while (cursor < lines.length) {
+        const header = lines[cursor].trim();
+        const ifMatch = header.match(/^if\s+(.+):$/);
+        const elseIfMatch = header.match(/^else if\s+(.+):$/);
+        const isElse = header === "else:";
+        if (cursor !== index && !elseIfMatch && !isElse) break;
+        const shouldRun = isElse ? !selected : Boolean(evaluate((ifMatch || elseIfMatch)?.[1] || "false"));
+        const body = lines[cursor + 1]?.trim();
+        if (shouldRun && !selected) {
+          selected = true;
+          if (body?.startsWith("say ")) output.push(format(evaluate(body.slice(4))));
+        }
+        cursor += 2;
+      }
+      index = cursor - 1;
       continue;
     }
     const say = trimmed.match(/^say\s+(.+)$/);
     if (say) { output.push(format(evaluate(say[1]))); continue; }
-    if (/^(fn|class|module|import|export|else|while|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
+    if (/^(fn|class|module|import|export|while|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
     else output.push(`Preview note · recognized line: ${trimmed}`);
   }
   if (!output.length) output.push("Preview completed · no console output in this snippet.");
