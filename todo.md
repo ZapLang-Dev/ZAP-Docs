@@ -128,3 +128,11 @@
 - [x] Text/background contrast နှင့် image overlay ကို dark mode တွင် ပြင်ရန်။
 - [x] Header toggle persistence၊ desktop/mobile home preview နှင့် production build စစ်ဆေးရန်။
 - [ ] Homepage Dark Mode fix checkpoint အသစ် သိမ်းရန်။
+
+## All-lessons Burmese coverage fix
+
+- [x] AllDocs နှင့် Burmese lesson content key များကို တိုက်ဆိုင်စစ်ဆေးရန်။
+- [x] Burmese content မရှိသော route များအတွက် မြန်မာ intro၊ blocks၊ examples၊ objective၊ mistakes၊ exercise နှင့် quiz fallback ထည့်ရန်။
+- [x] Burmese source map နှင့် official links များကို route အားလုံးအတွက် မှန်ကန်စွာ ချိတ်ရန်။
+- [x] Language toggle၊ search result၊ trace detail၊ playground၊ dark mode နှင့် mobile Burmese rendering စစ်ဆေးရန်။
+- [ ] All-lessons Burmese fix checkpoint အသစ် သိမ်းရန်။
