@@ -87,3 +87,12 @@
 - [x] အသစ်ထည့် lesson တစ်ခုချင်းစီ၏ Burmese official source link ကို မှန်ကန်စွာ ချိတ်ရန်။
 - [x] Burmese toggle၊ source link၊ dark mode၊ advanced search၊ previous/next navigation နှင့် mobile reading ကို ပြန်လည်စစ်ဆေးရန်။
 - [ ] Burmese full-translation checkpoint အသစ် သိမ်းရန်။
+
+## Further remaining lesson audit
+
+- [x] Current route coverage နှင့် official Docs filenames ကို ထပ်မံတိုက်ဆိုင်စစ်ဆေးရန်။
+- [x] Language/reference၊ standard library၊ async/runtime၊ package/registry၊ release/archive နှင့် contributor docs အတွင်း မပါသေးသော subtopics များကို စာရင်းပြုစုရန်။
+- [x] ကျန် topics များကို learner lesson၊ technical reference၊ release archive နှင့် contributor workflow အဖြစ် ခွဲခြားရန်။
+- [x] ကျန် lesson တစ်ခုချင်းစီအတွက် English/Burmese objective၊ explanation၊ syntax၊ examples၊ mistakes၊ exercises၊ quizzes နှင့် official source mapping ထည့်ရန်။
+- [x] Search metadata၊ sidebar counts၊ previous/next navigation၊ language toggle၊ dark mode နှင့် mobile reading ကို ပြန်လည်စစ်ဆေးရန်။
+- [ ] Remaining lesson expansion checkpoint အသစ် သိမ်းရန်။
