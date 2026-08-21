@@ -167,3 +167,10 @@
 - [x] မပြည့်စုံသော lesson များအတွက် မြန်မာ intro၊ sections၊ examples၊ mistakes၊ practice နှင့် quiz ဖြည့်ရန်။
 - [x] Toggle၊ search၊ trace၊ playground၊ dark mode နှင့် mobile Burmese rendering စစ်ဆေးရန်။
 - [ ] Burmese translation completion checkpoint အသစ် သိမ်းရန်။
+
+## Push latest Burmese translation to GitHub
+
+- [ ] Local working tree နှင့် latest checkpoint commit ကို စစ်ဆေးရန်။
+- [ ] Burmese translation audit/report နှင့် source changes ကို commit လုပ်ရန်။
+- [ ] `manus-zap-docs` branch သို့ push လုပ်ရန်။
+- [ ] Remote SHA နှင့် GitHub branch link ကို အတည်ပြုရန်။
