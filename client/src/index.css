@@ -142,3 +142,35 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
   .doc-title-row { gap: 16px; flex-direction: column; }
   .language-toggle button { padding: 7px 10px; }
 }
+
+/* Voltage Editorial + tutorial layer: use cyan for active learning, navy for structure, amber for lesson indexing, and restrained cards for practice feedback. */
+.lesson-objective { display: flex; gap: 14px; align-items: flex-start; margin: 18px 0 20px; padding: 16px 18px; background: #e8f6f7; border-left: 3px solid #10a9bd; }
+.lesson-objective strong { display: block; color: #08243c; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+.lesson-objective p { margin: 5px 0 0; color: #3e5e6d; }
+.lesson-badge { display: inline-block; color: #bd6b1f; font-size: .64rem; font-weight: 900; letter-spacing: .14em; white-space: nowrap; }
+.syntax-table-wrap { margin: 18px 0 25px; border: 1px solid rgba(18, 61, 80, .12); background: rgba(255,255,255,.65); }
+.lesson-mini-heading { display: block; padding: 11px 14px 8px; color: #0c8292; font-size: .66rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.syntax-table { width: 100%; border-collapse: collapse; }
+.syntax-table th, .syntax-table td { padding: 10px 14px; border-top: 1px solid rgba(18, 61, 80, .09); text-align: left; font-size: .84rem; }
+.syntax-table th { width: 32%; color: #173a51; font-weight: 800; }
+.syntax-table td { color: #55707b; }
+.syntax-table code, .expected-output code { color: #087f91; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .82rem; }
+.lesson-output-row { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 18px; margin: 28px 0; }
+.expected-output, .lesson-mistakes { border: 1px solid rgba(18, 61, 80, .12); background: #f7fbfb; }
+.expected-output code { display: block; padding: 6px 14px 15px; white-space: pre-wrap; }
+.lesson-mistakes ul { margin: 0; padding: 0 18px 15px 32px; color: #5b6f77; font-size: .86rem; }
+.lesson-mistakes li + li { margin-top: 6px; }
+.practice-panel, .quiz-panel { margin: 20px 0; padding: 20px; border: 1px solid rgba(18, 61, 80, .12); background: linear-gradient(135deg, #f5fbfc, #fffdf8); }
+.practice-panel { display: flex; gap: 18px; }
+.practice-panel h2, .quiz-panel h2 { margin: 5px 0 8px; color: #09243c; font-size: 1.28rem; }
+.practice-panel p { margin: 0; color: #4c6975; }
+.practice-note { display: block; margin-top: 9px; color: #748890; font-size: .76rem; }
+.quiz-options { display: flex; flex-wrap: wrap; gap: 9px; }
+.quiz-options button { border: 1px solid rgba(18, 61, 80, .2); background: white; color: #234c5f; padding: 10px 13px; cursor: pointer; font: inherit; font-size: .82rem; transition: border-color 160ms ease, background 160ms ease, transform 160ms ease; }
+.quiz-options button:hover { border-color: #10a9bd; transform: translateY(-1px); }
+.quiz-options button.correct { border-color: #168d77; background: #e5f7ef; color: #126b59; }
+.quiz-options button.incorrect { border-color: #c56c54; background: #fff0eb; color: #a24d3c; }
+.quiz-feedback { margin: 13px 0 0; font-size: .85rem; }
+.correct-text { color: #14765f; }
+.incorrect-text { color: #a24d3c; }
+@media (max-width: 700px) { .lesson-output-row { grid-template-columns: 1fr; } .practice-panel { flex-direction: column; gap: 8px; } .syntax-table th, .syntax-table td { padding: 9px 10px; } }
