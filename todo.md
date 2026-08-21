@@ -1,7 +1,7 @@
-# Code example enhancement checklist
+# Interactive playground checklist
 
-- [x] Inspect the current code-block renderer and define Zap token categories.
-- [x] Add syntax highlighting for comments, strings, numbers, keywords, types, and built-ins.
-- [x] Add copy buttons with copied-state feedback and keyboard accessibility.
-- [x] Validate highlighted examples and copy controls on desktop and mobile.
+- [x] Define the lightweight browser-side execution boundary and safe fallback behavior.
+- [x] Add a Run example action beside Copy for every documentation code block.
+- [x] Add editable code, output feedback, reset behavior, and close controls.
+- [x] Validate playground interactions and responsive layout on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.

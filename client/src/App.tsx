@@ -1,7 +1,7 @@
 // Voltage Editorial design: navigation-first layout, navy ink, Zap cyan, amber wayfinding, and DM Mono metadata.
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Search, X } from "lucide-react";
+import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Play, RotateCcw, Search, X } from "lucide-react";
 
 const logoSrc = "/manus-storage/zap-logo_dbceddfd.jpg";
 const heroTexture = "/manus-storage/zap-hero-field_fa9e733f.png";
@@ -134,8 +134,40 @@ function highlightZap(code: string) {
   });
 }
 
+function runZapPreview(code: string) {
+  const values: Record<string, unknown> = {};
+  const output: string[] = [];
+  const evaluate = (expression: string): unknown => {
+    const value = expression.trim();
+    if ((value.startsWith("\"") && value.endsWith("\"")) || (value.startsWith("'") && value.endsWith("'"))) return value.slice(1, -1);
+    if (value === "true") return true;
+    if (value === "false") return false;
+    if (value === "none") return "none";
+    if (/^-?\d+(?:\.\d+)?$/.test(value)) return Number(value);
+    if (value in values) return values[value];
+    if (value.includes(" + ")) return value.split(" + ").map((part) => evaluate(part)).join("");
+    if (value.startsWith("[") || value.startsWith("{")) {
+      try { return JSON.parse(value.replace(/'/g, '"')); } catch { return value; }
+    }
+    return value;
+  };
+  code.split(/\n/).forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) return;
+    const declaration = trimmed.match(/^let\s+([A-Za-z_][\w]*)\s*(?::[^=]+)?=\s*(.+)$/);
+    if (declaration) { values[declaration[1]] = evaluate(declaration[2]); return; }
+    const say = trimmed.match(/^say\s+(.+)$/);
+    if (say) { output.push(String(evaluate(say[1]))); return; }
+    if (/^(fn|class|module|import|export|if|else|for|while|async|return)\b/.test(trimmed)) output.push("Preview note: this browser runner currently supports let, say, and simple values.");
+  });
+  return output;
+}
+
 function CodeBlock({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
+  const [playgroundOpen, setPlaygroundOpen] = useState(false);
+  const [draft, setDraft] = useState(code);
+  const [output, setOutput] = useState<string[] | null>(null);
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(code);
@@ -145,7 +177,9 @@ function CodeBlock({ code }: { code: string }) {
       setCopied(false);
     }
   };
-  return <div className="inline-code"><div className="inline-code-top"><span className="code-label">ZAP</span><button className="copy-code" onClick={handleCopy} type="button" aria-label={copied ? "Code copied" : "Copy code"}>{copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}</button></div><pre><code>{highlightZap(code)}</code></pre></div>;
+  const runExample = () => setOutput(runZapPreview(draft));
+  const resetExample = () => { setDraft(code); setOutput(null); };
+  return <div className="inline-code"><div className="inline-code-top"><span className="code-label">ZAP</span><div className="code-actions"><button className="run-code" onClick={() => setPlaygroundOpen((open) => !open)} type="button" aria-expanded={playgroundOpen}>{playgroundOpen ? <><X size={13} /> Close</> : <><Play size={13} /> Run example</>}</button><button className="copy-code" onClick={handleCopy} type="button" aria-label={copied ? "Code copied" : "Copy code"}>{copied ? <><Check size={13} /> Copied</> : <><Copy size={13} /> Copy</>}</button></div></div><pre><code>{highlightZap(code)}</code></pre>{playgroundOpen && <div className="playground"><div className="playground-head"><span>LIGHTWEIGHT PREVIEW</span><button className="playground-reset" onClick={resetExample} type="button"><RotateCcw size={12} /> Reset</button></div><textarea value={draft} onChange={(event) => { setDraft(event.target.value); setOutput(null); }} spellCheck={false} aria-label="Editable Zap example" /><div className="playground-run"><button className="button-primary" onClick={runExample} type="button"><Play size={14} /> Run code</button><span>Browser preview · not the native runtime</span></div>{output && <pre className="playground-output"><code>{output.length ? output.join("\n") : "No output produced."}</code></pre>}</div>}</div>;
 }
 
 function DocsPage() {
