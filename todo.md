@@ -136,3 +136,10 @@
 - [x] Burmese source map နှင့် official links များကို route အားလုံးအတွက် မှန်ကန်စွာ ချိတ်ရန်။
 - [x] Language toggle၊ search result၊ trace detail၊ playground၊ dark mode နှင့် mobile Burmese rendering စစ်ဆေးရန်။
 - [ ] All-lessons Burmese fix checkpoint အသစ် သိမ်းရန်။
+
+## GitHub push
+
+- [ ] Git repository၊ remote URL၊ current branch နှင့် working tree ကို စစ်ဆေးရန်။
+- [ ] Verified project changes၊ generated files နှင့် sensitive files များကို review လုပ်ရန်။
+- [ ] Changes များကို descriptive commit တစ်ခုဖြင့် commit လုပ်ရန်။
+- [ ] Configured GitHub remote သို့ push လုပ်ပြီး commit/branch result စစ်ဆေးရန်။
