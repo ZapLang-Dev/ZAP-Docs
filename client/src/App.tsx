@@ -151,15 +151,46 @@ function runZapPreview(code: string) {
     }
     return value;
   };
-  code.split(/\n/).forEach((line) => {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith("#")) return;
+  const lines = code.split(/\n/);
+  const format = (value: unknown) => typeof value === "object" ? JSON.stringify(value) : String(value);
+  for (let index = 0; index < lines.length; index += 1) {
+    const trimmed = lines[index].trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const command = trimmed.match(/^zap\s+(.+)$/);
+    if (command) {
+      const argument = command[1];
+      if (argument === "--version") output.push("Zap v2.1.7 · release preview");
+      else if (argument === "--help") output.push("Zap CLI help · run, check, fmt, test, and init");
+      else if (argument.startsWith("check")) output.push("Check complete · no blocking issues in this preview");
+      else if (argument.startsWith("fmt")) output.push("Format preview complete · source would be normalized");
+      else if (argument.startsWith("test")) output.push("Test preview complete · no test failures reported");
+      else if (argument.startsWith("init")) output.push("Project scaffold preview created");
+      else output.push(`Command preview · would run: zap ${argument}`);
+      continue;
+    }
     const declaration = trimmed.match(/^let\s+([A-Za-z_][\w]*)\s*(?::[^=]+)?=\s*(.+)$/);
-    if (declaration) { values[declaration[1]] = evaluate(declaration[2]); return; }
+    if (declaration) { values[declaration[1]] = evaluate(declaration[2]); continue; }
+    const assignment = trimmed.match(/^([A-Za-z_][\w]*)\s*=\s*(.+)$/);
+    if (assignment) { values[assignment[1]] = evaluate(assignment[2]); continue; }
+    const loop = trimmed.match(/^for\s+([A-Za-z_][\w]*)\s+in\s+(\[.*\]|range\((\d+)\)):/);
+    if (loop) {
+      const items = loop[3] ? Array.from({ length: Number(loop[3]) }, (_, item) => item) : evaluate(loop[2]);
+      const body = lines[index + 1]?.trim();
+      if (body?.startsWith("say ")) (Array.isArray(items) ? items : [items]).forEach((item) => { values[loop[1]] = item; output.push(format(evaluate(body.slice(4)))); });
+      continue;
+    }
+    const condition = trimmed.match(/^if\s+(.+):$/);
+    if (condition) {
+      const body = lines[index + 1]?.trim();
+      if (evaluate(condition[1]) === true && body?.startsWith("say ")) output.push(format(evaluate(body.slice(4))));
+      continue;
+    }
     const say = trimmed.match(/^say\s+(.+)$/);
-    if (say) { output.push(String(evaluate(say[1]))); return; }
-    if (/^(fn|class|module|import|export|if|else|for|while|async|return)\b/.test(trimmed)) output.push("Preview note: this browser runner currently supports let, say, and simple values.");
-  });
+    if (say) { output.push(format(evaluate(say[1]))); continue; }
+    if (/^(fn|class|module|import|export|else|while|async|return)\b/.test(trimmed)) output.push("Preview note · syntax recognized, but this lightweight runner skips native runtime execution.");
+    else output.push(`Preview note · recognized line: ${trimmed}`);
+  }
+  if (!output.length) output.push("Preview completed · no console output in this snippet.");
   return output;
 }
 

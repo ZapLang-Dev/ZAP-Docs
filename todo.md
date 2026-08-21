@@ -1,7 +1,8 @@
-# Interactive playground checklist
+# Playground output fix checklist
 
-- [x] Define the lightweight browser-side execution boundary and safe fallback behavior.
-- [x] Add a Run example action beside Copy for every documentation code block.
-- [x] Add editable code, output feedback, reset behavior, and close controls.
-- [x] Validate playground interactions and responsive layout on desktop and mobile.
+- [x] Identify example patterns that currently produce no output.
+- [x] Support common Zap CLI commands with useful simulated status output.
+- [x] Add simple loop and condition handling for teaching examples.
+- [x] Guarantee a completion message when a snippet has no printed output.
+- [x] Validate representative code examples on desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.
