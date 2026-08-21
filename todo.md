@@ -1,7 +1,7 @@
-# GitHub release sync checklist
+# Homepage and footer redesign checklist
 
-- [x] Define the GitHub API endpoint and fallback release data for v2.0.4.
-- [x] Add a dynamic release loader to the Installation page using `useEffect`.
-- [x] Map GitHub asset names to platform download links and update the changelog URL.
-- [x] Validate loading states, successful sync, and API failure fallback.
+- [x] Define the refreshed homepage layout, interaction flow, and footer content.
+- [x] Implement the updated hero, card grid, and code-band UI on the homepage.
+- [x] Add a comprehensive branded footer with navigation, release, and community links.
+- [x] Validate the responsive homepage and footer layout across desktop and mobile.
 - [ ] Save a publish-ready checkpoint after verification.

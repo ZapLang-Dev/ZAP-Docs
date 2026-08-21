@@ -80,3 +80,36 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 @media (max-width:580px) { .hero{min-height:620px}.hero-inner{min-height:620px}.hero-content{padding-top:55px}.hero h1{font-size:54px}.hero-content p{font-size:14px}.hero-index{bottom:28px;left:25px;right:auto}.launch-grid{grid-template-columns:1fr}.card-2,.card-3{margin-top:0}.section-lead h2,.code-band h2{font-size:34px}.site-footer{align-items:flex-start;gap:14px;flex-direction:column}.doc-title-row{display:block}.read-time{display:block;margin-top:14px}.doc-title-row h1{font-size:42px}.doc-section{grid-template-columns:30px 1fr}.inline-code{overflow:auto}.header-actions{gap:0}.search-trigger span{display:none} }
 @media (prefers-reduced-motion: no-preference) { .hero-content,.launch-card,.code-card { animation:rise .65s var(--ease) both; }.launch-card:nth-child(2){animation-delay:.08s}.launch-card:nth-child(3){animation-delay:.16s} }
 @keyframes rise { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+/* Voltage Editorial homepage refresh: asymmetrical hero, signal-led wayfinding, and a practical footer system. */
+.hero-redesign .hero-inner { min-height: 620px; }
+.hero-grid { display:grid; grid-template-columns:minmax(0, 1fr) 280px; align-items:center; gap:72px; max-width:1040px; }
+.hero-eyebrow { display:block; margin:22px 0 14px; color:var(--cyan-deep); }
+.hero-content p { max-width:530px; }
+.hero-proof { display:flex; flex-wrap:wrap; gap:18px 28px; margin-top:28px; color:#81919a; font:10px var(--mono); text-transform:uppercase; letter-spacing:.06em; }
+.hero-proof b { color:var(--amber); margin-right:6px; }
+.hero-panel { align-self:end; margin-bottom:68px; padding:18px; border:1px solid rgba(14,74,100,.16); background:rgba(255,255,255,.62); box-shadow:0 18px 50px rgba(11,32,56,.08); backdrop-filter:blur(12px); }
+.hero-panel-top { display:flex; align-items:center; justify-content:space-between; color:#79909a; font:10px var(--mono); letter-spacing:.1em; }
+.signal-dot { width:7px; height:7px; display:inline-block; border-radius:50%; background:var(--amber); box-shadow:0 0 0 4px rgba(229,164,70,.15); }
+.hero-panel strong { display:block; margin-top:44px; color:var(--ink); font-size:22px; line-height:1.08; letter-spacing:-.05em; }
+.hero-panel p { margin:16px 0 22px; color:#738792; font-size:12px; line-height:1.7; }
+.hero-panel button,.band-link { display:inline-flex; align-items:center; gap:7px; border:0; padding:0; background:transparent; color:var(--cyan-deep); font-size:12px; font-weight:800; }
+.hero-panel button:hover,.band-link:hover { color:var(--ink); }
+.launch-redesign { position:relative; }
+.section-note { display:flex; align-items:center; gap:10px; margin-top:28px; color:#82939c; font:10px var(--mono); text-transform:uppercase; letter-spacing:.06em; }
+.card-link { display:inline-flex; align-items:center; gap:6px; }
+.code-redesign .band-link { margin-top:22px; color:#6fdded; }
+.site-footer-redesign { display:grid; grid-template-columns:260px 1fr; gap:80px; padding:64px 90px 25px; background:#f1f8fa; border-top:1px solid var(--line); }
+.footer-brand { display:flex; align-items:flex-start; gap:12px; }
+.footer-brand img { width:36px; height:36px; border-radius:10px; }
+.footer-brand strong,.footer-brand span { display:block; }
+.footer-brand strong { color:var(--ink); font-size:13px; }
+.footer-brand span { margin-top:6px; color:#84959d; font:10px var(--mono); }
+.footer-columns { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
+.footer-columns > div { display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+.footer-label { margin-bottom:5px; color:var(--amber); font:10px var(--mono); text-transform:uppercase; letter-spacing:.1em; }
+.footer-columns a { color:#637781; font-size:12px; transition:color .18s var(--ease),transform .18s var(--ease); }
+.footer-columns a:hover { color:var(--cyan-deep); transform:translateX(3px); }
+.footer-bottom { grid-column:1 / -1; display:flex; justify-content:space-between; margin-top:28px; padding-top:18px; border-top:1px solid var(--line); color:#8b9ba2; font:10px var(--mono); }
+@media (max-width:900px) { .hero-grid { grid-template-columns:1fr; gap:25px; }.hero-panel { max-width:300px; margin:0 0 40px; }.site-footer-redesign { padding:48px 25px 24px; grid-template-columns:1fr; gap:38px; }.footer-bottom { grid-column:auto; } }
+@media (max-width:580px) { .hero-redesign .hero-inner { min-height:760px; }.hero-grid { gap:18px; }.hero-panel { margin-bottom:34px; }.hero-proof { gap:11px 16px; line-height:1.5; }.footer-columns { grid-template-columns:1fr 1fr; gap:28px 18px; }.footer-columns > div:last-child { grid-column:1 / -1; }.footer-bottom { flex-direction:column; gap:10px; line-height:1.6; } }
