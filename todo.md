@@ -153,8 +153,17 @@
 
 ## GitHub tag and description
 
-- [ ] Latest local commit နှင့် GitHub branch state ကို စစ်ဆေးရန်။
-- [ ] Descriptive repository description သတ်မှတ်ရန်။
-- [ ] Homepage Dark Mode fix အတွက် version tag အသစ် ဖန်တီးရန်။
-- [ ] Branch နှင့် tag ကို GitHub သို့ push လုပ်ရန်။
-- [ ] Remote commit၊ tag နှင့် repository description ကို ပြန်လည်အတည်ပြုရန်။
+- [x] Latest local commit နှင့် GitHub branch state ကို စစ်ဆေးရန်။
+- [x] Descriptive repository description သတ်မှတ်ရန်။
+- [x] Homepage Dark Mode fix အတွက် version tag အသစ် ဖန်တီးရန်။
+- [x] Branch နှင့် tag ကို GitHub သို့ push လုပ်ရန်။
+- [x] Remote commit၊ tag နှင့် repository description ကို ပြန်လည်အတည်ပြုရန်။
+
+## Burmese translation gap audit
+
+- [x] AllDocs route keys နှင့် Burmese lesson keys ကို တိုက်ဆိုင်စစ်ဆေးရန်။
+- [x] Burmese content ရှိသော်လည်း English metadata/quiz/output ကျန်နေသော lessons များကို သတ်မှတ်ရန်။
+- [x] Burmese source များနှင့် lesson တစ်ခုချင်းစီ၏ official mapping ကို စစ်ဆေးရန်။
+- [x] မပြည့်စုံသော lesson များအတွက် မြန်မာ intro၊ sections၊ examples၊ mistakes၊ practice နှင့် quiz ဖြည့်ရန်။
+- [x] Toggle၊ search၊ trace၊ playground၊ dark mode နှင့် mobile Burmese rendering စစ်ဆေးရန်။
+- [ ] Burmese translation completion checkpoint အသစ် သိမ်းရန်။
