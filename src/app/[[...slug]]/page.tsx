@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { Sidebar } from "@/components/Sidebar";
 import { CodeBlock } from "@/components/CodeBlock";
 import { findDocByPath, getAllDocPaths, docsSections } from "@/data/docs";
 
@@ -13,41 +14,39 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="mx-auto max-w-4xl px-6 py-16 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="mx-auto mb-6 h-16 w-16 rounded-2xl bg-zap-600 flex items-center justify-center">
-            <span className="text-white text-2xl font-bold">Z</span>
-          </div>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
+      <main className="home-main">
+        <div className="home-hero">
+          <div className="home-logo"><img src="/logo.jpg" alt="Zap logo" /></div>
+          <h1 className="home-title">
             Zap Programming Language
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+          <p className="home-subtitle">
             A beginner-friendly, general-purpose programming language designed for Web, Mobile, AI, and IoT applications.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="home-actions">
             <button
               onClick={() => navigate("/docs/introduction")}
-              className="rounded-lg bg-zap-600 px-6 py-3 text-sm font-semibold text-white hover:bg-zap-700 transition-colors"
+              className="button-primary"
             >
               Get Started
             </button>
             <button
               onClick={() => navigate("/docs/syntax")}
-              className="rounded-lg border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors"
+              className="button-secondary"
             >
               Language Guide
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="home-cards">
           {docsSections.map((section) => (
             <div
               key={section.title}
-              className="rounded-xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow"
+              className="home-card"
             >
-              <h3 className="font-semibold text-slate-900 mb-2">{section.title}</h3>
-              <p className="text-sm text-slate-600 mb-4">
+              <h3 className="home-card-title">{section.title}</h3>
+              <p className="home-card-meta">
                 {section.items.length} article{section.items.length !== 1 ? "s" : ""}
               </p>
               <div className="space-y-2">
@@ -55,7 +54,7 @@ const HomePage = () => {
                   <button
                     key={item.path}
                     onClick={() => navigate(item.path)}
-                    className="block text-sm text-zap-700 hover:text-zap-800 hover:underline"
+                    className="home-card-link"
                   >
                     {item.title}
                   </button>
@@ -63,7 +62,7 @@ const HomePage = () => {
                 {section.items.length > 3 && (
                   <button
                     onClick={() => navigate(section.items[0].path)}
-                    className="text-sm text-slate-500 hover:text-slate-700"
+                    className="home-card-more"
                   >
                     +{section.items.length - 3} more
                   </button>
@@ -73,14 +72,14 @@ const HomePage = () => {
           ))}
         </div>
 
-        <div className="rounded-xl bg-zap-50 border border-zap-200 p-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+        <div className="home-cta">
+          <h2 className="home-cta-title">
             Ready to learn Zap?
           </h2>
-          <p className="text-slate-600 mb-6">
+          <p className="home-cta-copy">
             Start with the introduction or jump straight into syntax examples.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="home-cta-links">
             {allPaths.slice(0, 6).map((path) => {
               const doc = findDocByPath(path);
               if (!doc) return null;
@@ -88,7 +87,7 @@ const HomePage = () => {
                 <button
                   key={path}
                   onClick={() => navigate(path)}
-                  className="rounded-lg bg-white border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:border-zap-300 hover:text-zap-700 transition-colors"
+                  className="home-cta-link"
                 >
                   {doc.title}
                 </button>
@@ -221,46 +220,10 @@ const DocPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="flex h-[calc(100vh-3.5rem)]">
-        <aside className="w-64 shrink-0 border-r border-slate-200 bg-slate-50/50">
-          <div className="h-[calc(100vh-3.5rem)] overflow-y-auto p-4">
-            <nav className="space-y-1">
-              {docsSections.map((section) => {
-                const hasActive = section.items.some((item) => item.path === location.pathname);
-                return (
-                  <div key={section.title} className="mb-2">
-                    <div className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-slate-900">
-                      <span>{section.title}</span>
-                      {hasActive && <div className="h-1.5 w-1.5 rounded-full bg-zap-500" />}
-                    </div>
-                    <div className="ml-2 mt-1 space-y-0.5 border-l border-slate-200 pl-3">
-                      {section.items.map((item) => {
-                        const isActive = location.pathname === item.path;
-                        return (
-                          <button
-                            key={item.path}
-                            onClick={() => navigate(item.path)}
-                            className={`flex w-full items-center rounded-md px-3 py-1.5 text-left text-sm transition-colors ${
-                              isActive
-                                ? "bg-zap-100 text-zap-800 font-medium"
-                                : "text-slate-600 hover:text-zap-700 hover:bg-slate-100"
-                            }`}
-                          >
-                            {item.title}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
-            </nav>
-          </div>
-        </aside>
-        <main className="flex-1 overflow-y-auto">
-          <div className="mx-auto max-w-4xl px-6 py-10 lg:px-8">
-            {renderMarkdown(doc.content)}
-          </div>
+      <div className="docs-shell">
+        <Sidebar />
+        <main className="docs-main">
+          <div className="docs-content">{renderMarkdown(doc.content)}</div>
         </main>
       </div>
     </div>
