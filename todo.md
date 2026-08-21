@@ -1,7 +1,7 @@
-# Release links checklist
+# GitHub release sync checklist
 
-- [x] Inspect official v2.0.4 release asset URLs and changelog links.
-- [x] Add Linux, macOS, and Windows direct download links to Installation.
-- [x] Render release and changelog references as clickable links.
-- [x] Validate the Installation page and confirm no reported TypeScript or LSP errors.
-- [ ] Save a publish-ready checkpoint.
+- [x] Define the GitHub API endpoint and fallback release data for v2.0.4.
+- [x] Add a dynamic release loader to the Installation page using `useEffect`.
+- [x] Map GitHub asset names to platform download links and update the changelog URL.
+- [x] Validate loading states, successful sync, and API failure fallback.
+- [ ] Save a publish-ready checkpoint after verification.
