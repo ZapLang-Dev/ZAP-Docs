@@ -120,3 +120,11 @@
 - [x] Selected stage အောက်တွင် code block၊ diagnostic panel၊ copy/run action နှင့် Burmese/English text ထည့်ရန်။
 - [x] Section anchors၊ focus management၊ mobile layout၊ dark mode နှင့် reduced-motion behavior စစ်ဆေးရန်။
 - [ ] Trace detail feature checkpoint အသစ် သိမ်းရန်။
+
+## Homepage Dark Mode fix
+
+- [x] Home page component နှင့် theme wrapper ကို စစ်ဆေးရန်။
+- [x] Hero၊ route cards၊ CTA buttons၊ decorative surfaces နှင့် footer အတွက် dark selectors ထည့်ရန်။
+- [x] Text/background contrast နှင့် image overlay ကို dark mode တွင် ပြင်ရန်။
+- [x] Header toggle persistence၊ desktop/mobile home preview နှင့် production build စစ်ဆေးရန်။
+- [ ] Homepage Dark Mode fix checkpoint အသစ် သိမ်းရန်။
