@@ -314,3 +314,12 @@
 - [ ] Install/release versions၊ official source links၊ search metadata နှင့် sidebar counts update လုပ်ရန်။
 - [ ] All routes၊ language toggle၊ mobile/dark mode နှင့် production build validation ပြုလုပ်ရန်။
 - [ ] v2.2.4 sync checkpoint အသစ် သိမ်းရန်။
+
+## Latest full sync and GitHub update
+
+- [ ] Official repository latest refs၊ releases၊ docs နှင့် source changes ကို ထပ်စစ်ရန်။
+- [ ] ZAP-Docs route/search/bilingual coverage gap ကို ပြန်စစ်ရန်။
+- [ ] ကျန် lesson များ၊ Burmese explanations၊ examples၊ practice နှင့် quizzes ဖြည့်ရန်။
+- [ ] Version/install/source links၊ sidebar counts နှင့် UX issues ပြင်ရန်။
+- [ ] TypeScript၊ production build နှင့် representative responsive previews စစ်ရန်။
+- [ ] Stable checkpoint သိမ်းပြီး GitHub `main` သို့ commit/push လုပ်ရန်။
