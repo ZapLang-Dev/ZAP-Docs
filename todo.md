@@ -214,3 +214,12 @@
 - [ ] Favicon/logo နှင့် hero/social image references များကို deployment-safe path သို့ ပြင်ရန်။
 - [ ] Title၊ description၊ canonical၊ Open Graph၊ Twitter Card နှင့် JSON-LD metadata ထည့်ရန်။
 - [ ] Build နှင့် representative preview တွင် image/metadata rendering စစ်ဆေးပြီး checkpoint သိမ်းရန်။
+
+## Homepage UI/UX redesign
+
+- [ ] Existing homepage hierarchy၊ hero၊ learning path cards၊ CTA နှင့် footer ကို audit လုပ်ရန်။
+- [ ] Voltage Editorial brand ကို ထိန်းသိမ်းပြီး clearer visual direction သတ်မှတ်ရန်။
+- [ ] Hero message၊ primary/secondary actions၊ lesson discovery နှင့် install/search affordances ကို ပြန်ညှိရန်။
+- [ ] Homepage sections၊ cards၊ spacing၊ typography နှင့် responsive mobile layout ကို redesign လုပ်ရန်။
+- [ ] Dark mode၊ keyboard focus၊ contrast၊ motion preference နှင့် production build/preview စစ်ဆေးရန်။
+- [ ] Homepage redesign checkpoint အသစ် သိမ်းရန်။
