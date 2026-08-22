@@ -261,3 +261,10 @@
 - [ ] Command code overflow ကို horizontal scroll သို့မဟုတ် readable wrapping ဖြင့် ထိန်းရန်။
 - [ ] 390px၊ tablet နှင့် desktop screenshots အပြင် TypeScript/build validation လုပ်ရန်။
 - [ ] Responsive hero checkpoint အသစ် သိမ်းရန်။
+
+## Install command scrollbar fix
+
+- [ ] Install command code ၏ horizontal overflow source ကို စစ်ဆေးရန်။
+- [ ] Mobile တွင် command ကို wrap ပြပြီး Copy control ကို မပျောက်အောင် ထိန်းရန်။
+- [ ] Desktop/mobile preview နှင့် production build validation ပြုလုပ်ရန်။
+- [ ] Scrollbar fix checkpoint အသစ် သိမ်းရန်။

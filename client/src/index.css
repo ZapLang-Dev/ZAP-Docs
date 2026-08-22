@@ -443,8 +443,8 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .install-detect-head .signal-dot { width:6px; height:6px; margin:0; }
 .install-detect-head button,.install-download-link { display:inline-flex; align-items:center; gap:5px; color:var(--cyan-deep); border:0; background:none; font:10px var(--mono); cursor:pointer; text-decoration:none; }
 .install-detect-head button:hover,.install-download-link:hover { color:var(--ink); }
-.install-command-row { display:flex; align-items:center; gap:12px; margin-top:12px; }
-.install-command-row code { min-width:0; flex:1; overflow:auto; color:var(--ink); font:11px/1.55 var(--mono); white-space:nowrap; scrollbar-width:thin; }
+.install-command-row { display:flex; align-items:flex-start; gap:12px; margin-top:12px; min-width:0; }
+.install-command-row code { min-width:0; flex:1; overflow:visible; color:var(--ink); font:11px/1.6 var(--mono); white-space:normal; overflow-wrap:anywhere; word-break:break-word; }
 .install-command-row button { display:inline-flex; align-items:center; gap:6px; flex:none; padding:7px 9px; border:1px solid var(--line); background:var(--card); color:var(--ink); font:10px var(--mono); cursor:pointer; }
 .install-command-row button:hover { border-color:var(--cyan); color:var(--cyan-deep); }
 .hero-install-detect > p { margin:10px 0 0; color:var(--muted); font-size:11px; line-height:1.5; }
@@ -452,7 +452,7 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .hero-install-detect { border-color:rgba(130,215,227,.3); background:rgba(16,36,50,.84); }
 .dark .install-command-row code { color:var(--ink); }
 .dark .install-detect-head button,.dark .install-download-link { color:var(--cyan); }
-@media (max-width:600px) { .hero-install-detect { margin-top:18px; padding:12px; } .install-detect-head { align-items:flex-start; flex-direction:column; gap:8px; } .install-command-row { align-items:stretch; flex-direction:column; gap:8px; } .install-command-row button { justify-content:center; } }
+@media (max-width:600px) { .hero-install-detect { margin-top:18px; padding:12px; } .install-detect-head { align-items:flex-start; flex-direction:column; gap:8px; } .install-command-row { align-items:stretch; flex-direction:column; gap:8px; } .install-command-row code { display:block; width:100%; } .install-command-row button { justify-content:center; } }
 
 /* Responsive hero hardening: let the content define height, keep every action reachable, and prevent the route index from overlapping long install commands. */
 @media (max-width:900px) { .hero-redesign .hero-inner { min-height:auto; padding:48px 32px 54px; } .hero-redesign .hero-grid { gap:32px; } .hero-redesign .hero-content { max-width:680px; padding-top:0; } .hero-redesign .hero-terminal { max-width:680px; margin:0; } .hero-redesign .hero-index { position:static; margin-top:24px; } }
