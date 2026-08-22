@@ -245,3 +245,11 @@
 - [ ] Live code preview၊ copy/run affordance နှင့် install/learn CTAs ကို hero အတွင်း ပေါင်းစည်းရန်။
 - [ ] Dark mode၊ responsive mobile layout၊ subtle animation နှင့် accessibility စစ်ဆေးရန်။
 - [ ] TypeScript/build/visual validation ပြီးနောက် checkpoint သိမ်းရန်။
+
+## OS-aware installation UX
+
+- [ ] Installation CTA နှင့် GitHub release asset mapping ကို စစ်ဆေးရန်။
+- [ ] Browser platform detection နှင့် unknown-platform fallback ထည့်ရန်။
+- [ ] Detected OS အလိုက် install command/download link နှင့် manual platform selector ပြသရန်။
+- [ ] Copy command၊ keyboard access၊ mobile layout နှင့် dark mode စစ်ဆေးရန်။
+- [ ] TypeScript/build validation ပြီးနောက် checkpoint သိမ်းရန်။

@@ -159,8 +159,26 @@ function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => 
   </aside>;
 }
 
+type InstallPlatform = "linux" | "macos" | "windows" | "unknown";
+const installTargets: Record<Exclude<InstallPlatform, "unknown">, { label: string; command: string; download: string }> = {
+  linux: { label: "Linux x86_64", command: "curl -L https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz -o zap.tar.gz && tar -xzf zap.tar.gz", download: "https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz" },
+  macos: { label: "macOS ARM64", command: "curl -L https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz -o zap.tar.gz && tar -xzf zap.tar.gz", download: "https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz" },
+  windows: { label: "Windows x86_64", command: "Invoke-WebRequest https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip -OutFile zap.zip", download: "https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip" },
+};
+function detectInstallPlatform(): InstallPlatform {
+  if (typeof navigator === "undefined") return "unknown";
+  const platform = ((navigator as Navigator & { userAgentData?: { platform?: string } }).userAgentData?.platform || navigator.platform || navigator.userAgent).toLowerCase();
+  if (platform.includes("win")) return "windows";
+  if (platform.includes("mac") || platform.includes("darwin")) return "macos";
+  if (platform.includes("linux") || platform.includes("x11")) return "linux";
+  return "unknown";
+}
 function Home() {
   const [, navigate] = useLocation();
+  const [installPlatform, setInstallPlatform] = useState<InstallPlatform>(detectInstallPlatform);
+  const [commandCopied, setCommandCopied] = useState(false);
+  const activeInstall = installPlatform === "unknown" ? null : installTargets[installPlatform];
+  const copyInstallCommand = async () => { if (!activeInstall) return; try { await navigator.clipboard.writeText(activeInstall.command); setCommandCopied(true); window.setTimeout(() => setCommandCopied(false), 1600); } catch { setCommandCopied(false); } };
   return <div className="home-page">
     <section className="hero hero-redesign">
       <div className="hero-inner">
@@ -172,6 +190,7 @@ function Home() {
             <h1>Build boldly.<br /><em>Learn clearly.</em></h1>
             <p>A beginner-friendly language for Web, Mobile, AI, and IoT, with a direct route from your first `.zp` file to a working project.</p>
             <div className="hero-actions"><button className="button-primary" onClick={() => navigate("/docs/introduction")}>Start with the guide <ArrowUpRight size={17} /></button><button className="button-quiet" onClick={() => navigate("/docs/installation")}>Install Zap <ChevronRight size={17} /></button></div>
+            <div className="hero-install-detect" aria-label="Detected operating system installation command"><div className="install-detect-head"><span><i className="signal-dot" /> {activeInstall ? `Detected: ${activeInstall.label}` : "Choose your platform"}</span><button type="button" onClick={() => navigate("/docs/installation")}>All downloads <ArrowUpRight size={13} /></button></div>{activeInstall ? <div className="install-command-row"><code>{activeInstall.command}</code><button type="button" onClick={copyInstallCommand} aria-label="Copy install command"><Copy size={14} />{commandCopied ? "Copied" : "Copy"}</button></div> : <p>Your platform could not be detected. Open the installation guide to choose a release.</p>}{activeInstall && <a className="install-download-link" href={activeInstall.download} target="_blank" rel="noreferrer">Download {activeInstall.label} <ArrowUpRight size={13} /></a>}</div>
             <div className="hero-proof"><span><b>01</b> Read the model</span><span><b>02</b> Run the example</span><span><b>03</b> Make it yours</span></div>
           </div>
           <aside className="hero-panel hero-terminal"><div className="hero-panel-top"><span><i className="terminal-dot" /> LIVE PLAYGROUND</span><span className="signal-dot" /></div><div className="terminal-file"><span>hello.zp</span><span>zap v2.0.4</span></div><pre className="hero-code"><code><span className="code-muted">01</span> <span className="code-keyword">fn</span> greet(name):<br /><span className="code-muted">02</span>     <span className="code-keyword">say</span> <span className="code-string">"Hello, "</span> + name<br /><span className="code-muted">03</span><br /><span className="code-muted">04</span> greet(<span className="code-string">"Zap"</span>)</code></pre><div className="terminal-output"><span>OUTPUT</span><strong>Hello, Zap</strong></div><button onClick={() => navigate("/docs/quick-start")}>Run the quick start <ArrowUpRight size={15} /></button></aside>
