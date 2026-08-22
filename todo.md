@@ -291,3 +291,10 @@
 - [ ] OS dropdown hover/focus အတွက် subtle interactive treatment ထည့်ရန်။
 - [ ] Mobile၊ dark mode၊ keyboard access နှင့် build validation ပြုလုပ်ရန်။
 - [ ] Install UX enhancement checkpoint အသစ် သိမ်းရန်။
+
+## Dropdown contrast fix
+
+- [ ] Select field နှင့် native option text/background contrast ကို စစ်ဆေးရန်။
+- [ ] Light/dark theme အတွက် explicit foreground/background colors ထည့်ရန်။
+- [ ] Hover/focus၊ mobile dropdown နှင့် production build validation ပြုလုပ်ရန်။
+- [ ] Contrast fix checkpoint အသစ် သိမ်းရန်။
