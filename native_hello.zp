@@ -1,8 +1,0 @@
-# Native Zap smoke test
-say "Hello from standalone Zap"
-let name = "Web AI"
-say name
-let count = 2 + 3 * 4
-say count
-if true:
-    say "Native runtime works"
