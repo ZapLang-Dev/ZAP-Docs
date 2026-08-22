@@ -206,3 +206,11 @@
 - [ ] Branded custom 404 Not Found page၊ home/docs/search recovery actions ထည့်ရန်။
 - [ ] Unknown route၊ nested docs route၊ dark mode၊ mobile layout နှင့် keyboard access စစ်ဆေးရန်။
 - [ ] TypeScript/build validation ပြီးနောက် checkpoint အသစ် သိမ်းရန်။
+
+## Image delivery and SEO
+
+- [ ] Netlify တွင် မပေါ်သော image asset URL/path များကို စစ်ဆေးရန်။
+- [ ] User-provided Zap banner ကို webdev asset storage သို့ upload လုပ်ပြီး production-safe URL အသုံးပြုရန်။
+- [ ] Favicon/logo နှင့် hero/social image references များကို deployment-safe path သို့ ပြင်ရန်။
+- [ ] Title၊ description၊ canonical၊ Open Graph၊ Twitter Card နှင့် JSON-LD metadata ထည့်ရန်။
+- [ ] Build နှင့် representative preview တွင် image/metadata rendering စစ်ဆေးပြီး checkpoint သိမ်းရန်။

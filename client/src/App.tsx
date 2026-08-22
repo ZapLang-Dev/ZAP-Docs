@@ -5,10 +5,10 @@ import { useTheme } from "./contexts/ThemeContext";
 import NotFound from "./pages/NotFound";
 import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Moon, Play, RotateCcw, Search, Sun, X } from "lucide-react";
 
-const logoSrc = "/manus-storage/zap-logo_dbceddfd.jpg";
-const heroTexture = "/manus-storage/zap-hero-field_fa9e733f.png";
-const atlasTexture = "/manus-storage/zap-code-atlas_6bec9d95.png";
-const sectionTexture = "/manus-storage/zap-section-pattern_e29d1e6c.png";
+const logoSrc = "/assets/zap-logo.jpg";
+const heroTexture = "/assets/zap-banner.webp";
+const atlasTexture = "/assets/zap-banner.webp";
+const sectionTexture = "/assets/zap-banner.webp";
 
 const sections = [
   { label: "Getting Started", count: "03", items: [["Introduction", "introduction"], ["Installation", "installation"], ["Quick Start", "quick-start"]] },
