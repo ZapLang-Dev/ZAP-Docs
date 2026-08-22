@@ -170,7 +170,31 @@
 
 ## Push latest Burmese translation to GitHub
 
-- [ ] Local working tree နှင့် latest checkpoint commit ကို စစ်ဆေးရန်။
-- [ ] Burmese translation audit/report နှင့် source changes ကို commit လုပ်ရန်။
-- [ ] `manus-zap-docs` branch သို့ push လုပ်ရန်။
-- [ ] Remote SHA နှင့် GitHub branch link ကို အတည်ပြုရန်။
+- [x] Local working tree နှင့် latest checkpoint commit ကို စစ်ဆေးရန်။
+- [x] Burmese translation audit/report နှင့် source changes ကို commit လုပ်ရန်။
+- [x] `manus-zap-docs` branch သို့ push လုပ်ရန်။
+- [x] Remote SHA နှင့် GitHub branch link ကို အတည်ပြုရန်။
+
+## Netlify loading and main merge
+
+- [x] User-provided Netlify URL ကို passive browser inspection ဖြင့် စစ်ဆေးရန်။
+- [x] GitHub `main` နှင့် `manus-zap-docs` commit/PR state ကို စစ်ဆေးရန်။
+- [x] Merge conflict၊ build/deploy risk နှင့် loading root cause ကို သုံးသပ်ရန်။
+- [x] Safe ဖြစ်ပါက `manus-zap-docs` ကို `main` သို့ merge လုပ်ရန်။
+- [x] Remote main result နှင့် Netlify deployment follow-up ကို အတည်ပြုရန်။
+
+## GitHub main build audit
+
+- [ ] GitHub main latest commit နှင့် source tree ကို စစ်ဆေးရန်။
+- [ ] package scripts၊ lockfile၊ Vite config နှင့် Netlify publish settings ကို စစ်ဆေးရန်။
+- [ ] Clean checkout တွင် install၊ type-check နှင့် production build run လုပ်ရန်။
+- [ ] Netlify Loading-only ဖြစ်ရသည့် root cause ကို build result နှင့် ခွဲခြားရန်။
+- [ ] Build audit report ကို user ထံ ပြန်လည်ပေးပို့ရန်။
+
+## zaplang.netlify.app 404 fix
+
+- [ ] Netlify site response နှင့် GitHub main deployment state ကို စစ်ဆေးရန်။
+- [ ] Build command၊ publish directory၊ framework preset နှင့် base directory ကို စစ်ဆေးရန်။
+- [ ] SPA fallback redirect ကို ထည့်ရန် သို့မဟုတ် ပြင်ရန်။
+- [ ] Root URL နှင့် `/docs/...` route များကို build/deploy ပြီးနောက် စစ်ဆေးရန်။
+- [ ] Netlify redeploy လိုအပ်ချက်နှင့် final result ကို ပြန်လည်ပေးပို့ရန်။
