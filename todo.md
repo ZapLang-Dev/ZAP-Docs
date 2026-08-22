@@ -237,3 +237,11 @@
 - [ ] Animation ကို transform/opacity အဓိကထားပြီး reduced-motion fallback ထည့်ရန်။
 - [ ] Desktop/mobile hero layout နှင့် visual motion ကို စစ်ဆေးရန်။
 - [ ] TypeScript/build validation ပြီးနောက် checkpoint သိမ်းရန်။
+
+## Developer-focused hero redesign
+
+- [ ] Current hero hierarchy နှင့် code/documentation landing patterns ကို audit လုပ်ရန်။
+- [ ] Strong Zap identity၊ version/status badge နှင့် technical route cues သတ်မှတ်ရန်။
+- [ ] Live code preview၊ copy/run affordance နှင့် install/learn CTAs ကို hero အတွင်း ပေါင်းစည်းရန်။
+- [ ] Dark mode၊ responsive mobile layout၊ subtle animation နှင့် accessibility စစ်ဆေးရန်။
+- [ ] TypeScript/build/visual validation ပြီးနောက် checkpoint သိမ်းရန်။
