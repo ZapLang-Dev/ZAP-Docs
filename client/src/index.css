@@ -480,3 +480,18 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .install-platform-controls select:focus-visible { outline:2px solid var(--cyan); outline-offset:2px; }
 .dark .install-platform-controls select { border-color:rgba(130,215,227,.28); background:#102b3d; color:var(--ink); }
 @media (max-width:600px) { .install-platform-controls { width:100%; flex-wrap:wrap; } .install-platform-controls label { width:100%; } .install-platform-controls select { flex:1; min-width:0; } .install-platform-controls > button { margin-left:auto; } }
+
+/* Install follow-up: make the next learning step visible immediately after the download action. */
+.install-followup { display:flex; align-items:center; flex-wrap:wrap; gap:14px 18px; margin-top:10px; }
+.install-followup .install-download-link { margin-top:0; }
+.getting-started-link { display:inline-flex; align-items:center; gap:5px; padding:0; border:0; background:none; color:var(--ink); font:10px var(--mono); cursor:pointer; text-decoration:none; transition:color .18s var(--ease),transform .18s var(--ease); }
+.getting-started-link:hover { color:var(--cyan-deep); transform:translateX(3px); }
+.getting-started-link:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+.install-platform-controls select { transition:border-color .18s var(--ease),background .18s var(--ease),box-shadow .18s var(--ease),transform .18s var(--ease); }
+.install-platform-controls select:hover { border-color:var(--cyan); background:color-mix(in srgb,var(--cyan) 8%,var(--card)); box-shadow:0 4px 12px rgba(11,157,179,.12); transform:translateY(-1px); }
+.install-platform-controls select:focus-visible { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(11,157,179,.14); transform:translateY(-1px); }
+.dark .getting-started-link { color:var(--ink); }
+.dark .getting-started-link:hover { color:var(--cyan); }
+.dark .install-platform-controls select:hover { background:rgba(130,215,227,.12); box-shadow:0 4px 14px rgba(0,0,0,.24); }
+@media (max-width:600px) { .install-followup { align-items:flex-start; flex-direction:column; gap:10px; } }
+@media (prefers-reduced-motion: reduce) { .getting-started-link,.install-platform-controls select { transition:none; } }

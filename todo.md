@@ -284,3 +284,10 @@
 - [ ] Platform ပြောင်းချိန် command၊ download link နှင့် copy feedback update ဖြစ်ကြောင်း စစ်ရန်။
 - [ ] Keyboard/mobile/dark mode နှင့် production build validation ပြုလုပ်ရန်။
 - [ ] Manual OS selector checkpoint အသစ် သိမ်းရန်။
+
+## Install UX enhancement
+
+- [ ] Install command အောက်တွင် download ပြီးနောက် Getting Started link ထည့်ရန်။
+- [ ] OS dropdown hover/focus အတွက် subtle interactive treatment ထည့်ရန်။
+- [ ] Mobile၊ dark mode၊ keyboard access နှင့် build validation ပြုလုပ်ရန်။
+- [ ] Install UX enhancement checkpoint အသစ် သိမ်းရန်။
