@@ -453,3 +453,13 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .install-command-row code { color:var(--ink); }
 .dark .install-detect-head button,.dark .install-download-link { color:var(--cyan); }
 @media (max-width:600px) { .hero-install-detect { margin-top:18px; padding:12px; } .install-detect-head { align-items:flex-start; flex-direction:column; gap:8px; } .install-command-row { align-items:stretch; flex-direction:column; gap:8px; } .install-command-row button { justify-content:center; } }
+
+/* Responsive hero hardening: let the content define height, keep every action reachable, and prevent the route index from overlapping long install commands. */
+@media (max-width:900px) { .hero-redesign .hero-inner { min-height:auto; padding:48px 32px 54px; } .hero-redesign .hero-grid { gap:32px; } .hero-redesign .hero-content { max-width:680px; padding-top:0; } .hero-redesign .hero-terminal { max-width:680px; margin:0; } .hero-redesign .hero-index { position:static; margin-top:24px; } }
+@media (max-width:600px) { .hero-redesign .hero-inner { min-height:auto; padding:34px 20px 42px; } .hero-redesign .hero-grid { gap:26px; } .hero-redesign .hero-content h1 { font-size:clamp(42px,13vw,54px); line-height:.95; } .hero-redesign .hero-content p { max-width:100%; font-size:13px; line-height:1.7; } .hero-redesign .hero-actions { display:grid; grid-template-columns:1fr 1fr; gap:9px; } .hero-redesign .hero-actions button { justify-content:center; min-height:44px; padding:0 10px; white-space:nowrap; } .hero-redesign .hero-install-detect { max-width:100%; margin-top:17px; } .hero-redesign .hero-terminal { max-width:100%; } .hero-redesign .hero-index { margin-top:20px; font-size:9px; } }
+@media (max-width:360px) { .hero-redesign .hero-actions { grid-template-columns:1fr; } .hero-redesign .hero-actions button { justify-content:flex-start; padding:0 14px; } .hero-redesign .hero-code { padding-left:13px; padding-right:13px; font-size:10px; } }
+
+/* Mobile overflow fix: explicitly allow hero columns and actions to shrink inside narrow viewports. */
+.hero-redesign .hero-grid,.hero-redesign .hero-content,.hero-redesign .hero-actions,.hero-redesign .hero-install-detect { min-width:0; }
+@media (max-width:600px) { .hero-redesign .hero-actions { grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; } .hero-redesign .hero-actions > button { width:100%; min-width:0; overflow:hidden; } .hero-redesign .hero-content p { overflow-wrap:anywhere; } .hero-redesign .hero-install-detect { width:100%; box-sizing:border-box; } }
+@media (max-width:360px) { .hero-redesign .hero-actions { grid-template-columns:minmax(0,1fr); } }

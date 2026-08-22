@@ -253,3 +253,11 @@
 - [ ] Detected OS အလိုက် install command/download link နှင့် manual platform selector ပြသရန်။
 - [ ] Copy command၊ keyboard access၊ mobile layout နှင့် dark mode စစ်ဆေးရန်။
 - [ ] TypeScript/build validation ပြီးနောက် checkpoint သိမ်းရန်။
+
+## Responsive hero layout fix
+
+- [ ] Hero mobile/tablet overflow နှင့် clipped content ကို audit လုပ်ရန်။
+- [ ] Headline၊ CTA၊ install command panel နှင့် terminal card spacing/breakpoints ကို ပြင်ရန်။
+- [ ] Command code overflow ကို horizontal scroll သို့မဟုတ် readable wrapping ဖြင့် ထိန်းရန်။
+- [ ] 390px၊ tablet နှင့် desktop screenshots အပြင် TypeScript/build validation လုပ်ရန်။
+- [ ] Responsive hero checkpoint အသစ် သိမ်းရန်။
