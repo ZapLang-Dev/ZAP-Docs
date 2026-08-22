@@ -6,7 +6,6 @@ import NotFound from "./pages/NotFound";
 import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Moon, Play, RotateCcw, Search, Sun, X } from "lucide-react";
 
 const logoSrc = "/assets/zap-logo.jpg";
-const heroTexture = "/assets/zap-banner.webp";
 const atlasTexture = "/assets/zap-banner.webp";
 const sectionTexture = "/assets/zap-banner.webp";
 
@@ -163,7 +162,7 @@ function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => 
 function Home() {
   const [, navigate] = useLocation();
   return <div className="home-page">
-    <section className="hero hero-redesign" style={{ backgroundImage: `linear-gradient(90deg, rgba(246,251,253,.97) 0%, rgba(246,251,253,.87) 52%, rgba(246,251,253,.28) 100%), url(${heroTexture})` }}>
+    <section className="hero hero-redesign">
       <div className="hero-inner">
         <div className="hero-kicker"><span className="kicker-line" /> ZAP / LANGUAGE SYSTEM <span className="kicker-code">v2.0.4 stable</span></div>
         <div className="hero-grid">

@@ -223,3 +223,10 @@
 - [ ] Homepage sections၊ cards၊ spacing၊ typography နှင့် responsive mobile layout ကို redesign လုပ်ရန်။
 - [ ] Dark mode၊ keyboard focus၊ contrast၊ motion preference နှင့် production build/preview စစ်ဆေးရန်။
 - [ ] Homepage redesign checkpoint အသစ် သိမ်းရန်။
+
+## Image-free homepage hero
+
+- [ ] Hero inline background image နှင့် CSS background image override များကို ဖယ်ရှားရန်။
+- [ ] Clean editorial surface၊ Zap mark၊ route rail နှင့် hero panel hierarchy ကို ထိန်းသိမ်း/ပြန်ညှိရန်။
+- [ ] Light/dark mode နှင့် mobile contrast/layout စစ်ဆေးရန်။
+- [ ] TypeScript/build နှင့် screenshot validation ပြီးနောက် checkpoint သိမ်းရန်။

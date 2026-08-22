@@ -401,3 +401,11 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .dark .launch-redesign { background-image:linear-gradient(90deg,rgba(130,215,227,.07) 1px,transparent 1px),linear-gradient(rgba(130,215,227,.07) 1px,transparent 1px); background-size:48px 48px; }
 .dark .launch-redesign .launch-card { box-shadow:0 16px 32px rgba(0,0,0,.24); }
 @media (max-width:600px) { .hero-redesign { background-image:linear-gradient(90deg,rgba(246,251,253,.98),rgba(246,251,253,.82)),url('/assets/zap-banner.webp') !important; } .launch-redesign .section-lead { padding-left:16px; } .code-redesign .code-band-inner::before { top:-24px; right:auto; left:25px; } }
+
+/* Image-free hero: keep the editorial signal through rails, rules, and geometric light rather than a photographic background. */
+.hero-redesign { position:relative; isolation:isolate; background-color:var(--paper) !important; background-image:linear-gradient(90deg, color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px),linear-gradient(color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px) !important; background-size:56px 56px !important; background-position:0 0 !important; }
+.hero-redesign::after { content:""; position:absolute; z-index:-1; top:0; right:0; bottom:0; width:38%; background:linear-gradient(135deg,transparent 0 31%,color-mix(in srgb,var(--cyan) 9%,transparent) 31% 31.4%,transparent 31.4% 62%,color-mix(in srgb,var(--amber) 14%,transparent) 62% 62.4%,transparent 62.4%),linear-gradient(90deg,transparent,color-mix(in srgb,var(--cyan) 8%,transparent)); clip-path:polygon(22% 0,100% 0,100% 100%,0 100%); pointer-events:none; }
+.hero-redesign .hero-inner,.hero-redesign .hero-index { position:relative; z-index:1; }
+.dark .hero-redesign { background-color:var(--paper) !important; background-image:linear-gradient(90deg,rgba(130,215,227,.08) 1px,transparent 1px),linear-gradient(rgba(130,215,227,.08) 1px,transparent 1px) !important; background-size:56px 56px !important; }
+.dark .hero-redesign::after { background:linear-gradient(135deg,transparent 0 31%,rgba(130,215,227,.12) 31% 31.4%,transparent 31.4% 62%,rgba(242,199,107,.14) 62% 62.4%,transparent 62.4%),linear-gradient(90deg,transparent,rgba(130,215,227,.08)); }
+@media (max-width:600px) { .hero-redesign::after { width:65%; opacity:.75; clip-path:polygon(35% 0,100% 0,100% 100%,0 100%); } }
