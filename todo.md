@@ -198,3 +198,11 @@
 - [ ] SPA fallback redirect ကို ထည့်ရန် သို့မဟုတ် ပြင်ရန်။
 - [ ] Root URL နှင့် `/docs/...` route များကို build/deploy ပြီးနောက် စစ်ဆေးရန်။
 - [ ] Netlify redeploy လိုအပ်ချက်နှင့် final result ကို ပြန်လည်ပေးပို့ရန်။
+
+## SPA routing and custom 404
+
+- [ ] Wouter route order၊ wildcard fallback နှင့် direct refresh behavior ကို စစ်ဆေးရန်။
+- [ ] Netlify SPA redirect နှင့် publish output ကို စစ်ဆေးရန်။
+- [ ] Branded custom 404 Not Found page၊ home/docs/search recovery actions ထည့်ရန်။
+- [ ] Unknown route၊ nested docs route၊ dark mode၊ mobile layout နှင့် keyboard access စစ်ဆေးရန်။
+- [ ] TypeScript/build validation ပြီးနောက် checkpoint အသစ် သိမ်းရန်။

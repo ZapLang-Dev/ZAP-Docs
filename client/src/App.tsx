@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { useTheme } from "./contexts/ThemeContext";
+import NotFound from "./pages/NotFound";
 import { ArrowUpRight, BookOpen, Check, ChevronRight, Command, Copy, Menu, Moon, Play, RotateCcw, Search, Sun, X } from "lucide-react";
 
 const logoSrc = "/manus-storage/zap-logo_dbceddfd.jpg";
@@ -577,6 +578,13 @@ function DocsLayout({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [location] = useLocation();
-  const isDocs = location.startsWith("/docs/");
-  return <><Header onMenu={() => setMobileOpen(true)} />{isDocs ? <DocsLayout mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} /> : <Home />}</>;
+  const normalizedLocation = location.replace(/\/+$/, "") || "/";
+  const isDocs = normalizedLocation.startsWith("/docs/");
+  const isKnownDoc = isDocs && allDocs.some((doc) => normalizedLocation === `/docs/${doc.slug}`);
+  const page = normalizedLocation === "/"
+    ? <Home />
+    : isKnownDoc
+      ? <DocsLayout mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
+      : <NotFound requestedPath={location} />;
+  return <><Header onMenu={() => setMobileOpen(true)} />{page}</>;
 }
