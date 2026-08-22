@@ -463,3 +463,12 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 .hero-redesign .hero-grid,.hero-redesign .hero-content,.hero-redesign .hero-actions,.hero-redesign .hero-install-detect { min-width:0; }
 @media (max-width:600px) { .hero-redesign .hero-actions { grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; } .hero-redesign .hero-actions > button { width:100%; min-width:0; overflow:hidden; } .hero-redesign .hero-content p { overflow-wrap:anywhere; } .hero-redesign .hero-install-detect { width:100%; box-sizing:border-box; } }
 @media (max-width:360px) { .hero-redesign .hero-actions { grid-template-columns:minmax(0,1fr); } }
+
+/* Install copy feedback: a compact floating confirmation keeps the command layout stable. */
+.install-copy-button { position:relative; }
+.install-copy-button.is-copied { border-color:var(--cyan); color:var(--cyan-deep); background:color-mix(in srgb,var(--cyan) 10%,var(--card)); }
+.copy-tooltip { position:absolute; z-index:5; left:50%; bottom:calc(100% + 9px); transform:translate(-50%,4px); padding:6px 9px; border:1px solid var(--cyan); background:var(--ink); color:#fff; font:10px var(--mono); letter-spacing:.04em; white-space:nowrap; box-shadow:0 8px 20px rgba(11,32,56,.18); animation:copy-tooltip-in .2s var(--ease) both; }
+.copy-tooltip::after { content:""; position:absolute; left:50%; bottom:-5px; width:8px; height:8px; border-right:1px solid var(--cyan); border-bottom:1px solid var(--cyan); background:var(--ink); transform:translateX(-50%) rotate(45deg); }
+@keyframes copy-tooltip-in { from { opacity:0; transform:translate(-50%,8px) scale(.94); } to { opacity:1; transform:translate(-50%,0) scale(1); } }
+.dark .install-copy-button.is-copied { color:var(--cyan); background:rgba(130,215,227,.12); }
+@media (prefers-reduced-motion: reduce) { .copy-tooltip { animation:none; transform:translate(-50%,0); } }

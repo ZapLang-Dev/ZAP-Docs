@@ -268,3 +268,11 @@
 - [ ] Mobile တွင် command ကို wrap ပြပြီး Copy control ကို မပျောက်အောင် ထိန်းရန်။
 - [ ] Desktop/mobile preview နှင့် production build validation ပြုလုပ်ရန်။
 - [ ] Scrollbar fix checkpoint အသစ် သိမ်းရန်။
+
+## Copied tooltip and GitHub sync
+
+- [ ] Install Copy button တွင် visual `Copied!` tooltip animation ထည့်ရန်။
+- [ ] Tooltip ကို accessible live feedback နှင့် reduced-motion fallback ဖြင့် ပြင်ရန်။
+- [ ] TypeScript၊ production build နှင့် visual validation ပြုလုပ်ရန်။
+- [ ] GitHub main branch သို့ descriptive commit ဖြင့် push လုပ်ရန်။
+- [ ] Push result နှင့် checkpoint ကို မှတ်တမ်းတင်ရန်။
