@@ -298,3 +298,10 @@
 - [ ] Light/dark theme အတွက် explicit foreground/background colors ထည့်ရန်။
 - [ ] Hover/focus၊ mobile dropdown နှင့် production build validation ပြုလုပ်ရန်။
 - [ ] Contrast fix checkpoint အသစ် သိမ်းရန်။
+
+## Hero terminal alignment fix
+
+- [ ] Desktop hero content နှင့် terminal card ကို တစ်တန်းတည်း align လုပ်ရန်။
+- [ ] Terminal panel margin/vertical positioning ကို ပြင်ရန်။
+- [ ] Tablet/mobile တွင် readable stacking ကို ထိန်းသိမ်းရန်။
+- [ ] Desktop/mobile preview နှင့် build validation ပြီးနောက် checkpoint သိမ်းရန်။
