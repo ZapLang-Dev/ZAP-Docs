@@ -21,3 +21,11 @@ The GitHub Releases API confirms these platform assets: `zap-2.2.3-linux-x86_64.
 Added learner routes and bilingual source mappings for async boundaries, async runtime, async LSP, diagnostics model, memory budget/object store, generic type design, documentation navigation, standard-library time helpers, release signing/provenance, and v2.2.3 release history. Added search metadata, official English/Burmese source links, accurate sidebar counts, generic learning objective/syntax/practice/quiz metadata for new routes, and corrected stale v2.0.4/v2.1.7 references.
 
 Validation: `pnpm exec tsc --noEmit --pretty false` passes; `pnpm run build` passes. The bundle-size advisory remains non-blocking because the current static app is intentionally bundled as one route-aware client.
+
+## Zap v2.2.4 audit findings
+
+The official repository `master` points to tag `v2.2.4` at commit `00d2847eaf149821c88f1ed060085972eca993b2`. The release adds the bilingual source files `docs/RELEASE_2.2.4_EN.md` and `docs/RELEASE_2.2.4_MM.md`, while the v2.2.3-to-v2.2.4 diff updates active baselines across language specification, syntax guide, async boundaries, memory contract, runtime state, standard-library policy, traits RFC, type conformance, documentation navigation, README, security, and VS Code package manifests.
+
+The release documentation emphasizes deterministic single-threaded runtime behavior, eager scheduled async values, explicit cancellation/timeout boundaries, structured diagnostics, deterministic parser/JSON/lockfile/security corpus gates, reproducible Unix and Windows packaging, uninstall/reinstall/upgrade verification, and LSP `textDocument/documentSymbol` support with nested symbols and deterministic ranges. Traits/interfaces/composition and tracing collectors remain proposals or deferred scope rather than released language features.
+
+Sources: [official v2.2.4 release note](https://github.com/hidecard/zap/blob/master/docs/RELEASE_2.2.4_EN.md), [Burmese v2.2.4 release note](https://github.com/hidecard/zap/blob/master/docs/RELEASE_2.2.4_MM.md), [v2.2.4 tag](https://github.com/hidecard/zap/releases/tag/v2.2.4), [v2.2.4 commit](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2).

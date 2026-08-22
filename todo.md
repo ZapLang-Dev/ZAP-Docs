@@ -305,3 +305,12 @@
 - [ ] Terminal panel margin/vertical positioning ကို ပြင်ရန်။
 - [ ] Tablet/mobile တွင် readable stacking ကို ထိန်းသိမ်းရန်။
 - [ ] Desktop/mobile preview နှင့် build validation ပြီးနောက် checkpoint သိမ်းရန်။
+
+## Zap v2.2.4 documentation sync
+
+- [ ] Official v2.2.4 release assets၊ changelog နှင့် docs inventory ကို စစ်ဆေးရန်။
+- [ ] လက်ရှိ ZAP-Docs နှင့် official v2.2.4 content gap ကို map လုပ်ရန်။
+- [ ] ကျန် lesson routes များအတွက် English/Burmese detailed content၊ examples၊ practice နှင့် quizzes ဖြည့်ရန်။
+- [ ] Install/release versions၊ official source links၊ search metadata နှင့် sidebar counts update လုပ်ရန်။
+- [ ] All routes၊ language toggle၊ mobile/dark mode နှင့် production build validation ပြုလုပ်ရန်။
+- [ ] v2.2.4 sync checkpoint အသစ် သိမ်းရန်။
