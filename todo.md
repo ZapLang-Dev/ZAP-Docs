@@ -276,3 +276,11 @@
 - [ ] TypeScript၊ production build နှင့် visual validation ပြုလုပ်ရန်။
 - [ ] GitHub main branch သို့ descriptive commit ဖြင့် push လုပ်ရန်။
 - [ ] Push result နှင့် checkpoint ကို မှတ်တမ်းတင်ရန်။
+
+## Manual OS selector for installation
+
+- [ ] Install panel တွင် Linux/macOS/Windows dropdown ထည့်ရန်။
+- [ ] Auto-detected platform ကို initial default အဖြစ်ထားပြီး manual selection ဖြင့် state ပြောင်းရန်။
+- [ ] Platform ပြောင်းချိန် command၊ download link နှင့် copy feedback update ဖြစ်ကြောင်း စစ်ရန်။
+- [ ] Keyboard/mobile/dark mode နှင့် production build validation ပြုလုပ်ရန်။
+- [ ] Manual OS selector checkpoint အသစ် သိမ်းရန်။

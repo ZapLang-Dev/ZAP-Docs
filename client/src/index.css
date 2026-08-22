@@ -472,3 +472,11 @@ kbd { border:1px solid #cdd9df; border-radius:4px; padding:3px 5px; font:10px va
 @keyframes copy-tooltip-in { from { opacity:0; transform:translate(-50%,8px) scale(.94); } to { opacity:1; transform:translate(-50%,0) scale(1); } }
 .dark .install-copy-button.is-copied { color:var(--cyan); background:rgba(130,215,227,.12); }
 @media (prefers-reduced-motion: reduce) { .copy-tooltip { animation:none; transform:translate(-50%,0); } }
+
+/* Manual OS selector: auto-detection remains the default, while the compact native select gives users explicit control. */
+.install-platform-controls { display:flex; align-items:center; gap:8px; }
+.install-platform-controls label { color:var(--muted); font:10px var(--mono); text-transform:uppercase; letter-spacing:.05em; }
+.install-platform-controls select { min-height:30px; padding:0 24px 0 8px; border:1px solid var(--line); background:var(--card); color:var(--ink); font:10px var(--mono); cursor:pointer; }
+.install-platform-controls select:focus-visible { outline:2px solid var(--cyan); outline-offset:2px; }
+.dark .install-platform-controls select { border-color:rgba(130,215,227,.28); background:#102b3d; color:var(--ink); }
+@media (max-width:600px) { .install-platform-controls { width:100%; flex-wrap:wrap; } .install-platform-controls label { width:100%; } .install-platform-controls select { flex:1; min-width:0; } .install-platform-controls > button { margin-left:auto; } }
