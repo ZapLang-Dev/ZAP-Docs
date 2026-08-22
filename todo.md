@@ -230,3 +230,10 @@
 - [ ] Clean editorial surface၊ Zap mark၊ route rail နှင့် hero panel hierarchy ကို ထိန်းသိမ်း/ပြန်ညှိရန်။
 - [ ] Light/dark mode နှင့် mobile contrast/layout စစ်ဆေးရန်။
 - [ ] TypeScript/build နှင့် screenshot validation ပြီးနောက် checkpoint သိမ်းရန်။
+
+## Hero geometric route-mark animation
+
+- [ ] Cyan/amber geometric marks အတွက် subtle floating/pulse keyframes ထည့်ရန်။
+- [ ] Animation ကို transform/opacity အဓိကထားပြီး reduced-motion fallback ထည့်ရန်။
+- [ ] Desktop/mobile hero layout နှင့် visual motion ကို စစ်ဆေးရန်။
+- [ ] TypeScript/build validation ပြီးနောက် checkpoint သိမ်းရန်။
