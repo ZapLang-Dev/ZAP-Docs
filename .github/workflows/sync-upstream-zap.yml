@@ -1,0 +1,69 @@
+name: Sync upstream ZAP documentation
+
+on:
+  schedule:
+    # GitHub Actions polls the public upstream repository every 15 minutes.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [zap-updated]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream-zap
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Sync and validate official documentation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out ZAP-Docs
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.4.1
+          run_install: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install site dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Fetch upstream ZAP
+        run: git clone --depth 1 --branch master https://github.com/hidecard/zap.git "$RUNNER_TEMP/zap-source"
+
+      - name: Synchronize official documentation
+        run: ./scripts/sync-official-zap-docs.sh "$RUNNER_TEMP/zap-source"
+
+      - name: Validate the site
+        run: |
+          pnpm check
+          pnpm build
+          git diff --check
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet; then
+            echo "No documentation changes detected."
+            exit 0
+          fi
+
+          UPSTREAM_COMMIT="$(git -C "$RUNNER_TEMP/zap-source" rev-parse --short HEAD)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/public/official-docs client/public/official-README.md client/public/official-CHANGELOG_EN.md client/public/official-docs-manifest.json
+          git commit -m "chore: sync official ZAP docs ($UPSTREAM_COMMIT)"
+          git push origin HEAD:main
