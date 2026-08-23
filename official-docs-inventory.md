@@ -1,56 +1,28 @@
-# Official Zap documentation inventory
+# Official ZAP documentation inventory
 
-## Primary sources
+## Source of truth
 
-- Repository: https://github.com/hidecard/zap
-- Official documentation directory: https://github.com/hidecard/zap/tree/master/docs
-- English beginner course: https://raw.githubusercontent.com/hidecard/zap/master/docs/LEARN_ZAP_EN.md
-- Burmese beginner course: https://raw.githubusercontent.com/hidecard/zap/master/docs/LEARN_ZAP_MM.md
-- English syntax reference: https://raw.githubusercontent.com/hidecard/zap/master/docs/SYNTAX_GUIDE_EN.md
-- Burmese syntax reference: https://raw.githubusercontent.com/hidecard/zap/master/docs/SYNTAX_GUIDE.md
-- Official docs directory API: https://api.github.com/repos/hidecard/zap/contents/docs?ref=master
+The ZAP-Docs site mirrors the official source repository at [github.com/hidecard/zap](https://github.com/hidecard/zap), using the `master` branch at commit `283c310792d69b467d61fa9df114b7b2ceef379d`. The current published baseline in the source repository is **v2.2.7**.
 
-## Verified lesson coverage
+The synchronized local snapshot is stored under `client/public/official-docs/`. The root overview and English changelog are available as `client/public/official-README.md` and `client/public/official-CHANGELOG_EN.md`. `client/public/official-docs-manifest.json` records the source repository, branch, commit, synchronization timestamp, and file count.
 
-The English beginner guide follows a lesson path covering installation and Hello World, comments and indentation, values and variables, type annotations, text and operators, conditions, lists/maps/JSON, loops, functions, closures and scope, classes and objects, files/paths/environment, modules/exports, Result and Option, Result propagation, tests/assertions, CLI workflow/diagnostics, mini projects, structured ZapError diagnostics, typed Result/Option payloads, and later runtime/tooling topics in the full source.
+## Snapshot coverage
 
-The Burmese beginner guide presents a lesson-based course with installation and Hello World, comments/program structure, variables and value types, operators/calculations, if/else, lists/indexing, maps/JSON, for/while loops, functions/return, scope/closures, file I/O/path/time/environment, modules/project structure, testing/formatter, a task-tracker mini project, and troubleshooting. It explicitly states that each lesson should include a concept, code example, run instructions, expected output, and practice task.
+The complete upstream `docs/` directory is copied without filtering, including learner guides, bilingual references, runtime and tooling contracts, package and release records, roadmap/status notes, ownership data, and patch artifacts. The snapshot currently contains **169 files**, preserving the upstream paths and filenames so that every official document remains directly accessible.
 
-The English syntax guide covers running programs and CLI commands, comments/values, variables and annotations, operators, blocks/control flow, functions, default and named parameters, async functions and await, classes/inheritance, lists/maps/JSON, modules/workspaces, Result/Option, structured errors with raise/try/catch, files/paths/time/environment, diagnostics, and tests.
-
-## Integration decision
-
-The site should preserve the current visual lesson model but expand the route catalog and data model to support detailed lessons with title, language, source URL, learning objective, explanation, syntax, examples, expected output, common mistakes, exercises, and related lessons. English and Burmese content should be presented as parallel lesson tracks or an explicit language selector rather than mixing languages inside one paragraph.
-
-## Additional official documentation families discovered
-
-The repository also contains dedicated bilingual sources for async boundaries, async LSP, async runtime, default parameters, deployment, diagnostic model, language guide/specification, memory model, package and registry workflows, standard-library index, text/math/collection helpers, filesystem/JSON, logging, time, type narrowing, generic type design, resource limits, cross-platform behavior, security audits, release signing/version policy, and roadmap/progress documents.
-
-| Family | English source | Burmese source |
-|---|---|---|
-| Async | `ASYNC_BOUNDARIES_EN.md`, `ASYNC_LSP_EN.md`, `ASYNC_RUNTIME_EN.md` | matching `_MM.md` files |
-| Standard library | `STDLIB_INDEX_EN.md`, `STDLIB_TEXT_MATH_COLLECTION_EN.md`, `STDLIB_FILESYSTEM_JSON_EN.md`, `STDLIB_LOGGING_EN.md`, `STDLIB_TIME_EN.md` | matching `_MM.md` files |
-| Types | `TYPE_NARROWING_EN.md`, `TYPECHECK_CONFORMANCE_MATRIX_EN.md`, `TYPECHECK_GENERIC_DESIGN_EN.md` | matching `_MM.md` files |
-| Packages | `PACKAGE_EN.md`, `PACKAGES.md`, `REGISTRY_AUTH_EN.md` | `REGISTRY_AUTH_MM.md` and bilingual package docs |
-| Delivery | `DEPLOYMENT_EN.md`, `RELEASE_SIGNING_EN.md`, `RELEASE_VERSION_POLICY_EN.md` | matching `_MM.md` files |
-| Diagnostics | `DIAGNOSTIC_MODEL_EN.md`, `SECURITY_AUDIT_EN.md` | matching `_MM.md` files |
-| Architecture | `CORE_SPEC.md`, `LANGUAGE_SPEC_EN.md`, `MEMORY_MODEL_EN.md`, `NATIVE.md` | selected bilingual status docs |
-| Project practice | `BENCHMARK_HARNESS_EN.md`, `COMPATIBILITY_CHANGE_TEMPLATE_EN.md`, `ECOSYSTEM.md` | matching bilingual files where available |
-
-These families are the remaining lesson candidates beyond the already integrated beginner, language, advanced runtime, and basic tooling routes. They should be grouped into beginner lessons, reference lessons, and contributor/developer lessons rather than exposing every internal planning document as a beginner tutorial.
-
-## Complete Docs directory audit
-
-The current official `docs/` directory contains 120 entries. For the website curriculum, learner-facing documents should be promoted into lesson/reference routes, while internal status, planning, patch, and historical release notes should be grouped into a separate contributor and release archive rather than presented as beginner lessons.
-
-| Curriculum group | Sources to promote into lessons or reference pages |
+| Area | Representative upstream sources |
 |---|---|
-| Core language | `LANGUAGE_SPEC_EN/MM`, `CORE_SPEC`, `SYNTAX_GUIDE_EN`, `LEARN_ZAP_EN/MM`, `LANGUAGE_GUIDE`, `DEFAULT_PARAMETERS_EN/MM`, `TYPE_NARROWING_EN/MM`, `TYPECHECK_GENERIC_DESIGN_EN/MM`, `TYPECHECK_CONFORMANCE_MATRIX_EN/MM`, `MEMORY_MODEL_EN/MM` |
-| Async and runtime | `ASYNC_BOUNDARIES_EN/MM`, `ASYNC_LSP_EN/MM`, `ASYNC_RUNTIME_EN/MM`, `P005_ASYNC_BOUNDARY_STATUS_MM`, `P005B_RESOURCE_LIMIT_PLAN_EN/MM`, `P005C_CROSS_PLATFORM_PLAN_EN/MM`, `NATIVE`, `P004_MEMORY_CONTRACT_STATUS_MM` |
-| Standard library | `STDLIB_INDEX_EN/MM`, `STDLIB_TEXT_MATH_COLLECTION_EN/MM`, `STDLIB_FILESYSTEM_JSON_EN/MM`, `STDLIB_LOGGING_EN/MM`, `STDLIB_TIME_EN/MM` |
-| Packages and ecosystem | `PACKAGE_EN`, `PACKAGE`, `PACKAGES`, `REGISTRY_AUTH_EN/MM`, `ECOSYSTEM`, `SPEC_OWNERSHIP_EN/MM`, `SPEC_OWNERSHIP_INDEX.tsv` |
-| Diagnostics, security, and operations | `DIAGNOSTIC_MODEL_EN/MM`, `SECURITY_AUDIT_EN/MM`, `BENCHMARK_HARNESS_EN/MM`, `DEPLOYMENT_EN/MM`, `COMPATIBILITY_CHANGE_TEMPLATE_EN/MM` |
-| Releases and delivery | `RELEASE_VERSION_POLICY_EN/MM`, `RELEASE_SIGNING_EN/MM`, `RELEASE_ROLLBACK_RUNBOOK_EN/MM`, `RELEASE_2.1.0` through `RELEASE_2.1.9` bilingual pairs, and historical release notes |
-| Contributor and project history | `DESIGN`, `NEXT_TODO_PLAN_EN/MM`, `P0_FOUNDATION_STATUS_EN`, `P1_PROGRESS`, `P1_PROGRESS_MM`, `P2_PROGRESS`, `P2_PROGRESS_MM`, `P3_ROADMAP_EN/MM`, `V2.1_ROADMAP_EN/MM`, `AUDIT_LANGUAGE_COMPARISON_2026-08`, `TODO_ZAP_MM`, and roadmap files |
+| Beginner and language reference | `LEARN_ZAP_EN.md`, `LEARN_ZAP_MM.md`, `SYNTAX_GUIDE_EN.md`, `SYNTAX_GUIDE.md`, `LANGUAGE_GUIDE.md`, `LANGUAGE_SPEC_EN.md`, `LANGUAGE_SPEC_MM.md` |
+| Runtime and async | `NATIVE.md`, `RUNTIME_STATE_EN.md`, `RUNTIME_STATE_MM.md`, `ASYNC_BOUNDARIES_EN.md`, `ASYNC_RUNTIME_EN.md`, `ASYNC_LSP_EN.md` |
+| Standard library | `STDLIB_INDEX_EN.md`, `STDLIB_TEXT_MATH_COLLECTION_EN.md`, `STDLIB_FILESYSTEM_JSON_EN.md`, `STDLIB_LOGGING_EN.md`, `STDLIB_TIME_EN.md` and Burmese counterparts |
+| Types and diagnostics | `TYPE_NARROWING_EN.md`, `TYPECHECK_GENERIC_DESIGN_EN.md`, `TYPECHECK_CONFORMANCE_MATRIX_EN.md`, `DIAGNOSTIC_MODEL_EN.md`, `SECURITY_AUDIT_EN.md` |
+| Packages and delivery | `PACKAGE_EN.md`, `PACKAGE.md`, `PACKAGES.md`, `REGISTRY_AUTH_EN.md`, `DEPLOYMENT_EN.md`, `RELEASE_SIGNING_EN.md`, `RELEASE_VERSION_POLICY_EN.md` |
+| Project and historical material | roadmap, progress, ownership, compatibility, release-history, rollback, and audit documents in the upstream `docs/` directory |
 
-The website should not claim that every planning/status document is a stable language feature. Each route will therefore show a source category such as `Learn`, `Reference`, `Runtime`, `Tooling`, `Release`, or `Contributor`, plus the exact official source link and version context.
+## Website integration
+
+The application keeps its curated learner routes and bilingual lesson presentation, while linking each route to the corresponding official upstream document. Current-release UI elements now use v2.2.7 assets for Linux x86_64, macOS ARM64, and Windows x86_64. Historical lessons retain their historical version references where those references describe an earlier release rather than the active baseline.
+
+## Update procedure
+
+To refresh the snapshot, pull the latest `master` branch from the source repository, replace `client/public/official-docs/` with the upstream `docs/` directory, refresh `official-README.md`, `official-CHANGELOG_EN.md`, and regenerate `official-docs-manifest.json`. Then review current-release labels and download URLs in `client/src/App.tsx`, run the TypeScript check and production build, and inspect the Git diff before committing.
