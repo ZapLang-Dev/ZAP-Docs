@@ -97,7 +97,7 @@ The project is intended as a foundation for future web, AI, mobile, and IoT libr
 
 ## Installation
 
-Zap is distributed as a standalone native executable. No separate language runtime is required. Download the archive that matches your operating system and CPU architecture from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7) or the [GitHub Releases page](https://github.com/ZapLang-Dev/zap/releases), verify its checksum and signature, extract it, and make the `zap` executable available on your `PATH`. The v2.2.7 release is the latest published release.
+Zap is distributed as a standalone native executable. No separate language runtime is required. Download the archive that matches your operating system and CPU architecture from the [v2.11.16 source tag](https://github.com/ZapLang-Dev/zap/tree/v2.11.16) or the [ZapLang-Dev Releases page](https://github.com/ZapLang-Dev/zap/releases). Verify the checksum and signature when release assets are available, extract the archive, and make the `zap` executable available on your `PATH`. The organization-owned source baseline is v2.11.16; verify the Releases page for the latest published binary assets.
 
 ### Supported Release Targets
 
@@ -107,7 +107,7 @@ Zap is distributed as a standalone native executable. No separate language runti
 | Windows | x86_64 | `.zip` | Extract and run `install_windows.bat` from Command Prompt |
 | macOS | ARM64 | `.tar.gz` | Extract, make the installer executable, and run `./install.sh` |
 
-For the planned v2.2.7 release, the platform assets are expected to be `zap-2.2.7-linux-x86_64.tar.gz`, `zap-2.2.7-macos-arm64.tar.gz`, and `zap-2.2.7-windows-x86_64.zip`; verify the published asset names on the GitHub Releases page before installing. The exact archive filename may change with each release. Select the asset whose platform and architecture match your computer; do not install a Linux archive on Windows or a macOS archive on Linux.
+For the v2.11.16 baseline, platform assets should follow the release naming convention `zap-2.11.16-linux-x86_64.tar.gz`, `zap-2.11.16-macos-arm64.tar.gz`, and `zap-2.11.16-windows-x86_64.zip`; verify the published asset names on the ZapLang-Dev Releases page before installing. The exact archive filename may change with each release. Select the asset whose platform and architecture match your computer; do not install a Linux archive on Windows or a macOS archive on Linux.
 
 ### Linux Installation
 
@@ -116,7 +116,7 @@ For the planned v2.2.7 release, the platform assets are expected to be `zap-2.2.
 3. Enter the extracted directory and run the installer:
 
 ```bash
-tar -xzf zap-2.2.7-linux-x86_64.tar.gz
+tar -xzf zap-2.11.16-linux-x86_64.tar.gz
 cd zap
 bash install.sh
 ```
@@ -132,11 +132,11 @@ If you prefer a local installation, keep the extracted `zap` executable in a pro
 
 ### macOS Installation
 
-1. Download the macOS ARM64 `.tar.gz` archive from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7).
+1. Download the macOS ARM64 `.tar.gz` archive from the [v2.11.16 source and release page](https://github.com/ZapLang-Dev/zap/tree/v2.11.16).
 2. Extract it and enter the extracted directory:
 
 ```bash
-tar -xzf zap-2.2.7-macos-arm64.tar.gz
+tar -xzf zap-2.11.16-macos-arm64.tar.gz
 cd zap
 ```
 
@@ -158,7 +158,7 @@ On Intel-based Macs, use a compatible release asset if one is published. Do not 
 
 ### Windows Installation
 
-1. Download the Windows x86_64 `.zip` archive from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7).
+1. Download the Windows x86_64 `.zip` archive from the [v2.11.16 source and release page](https://github.com/ZapLang-Dev/zap/tree/v2.11.16).
 2. Extract the archive to a folder such as `C:\Zap`.
 3. Open **Command Prompt** as a normal user and run the installer batch file from the extracted directory:
 
