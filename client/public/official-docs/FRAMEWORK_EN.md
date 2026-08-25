@@ -160,5 +160,5 @@ The Framework Foundation is complete when all four starters have valid manifests
 [6]: https://docs.zephyrproject.org/latest/ — Zephyr RTOS and embedded platform documentation
 [7]: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/ — Espressif ESP-IDF documentation
 [8]: https://embassy.dev/book/ — Embassy embedded async framework documentation
-[9]: https://github.com/hidecard/zap/blob/master/docs/ASYNC_BOUNDARIES_EN.md — Zap v2.2.7 async boundary contract
-[10]: https://github.com/hidecard/zap/blob/master/SECURITY.md — Zap security policy and untrusted-execution boundary
+[9]: https://github.com/ZapLang-Dev/zap/blob/master/docs/ASYNC_BOUNDARIES_EN.md — Zap v2.2.7 async boundary contract
+[10]: https://github.com/ZapLang-Dev/zap/blob/master/SECURITY.md — Zap security policy and untrusted-execution boundary

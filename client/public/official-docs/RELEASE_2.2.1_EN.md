@@ -4,7 +4,7 @@ Zap v2.2.1 is the corrective patch release following the published v2.2.0 releas
 
 ## Release provenance
 
-The v2.2.1 release is built from the corrected post-v2.2.0 `master` history. The published v2.2.0 tag remains immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), together with its signed assets, checksums, provenance, and release notes. No v2.2.0 tag or asset was rewritten to contain the later fixes.
+The v2.2.1 release is built from the corrected post-v2.2.0 `master` history. The published v2.2.0 tag remains immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), together with its signed assets, checksums, provenance, and release notes. No v2.2.0 tag or asset was rewritten to contain the later fixes.
 
 ## LSP document synchronization
 
@@ -40,10 +40,10 @@ The release candidate passed the pinned Rust formatting check, strict Clippy wit
 
 ## Upgrade guidance
 
-Download the archive matching the target platform from the [v2.2.1 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.1), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). Users who need the historical v2.2.0 artifacts can continue to use the immutable [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0).
+Download the archive matching the target platform from the [v2.2.1 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). Users who need the historical v2.2.0 artifacts can continue to use the immutable [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0).
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb "Zap v2.2.0 tag commit"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb "Zap v2.2.0 tag commit"

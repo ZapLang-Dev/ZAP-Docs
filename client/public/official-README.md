@@ -2,11 +2,11 @@
 
 ![Zap Programming Language banner](assets/branding/zap-banner.png)
 
-[![Zap CI](https://github.com/hidecard/zap/actions/workflows/ci.yml/badge.svg)](https://github.com/hidecard/zap/actions/workflows/ci.yml)
-[![Latest Release](https://img.shields.io/github/v/release/hidecard/zap?display_name=tag&sort=semver&color=2ea44f)](https://github.com/hidecard/zap/releases/latest)
+[![Zap CI](https://github.com/ZapLang-Dev/zap/actions/workflows/ci.yml/badge.svg)](https://github.com/ZapLang-Dev/zap/actions/workflows/ci.yml)
+[![Latest Release](https://img.shields.io/github/v/release/ZapLang-Dev/zap?display_name=tag&sort=semver&color=2ea44f)](https://github.com/ZapLang-Dev/zap/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Runtime: Rust](https://img.shields.io/badge/runtime-Rust-orange.svg)](native/)
-[![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)](https://github.com/hidecard/zap/actions)
+[![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)](https://github.com/ZapLang-Dev/zap/actions)
 [![Source: .zp](https://img.shields.io/badge/source-.zp-8A2BE2.svg)](README.md)
 [![Documentation](https://img.shields.io/badge/docs-English%20%7C%20မြန်မာ-0969da.svg)](README_MM.md) [![Discord](https://img.shields.io/badge/Discord-Join%20community-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/j9DHdCtJE) [![Telegram](https://img.shields.io/badge/Telegram-Join%20group-26A5E4.svg?logo=telegram&logoColor=white)](https://t.me/+fySFCXwMt8U3Y2Y1)
 
@@ -22,19 +22,19 @@ Zap is actively evolving toward a production-ready language ecosystem. The stabl
 
 | Item | Current status |
 |---|---|
-| Current release line | `v2.2.7` |
+| Current release line | `v2.11.16` |
 | Runtime | Native Rust runtime |
 | Source files | `.zp`, commonly `main.zp` |
 | Project manifest | `zap.toml` |
 | CLI | `zap` |
 | Platforms | Linux, Windows, and macOS ARM64 release workflows |
-| Repository | [github.com/hidecard/zap](https://github.com/hidecard/zap) |
-| Releases | [GitHub Releases](https://github.com/hidecard/zap/releases) |
+| Repository | [github.com/ZapLang-Dev/zap](https://github.com/ZapLang-Dev/zap) |
+| Releases | [GitHub Releases](https://github.com/ZapLang-Dev/zap/releases) |
 | Documentation hub | [English navigation](docs/DOCUMENTATION_NAVIGATION_EN.md) · [မြန်မာ navigation](docs/DOCUMENTATION_NAVIGATION_MM.md) |
 | Runtime-state contract | [English](docs/RUNTIME_STATE_EN.md) · [မြန်မာ](docs/RUNTIME_STATE_MM.md) |
 | Memory budget/object store contract | [English](docs/MEMORY_BUDGET_OBJECT_STORE_EN.md) · [မြန်မာ](docs/MEMORY_BUDGET_OBJECT_STORE_MM.md) |
 | AST foundation status | [English](docs/P0_FOUNDATION_STATUS_EN.md) · [မြန်မာ](docs/P0_FOUNDATION_STATUS_MM.md) |
-| Documentation source | [Zap documentation directory](https://github.com/hidecard/zap/tree/master/docs) |
+| Documentation source | [Zap documentation directory](https://github.com/ZapLang-Dev/zap/tree/master/docs) |
 | Test status | Native test suite verified by GitHub Actions |
 | Verification status | M2-VERIFY-01 bounded replay, M2-VERIFY-02 native matrix, M2-BENCH-01 provenance/variance, M2-REG-01 transport, M3-STDLIB-01 policy evidence, M3-LSP-01 semantic-parity/editor validation, and post-release LSP protocol synchronization evidence |
 | Language design | [Traits/composition RFC](docs/TRAITS_RFC_EN.md) — design-only; deferred for v2.2.7 |
@@ -43,11 +43,11 @@ Zap is actively evolving toward a production-ready language ecosystem. The stabl
 
 ## Release provenance
 
-The installation links and archive names in this README describe the published [v2.2.7 release](https://github.com/hidecard/zap/releases/tag/v2.2.7), sourced from tagged commit [`d1d6816`](https://github.com/hidecard/zap/commit/d1d6816d7d39198b4a9778d531e29cd7b4e1f38a). The published v2.2.7 release and its signed assets are now the latest official distribution. The published [v2.2.5 release](https://github.com/hidecard/zap/releases/tag/v2.2.5) remains immutable. The earlier [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0), [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2), [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3), and [v2.2.4 release](https://github.com/hidecard/zap/releases/tag/v2.2.4), together with their tags and signed assets, remain immutable. The post-v2.2.0 remediation history and the runtime-safety/helper corrections through v2.2.3 are documented in the [remediation/provenance record](docs/POST_V2.2.0_REMEDIATION_EN.md) and the v2.2.3 release notes. The post-v2.2.2 hardening is included in v2.2.3.
+The current Zap source baseline is **v2.11.16**. Use the [v2.11.16 source tag](https://github.com/ZapLang-Dev/zap/tree/v2.11.16) and the [ZapLang-Dev repository](https://github.com/ZapLang-Dev/zap) as the organization-owned source of truth. The release-history pages in this documentation repository preserve historical v2.2.x records; those records are intentionally not rewritten because they describe the behavior and provenance of their original releases. For current implementation status, read the [current-status documentation](https://github.com/ZapLang-Dev/zap/blob/master/docs/CURRENT_STATUS_EN.md) and the [Bootstrap Contract](https://github.com/ZapLang-Dev/zap/blob/master/docs/BOOTSTRAP_CONTRACT_EN.md).
 
-## v2.2.7 Dependency Remediation Status
+## Historical v2.2.7 Dependency Remediation Status
 
-The approved dependency graph was developed on the isolated `chore/dependency-remediation-v2.2.7` branch, reviewed in [PR #2](https://github.com/hidecard/zap/pull/2), merged into `master`, and released as v2.2.7 after the final CI and release validations passed.
+This section is retained as a historical record for the v2.2.7 dependency-remediation release. It is not the current v2.11.16 release status. The current source, tags, issues, actions, and implementation contracts are maintained in [ZapLang-Dev/zap](https://github.com/ZapLang-Dev/zap).
 
 | Area | Verified remediation state |
 |---|---|
@@ -97,7 +97,7 @@ The project is intended as a foundation for future web, AI, mobile, and IoT libr
 
 ## Installation
 
-Zap is distributed as a standalone native executable. No separate language runtime is required. Download the archive that matches your operating system and CPU architecture from the [published v2.2.7 release](https://github.com/hidecard/zap/releases/tag/v2.2.7) or the [GitHub Releases page](https://github.com/hidecard/zap/releases), verify its checksum and signature, extract it, and make the `zap` executable available on your `PATH`. The v2.2.7 release is the latest published release.
+Zap is distributed as a standalone native executable. No separate language runtime is required. Download the archive that matches your operating system and CPU architecture from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7) or the [GitHub Releases page](https://github.com/ZapLang-Dev/zap/releases), verify its checksum and signature, extract it, and make the `zap` executable available on your `PATH`. The v2.2.7 release is the latest published release.
 
 ### Supported Release Targets
 
@@ -111,7 +111,7 @@ For the planned v2.2.7 release, the platform assets are expected to be `zap-2.2.
 
 ### Linux Installation
 
-1. Open the [Zap releases page](https://github.com/hidecard/zap/releases) and download the Linux x86_64 `.tar.gz` archive and its checksum file.
+1. Open the [Zap releases page](https://github.com/ZapLang-Dev/zap/releases) and download the Linux x86_64 `.tar.gz` archive and its checksum file.
 2. Extract the archive in a directory you control.
 3. Enter the extracted directory and run the installer:
 
@@ -132,7 +132,7 @@ If you prefer a local installation, keep the extracted `zap` executable in a pro
 
 ### macOS Installation
 
-1. Download the macOS ARM64 `.tar.gz` archive from the [published v2.2.7 release](https://github.com/hidecard/zap/releases/tag/v2.2.7).
+1. Download the macOS ARM64 `.tar.gz` archive from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7).
 2. Extract it and enter the extracted directory:
 
 ```bash
@@ -158,7 +158,7 @@ On Intel-based Macs, use a compatible release asset if one is published. Do not 
 
 ### Windows Installation
 
-1. Download the Windows x86_64 `.zip` archive from the [published v2.2.7 release](https://github.com/hidecard/zap/releases/tag/v2.2.7).
+1. Download the Windows x86_64 `.zip` archive from the [published v2.2.7 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7).
 2. Extract the archive to a folder such as `C:\Zap`.
 3. Open **Command Prompt** as a normal user and run the installer batch file from the extracted directory:
 

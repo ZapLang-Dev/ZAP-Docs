@@ -4,18 +4,18 @@
 
 ## အကျုံးဝင်မှုနှင့် provenance
 
-ဤမှတ်တမ်းသည် Zap v2.2.0 ၏ deep technical review အပြီး စတင်ခဲ့သော corrective-release cycle ကို မှတ်တမ်းတင်သည်။ ထုတ်ဝေပြီးသား v2.2.0 release notes နှင့် သီးခြားထားရခြင်းမှာ သမိုင်းမှတ်တမ်းကို မပြန်ရေးရန် ဖြစ်သည်။ Published **v2.2.0 tag သည် immutable** ဖြစ်ပြီး [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit ကို ညွှန်ပြထားသည်။ အောင်မြင်ခဲ့သော release workflow ကို [GitHub Actions run 32546657968](https://github.com/hidecard/zap/actions/runs/32546657968) တွင် မှတ်တမ်းတင်ထားသည်။ နောက်ပိုင်း correction များကို ထို historical tag သို့ backport၊ force-push သို့မဟုတ် v2.2.0 ၏ အစိတ်အပိုင်းဟု မဖော်ပြပါ။
+ဤမှတ်တမ်းသည် Zap v2.2.0 ၏ deep technical review အပြီး စတင်ခဲ့သော corrective-release cycle ကို မှတ်တမ်းတင်သည်။ ထုတ်ဝေပြီးသား v2.2.0 release notes နှင့် သီးခြားထားရခြင်းမှာ သမိုင်းမှတ်တမ်းကို မပြန်ရေးရန် ဖြစ်သည်။ Published **v2.2.0 tag သည် immutable** ဖြစ်ပြီး [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit ကို ညွှန်ပြထားသည်။ အောင်မြင်ခဲ့သော release workflow ကို [GitHub Actions run 32546657968](https://github.com/ZapLang-Dev/zap/actions/runs/32546657968) တွင် မှတ်တမ်းတင်ထားသည်။ နောက်ပိုင်း correction များကို ထို historical tag သို့ backport၊ force-push သို့မဟုတ် v2.2.0 ၏ အစိတ်အပိုင်းဟု မဖော်ပြပါ။
 
 လက်ရှိ `master` branch တွင် နောက်ပိုင်း corrective commit များ ပါရှိသည်။ ထိုပြောင်းလဲမှုများကို **v2.2.1** အဖြစ် package ပြုလုပ်ပြီး ထုတ်ဝေထားသည်။ v2.2.0 archive ကို install လုပ်သော user များသည် v2.2.0-tagged behavior ကို ရရှိမည်ဖြစ်ပြီး v2.2.1 release တွင် အောက်တွင် ဖော်ပြထားသော corrective behavior များ ပါဝင်သည်။
 
 | Provenance boundary | Commit သို့မဟုတ် record | အဓိပ္ပာယ် |
 |---|---|---|
-| Published v2.2.0 | [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) နှင့် [release v2.2.0](https://github.com/hidecard/zap/releases/tag/v2.2.0) | Historical release asset၊ checksum၊ provenance နှင့် release note များ ဖြစ်ပြီး မပြောင်းလဲပါ။ |
-| LSP synchronization correction | [`c2a662f`](https://github.com/hidecard/zap/commit/c2a662f) | Standard full-document `didChange`၊ version tracking၊ accepted-buffer diagnostics နှင့် unsupported range change များကို safe rejection ပြုလုပ်ခြင်း။ |
-| Semantic rename correction | [`eed2dc4`](https://github.com/hidecard/zap/commit/eed2dc4) | Shadowing၊ closure၊ parameter နှင့် import alias ပါဝင်သော file-local lexical binding resolution။ |
-| LSP interoperability correction | [`cdf2aa1`](https://github.com/hidecard/zap/commit/cdf2aa1) | Negotiated position encoding၊ strict file URI နှင့် workspace bounds၊ encoding-aware range များ။ |
-| VS Code delivery correction | [`f77f265`](https://github.com/hidecard/zap/commit/f77f265) | Canonical extension source၊ package validation၊ catalog-aligned asset နှင့် native-LSP rename provider။ |
-| Standard-library determinism correction | [`2c4c928`](https://github.com/hidecard/zap/commit/2c4c928) | Schema-2 `determinism_class` taxonomy၊ legacy-boolean compatibility၊ explicit builtin exception နှင့် bilingual policy update။ |
+| Published v2.2.0 | [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) နှင့် [release v2.2.0](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) | Historical release asset၊ checksum၊ provenance နှင့် release note များ ဖြစ်ပြီး မပြောင်းလဲပါ။ |
+| LSP synchronization correction | [`c2a662f`](https://github.com/ZapLang-Dev/zap/commit/c2a662f) | Standard full-document `didChange`၊ version tracking၊ accepted-buffer diagnostics နှင့် unsupported range change များကို safe rejection ပြုလုပ်ခြင်း။ |
+| Semantic rename correction | [`eed2dc4`](https://github.com/ZapLang-Dev/zap/commit/eed2dc4) | Shadowing၊ closure၊ parameter နှင့် import alias ပါဝင်သော file-local lexical binding resolution။ |
+| LSP interoperability correction | [`cdf2aa1`](https://github.com/ZapLang-Dev/zap/commit/cdf2aa1) | Negotiated position encoding၊ strict file URI နှင့် workspace bounds၊ encoding-aware range များ။ |
+| VS Code delivery correction | [`f77f265`](https://github.com/ZapLang-Dev/zap/commit/f77f265) | Canonical extension source၊ package validation၊ catalog-aligned asset နှင့် native-LSP rename provider။ |
+| Standard-library determinism correction | [`2c4c928`](https://github.com/ZapLang-Dev/zap/commit/2c4c928) | Schema-2 `determinism_class` taxonomy၊ legacy-boolean compatibility၊ explicit builtin exception နှင့် bilingual policy update။ |
 
 ## Corrective milestones
 
@@ -48,9 +48,9 @@ v2.2.1 release ကို clean commit မှ ပြင်ဆင်ပြီး C
 
 ## References
 
-1. [Published v2.2.0 tag](https://github.com/hidecard/zap/releases/tag/v2.2.0) နှင့် [immutable tag commit](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb)။
-2. [Successful v2.2.0 release workflow](https://github.com/hidecard/zap/actions/runs/32546657968)။
+1. [Published v2.2.0 tag](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) နှင့် [immutable tag commit](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb)။
+2. [Successful v2.2.0 release workflow](https://github.com/ZapLang-Dev/zap/actions/runs/32546657968)။
 3. [LSP synchronization contract](ASYNC_LSP_MM.md) နှင့် [protocol regression harness](../scripts/test_lsp_protocol_sync.sh)။
 4. [Standard-library stability and determinism policy](STDLIB_POLICY_MM.md)။
 5. [v2.2.0 historical release notes](RELEASE_2.2.0_MM.md) — ဤ record သည် ၎င်းကို ပြန်မရေးပါ။
-6. [Published v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1)၊ [v2.2.1 release workflow](https://github.com/hidecard/zap/actions/runs/32575824809) နှင့် [v2.2.1 release notes](RELEASE_2.2.1_MM.md)။
+6. [Published v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1)၊ [v2.2.1 release workflow](https://github.com/ZapLang-Dev/zap/actions/runs/32575824809) နှင့် [v2.2.1 release notes](RELEASE_2.2.1_MM.md)။

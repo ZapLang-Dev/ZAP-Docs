@@ -1,6 +1,6 @@
 # Official Zap source notes
 
-The documentation source of truth is the official repository: https://github.com/hidecard/zap
+The documentation source of truth is the official repository: https://github.com/ZapLang-Dev/zap
 
 The repository README identifies the current release line as v2.0.4, with `.zp` source files, `main.zp` as the common entry point, `zap.toml` as the project manifest, a native Rust runtime, and Linux x86_64, Windows x86_64, and macOS ARM64 release targets. The README installation section links to the v2.0.4 release and documents `tar -xzf`, `bash install.sh`, `chmod +x install.sh`, `./install.sh`, `install_windows.bat`, `zap --version`, `zap --help`, and running `zap main.zp`.
 
@@ -21,13 +21,13 @@ The official Burmese learning guide is available and should be used as the basis
 
 ## v2.0.4 release assets
 
-Release page: https://github.com/hidecard/zap/releases/tag/v2.0.4
+Release page: https://github.com/ZapLang-Dev/zap/releases/tag/v2.0.4
 
-Linux x86_64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz
-Linux checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz.sha256
-macOS ARM64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz
-macOS checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz.sha256
-Windows x86_64 archive: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip
-Windows checksum: https://github.com/hidecard/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip.sha256
-Full changelog comparison: https://github.com/hidecard/zap/compare/v2.0.3...v2.0.4
-Repository changelog: https://github.com/hidecard/zap/blob/master/CHANGELOG_EN.md
+Linux x86_64 archive: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz
+Linux checksum: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-linux-x86_64.tar.gz.sha256
+macOS ARM64 archive: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz
+macOS checksum: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-macos-arm64.tar.gz.sha256
+Windows x86_64 archive: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip
+Windows checksum: https://github.com/ZapLang-Dev/zap/releases/download/v2.0.4/zap-2.0.4-windows-x86_64.zip.sha256
+Full changelog comparison: https://github.com/ZapLang-Dev/zap/compare/v2.0.3...v2.0.4
+Repository changelog: https://github.com/ZapLang-Dev/zap/blob/master/CHANGELOG_EN.md

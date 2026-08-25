@@ -22,7 +22,7 @@ Install a Rust toolchain compatible with the crate's pinned compatibility line. 
 Clone the repository and select the Framework branch if it is not already available locally:
 
 ```bash
-git clone https://github.com/hidecard/zap.git
+git clone https://github.com/ZapLang-Dev/zap.git
 cd zap
 git switch Framework
 ```

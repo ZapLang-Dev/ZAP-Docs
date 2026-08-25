@@ -19,4 +19,4 @@ This patch release does not introduce new language syntax or broaden async or tr
 
 ## Verification
 
-The master-branch validation run passed the version gate, regression harness, formatting, strict Clippy, Cargo check, the full 254-test native suite, focused conformance/security/async/parity/ownership gates, and Linux, Windows, and macOS ARM64 build jobs. See the [GitHub Actions run](https://github.com/hidecard/zap/actions/runs/32505190955) for the complete evidence.
+The master-branch validation run passed the version gate, regression harness, formatting, strict Clippy, Cargo check, the full 254-test native suite, focused conformance/security/async/parity/ownership gates, and Linux, Windows, and macOS ARM64 build jobs. See the [GitHub Actions run](https://github.com/ZapLang-Dev/zap/actions/runs/32505190955) for the complete evidence.

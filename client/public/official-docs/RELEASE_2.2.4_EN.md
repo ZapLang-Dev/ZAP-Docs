@@ -4,7 +4,7 @@ Zap v2.2.4 is a post-v2.2.3 documentation-baseline maintenance release. It recor
 
 ## Release provenance
 
-The v2.2.4 release is built from the `master` history after the published v2.2.3 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); and v2.2.3 remains immutable at [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
+The v2.2.4 release is built from the `master` history after the published v2.2.3 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); and v2.2.3 remains immutable at [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
 
 ## Active specification baseline
 
@@ -28,16 +28,16 @@ The audited v2.2.3 baseline passed the complete release preflight after the docu
 
 ## Historical release preservation
 
-The post-v2.2.3 audit found no production panic-capable calls before Rust test modules and no actionable runtime or tooling defect beyond the stale active documentation references corrected in the maintenance commit [`5cf2682`](https://github.com/hidecard/zap/commit/5cf2682dd14e62f13a0edba6df9718d76e83459e). Deferred roadmap items remain deferred architecture or governance scope and are not silently represented as completed implementation.
+The post-v2.2.3 audit found no production panic-capable calls before Rust test modules and no actionable runtime or tooling defect beyond the stale active documentation references corrected in the maintenance commit [`5cf2682`](https://github.com/ZapLang-Dev/zap/commit/5cf2682dd14e62f13a0edba6df9718d76e83459e). Deferred roadmap items remain deferred architecture or governance scope and are not silently represented as completed implementation.
 
 ## Upgrade guidance
 
-Download the archive matching the target platform from the [v2.2.4 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.4), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) remain available without modification.
+Download the archive matching the target platform from the [v2.2.4 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) remain available without modification.
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/commit/5cf2682 "Fix stale active documentation baselines"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/commit/5cf2682 "Fix stale active documentation baselines"

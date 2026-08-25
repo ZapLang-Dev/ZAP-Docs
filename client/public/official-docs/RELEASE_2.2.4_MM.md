@@ -4,7 +4,7 @@ Zap v2.2.4 သည် v2.2.3 နောက်ပိုင်း documentation-base
 
 ## Release provenance
 
-Zap v2.2.4 ကို published v2.2.3 release နောက်ပိုင်း `master` history မှ တည်ဆောက်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ အဆိုပါ release များ၏ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
+Zap v2.2.4 ကို published v2.2.3 release နောက်ပိုင်း `master` history မှ တည်ဆောက်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ အဆိုပါ release များ၏ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
 
 ## Active specification baseline
 
@@ -28,16 +28,16 @@ Documentation correction များပြီးနောက် audited v2.2.3 
 
 ## Historical release preservation
 
-Post-v2.2.3 audit တွင် Rust test module များမတိုင်မီ production code အတွင်း panic ဖြစ်စေနိုင်သော call များ မတွေ့ရှိပါ။ Stale active documentation reference များမှအပ actionable runtime သို့မဟုတ် tooling defect မတွေ့ရှိရဘဲ ၎င်းတို့ကို maintenance commit [`5cf2682`](https://github.com/hidecard/zap/commit/5cf2682dd14e62f13a0edba6df9718d76e83459e) တွင် ပြင်ဆင်ထားပါသည်။ Roadmap ထဲရှိ deferred item များသည် architecture သို့မဟုတ် governance scope အဖြစ် ဆက်လက် deferred ဖြစ်ပြီး implementation ပြီးစီးသည်ဟု မဖော်ပြပါ။
+Post-v2.2.3 audit တွင် Rust test module များမတိုင်မီ production code အတွင်း panic ဖြစ်စေနိုင်သော call များ မတွေ့ရှိပါ။ Stale active documentation reference များမှအပ actionable runtime သို့မဟုတ် tooling defect မတွေ့ရှိရဘဲ ၎င်းတို့ကို maintenance commit [`5cf2682`](https://github.com/ZapLang-Dev/zap/commit/5cf2682dd14e62f13a0edba6df9718d76e83459e) တွင် ပြင်ဆင်ထားပါသည်။ Roadmap ထဲရှိ deferred item များသည် architecture သို့မဟုတ် governance scope အဖြစ် ဆက်လက် deferred ဖြစ်ပြီး implementation ပြီးစီးသည်ဟု မဖော်ပြပါ။
 
 ## Upgrade guidance
 
-Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.4 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.4) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
+Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.4 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/commit/5cf2682 "Fix stale active documentation baselines"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/commit/5cf2682 "Fix stale active documentation baselines"

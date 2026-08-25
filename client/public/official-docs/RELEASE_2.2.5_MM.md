@@ -4,7 +4,7 @@ Zap v2.2.5 သည် v2.2.4 နောက်ပိုင်း non-framework reli
 
 ## Release provenance
 
-Zap v2.2.5 ကို published v2.2.4 release နောက်ပိုင်း `master` history မှ တည်ဆောက်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ v2.2.4 သည် [`00d2847`](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2) တွင် immutable ဖြစ်သည်။ အဆိုပါ release များ၏ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
+Zap v2.2.5 ကို published v2.2.4 release နောက်ပိုင်း `master` history မှ တည်ဆောက်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ v2.2.4 သည် [`00d2847`](https://github.com/ZapLang-Dev/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2) တွင် immutable ဖြစ်သည်။ အဆိုပါ release များ၏ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
 
 ## Active runtime reliability baseline
 
@@ -28,17 +28,17 @@ Focused HTTP-hardening validation တွင် strict formatting၊ warnings den
 
 ## Historical release preservation
 
-Fresh no-framework audit တွင် actionable TODO/FIXME marker မကျန်ရှိတော့ကြောင်း၊ framework implementation အသစ်မရှိကြောင်းနှင့် HTTP invariant hardening ပြီးနောက် production `unreachable!` သို့မဟုတ် `todo!` path မကျန်ရှိတော့ကြောင်း စစ်ဆေးတွေ့ရှိရသည်။ Roadmap ထဲရှိ ကျန် item များသည် architecture သို့မဟုတ် governance scope အဖြစ် ရည်ရွယ်ချက်ရှိရှိ deferred ထားခြင်းဖြစ်ပြီး implementation ပြီးစီးသည်ဟု မဖော်ပြပါ။ Focused reliability correction ကို [`f4470ab`](https://github.com/hidecard/zap/commit/f4470abdcc314311cf759fa023bf497b1bdd2a94) commit တွင် မှတ်တမ်းတင်ထားပါသည်။
+Fresh no-framework audit တွင် actionable TODO/FIXME marker မကျန်ရှိတော့ကြောင်း၊ framework implementation အသစ်မရှိကြောင်းနှင့် HTTP invariant hardening ပြီးနောက် production `unreachable!` သို့မဟုတ် `todo!` path မကျန်ရှိတော့ကြောင်း စစ်ဆေးတွေ့ရှိရသည်။ Roadmap ထဲရှိ ကျန် item များသည် architecture သို့မဟုတ် governance scope အဖြစ် ရည်ရွယ်ချက်ရှိရှိ deferred ထားခြင်းဖြစ်ပြီး implementation ပြီးစီးသည်ဟု မဖော်ပြပါ။ Focused reliability correction ကို [`f4470ab`](https://github.com/ZapLang-Dev/zap/commit/f4470abdcc314311cf759fa023bf497b1bdd2a94) commit တွင် မှတ်တမ်းတင်ထားပါသည်။
 
 ## Upgrade guidance
 
-Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.5 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.5) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.4 release](https://github.com/hidecard/zap/releases/tag/v2.2.4)၊ [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
+Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.5 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.4 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4)၊ [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
-[6]: https://github.com/hidecard/zap/commit/f4470ab "Harden HTTP URL invariants"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
+[6]: https://github.com/ZapLang-Dev/zap/commit/f4470ab "Harden HTTP URL invariants"

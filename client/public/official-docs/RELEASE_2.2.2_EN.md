@@ -4,7 +4,7 @@ Zap v2.2.2 is a corrective maintenance release following the published v2.2.1 re
 
 ## Release provenance
 
-The v2.2.2 release is built from the post-v2.2.1 `master` history. The historical v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), together with their signed assets, checksums, provenance, and release notes. The published v2.2.1 tag and release also remain unchanged; no historical tag or asset was rewritten.
+The v2.2.2 release is built from the post-v2.2.1 `master` history. The historical v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), together with their signed assets, checksums, provenance, and release notes. The published v2.2.1 tag and release also remain unchanged; no historical tag or asset was rewritten.
 
 ## Runtime borrow and cycle safety
 
@@ -28,15 +28,15 @@ This release preserves the existing Zap language and package contracts while rep
 
 ## Verification and reproducibility
 
-The release candidate passed the complete serial native suite with 229 unit tests and 256 integration tests, strict Clippy with warnings denied, formatting, LSP protocol synchronization, LSP semantic parity, the canonical VS Code package contract, standard-library policy, parity/replay/async matrix, benchmark, packaging, documentation consistency and regression harnesses, specification ownership, and `git diff --check`. GitHub Actions run [`32584437606`](https://github.com/hidecard/zap/actions/runs/32584437606) completed successfully for the grammar-synchronized state. Cargo.lock was not regenerated or updated; only the `zap-native` package version stanza was patched from 2.2.1 to 2.2.2.
+The release candidate passed the complete serial native suite with 229 unit tests and 256 integration tests, strict Clippy with warnings denied, formatting, LSP protocol synchronization, LSP semantic parity, the canonical VS Code package contract, standard-library policy, parity/replay/async matrix, benchmark, packaging, documentation consistency and regression harnesses, specification ownership, and `git diff --check`. GitHub Actions run [`32584437606`](https://github.com/ZapLang-Dev/zap/actions/runs/32584437606) completed successfully for the grammar-synchronized state. Cargo.lock was not regenerated or updated; only the `zap-native` package version stanza was patched from 2.2.1 to 2.2.2.
 
 ## Upgrade guidance
 
-Download the archive matching the target platform from the [v2.2.2 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.2), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1) and historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) remain available without modification.
+Download the archive matching the target platform from the [v2.2.2 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) and historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) remain available without modification.
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/commit/73a1fb5840af4e36789f9572078b0215282291ea "Checked EnvFrame borrows and explicit cycle policy"
-[4]: https://github.com/hidecard/zap/commit/4db20741a34100c99cacca1811eea551b2040ce5 "Builtin grammar catalog synchronization"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/commit/73a1fb5840af4e36789f9572078b0215282291ea "Checked EnvFrame borrows and explicit cycle policy"
+[4]: https://github.com/ZapLang-Dev/zap/commit/4db20741a34100c99cacca1811eea551b2040ce5 "Builtin grammar catalog synchronization"

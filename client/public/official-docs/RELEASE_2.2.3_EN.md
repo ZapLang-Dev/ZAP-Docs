@@ -4,7 +4,7 @@ Zap v2.2.3 is a post-v2.2.2 runtime-reliability release. It packages bounded cyc
 
 ## Release provenance
 
-The v2.2.3 release is built from the `master` history after the published v2.2.2 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); and v2.2.2 remains immutable at [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
+The v2.2.3 release is built from the `master` history after the published v2.2.2 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); and v2.2.2 remains immutable at [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
 
 ## Runtime equality safety
 
@@ -32,14 +32,14 @@ The release candidate is required to pass strict formatting and Clippy, the seri
 
 ## Upgrade guidance
 
-Download the archive matching the target platform from the [v2.2.3 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.3), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) remain available without modification.
+Download the archive matching the target platform from the [v2.2.3 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) remain available without modification.
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/commit/ed1cb46 "Harden runtime borrows and cyclic equality"
-[5]: https://github.com/hidecard/zap/commit/3e58e10 "Harden LSP rename scope stack"
-[6]: https://github.com/hidecard/zap/commit/349f68a "Synchronize post-v2.2.2 documentation"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/commit/ed1cb46 "Harden runtime borrows and cyclic equality"
+[5]: https://github.com/ZapLang-Dev/zap/commit/3e58e10 "Harden LSP rename scope stack"
+[6]: https://github.com/ZapLang-Dev/zap/commit/349f68a "Synchronize post-v2.2.2 documentation"
 

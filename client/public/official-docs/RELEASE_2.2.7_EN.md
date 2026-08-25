@@ -4,7 +4,7 @@ Zap v2.2.7 is a Framework dependency-security and runtime-quality maintenance re
 
 ## Release provenance
 
-The v2.2.7 release candidate is prepared from the Framework remediation history after the published v2.2.6 release; v2.2.6 remains immutable. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); v2.2.3 remains immutable at [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8); v2.2.4 remains immutable at [`00d2847`](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2); and v2.2.5 remains immutable at commit [`e5f3ea7`](https://github.com/hidecard/zap/commit/e5f3ea7195d4b8bb1e3c38c4618be834bf50c558). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
+The v2.2.7 release candidate is prepared from the Framework remediation history after the published v2.2.6 release; v2.2.6 remains immutable. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); v2.2.3 remains immutable at [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8); v2.2.4 remains immutable at [`00d2847`](https://github.com/ZapLang-Dev/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2); and v2.2.5 remains immutable at commit [`e5f3ea7`](https://github.com/ZapLang-Dev/zap/commit/e5f3ea7195d4b8bb1e3c38c4618be834bf50c558). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
 
 ## Active runtime reliability baseline
 
@@ -36,16 +36,16 @@ The v2.2.7 maintenance work preserves all prior release tags and published asset
 
 ## Upgrade guidance
 
-After publication, download the archive matching the target platform from the [v2.2.7 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.7), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.5 release](https://github.com/hidecard/zap/releases/tag/v2.2.5), [v2.2.4 release](https://github.com/hidecard/zap/releases/tag/v2.2.4), [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) remain available without modification.
+After publication, download the archive matching the target platform from the [v2.2.7 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.7), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.5 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5), [v2.2.4 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4), [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) remain available without modification.
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
-[6]: https://github.com/hidecard/zap/releases/tag/v2.2.5 "Zap v2.2.5 release"
-[7]: https://github.com/hidecard/zap/commit/cf614e2 "Fix Windows legacy path fixture"
-[8]: https://github.com/hidecard/zap/commit/0b0e276 "Core hardening maintenance"
-[9]: https://github.com/hidecard/zap/commit/d5c2cde "Align grammar with cataloged sleep builtin"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
+[6]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5 "Zap v2.2.5 release"
+[7]: https://github.com/ZapLang-Dev/zap/commit/cf614e2 "Fix Windows legacy path fixture"
+[8]: https://github.com/ZapLang-Dev/zap/commit/0b0e276 "Core hardening maintenance"
+[9]: https://github.com/ZapLang-Dev/zap/commit/d5c2cde "Align grammar with cataloged sleep builtin"

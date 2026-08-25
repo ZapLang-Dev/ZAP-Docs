@@ -11,7 +11,7 @@ The documentation site is a static frontend. It cannot safely execute an arbitra
 1. Official README: https://raw.githubusercontent.com/hidecard/zap/master/README.md
 2. Official repository contents: https://api.github.com/repos/hidecard/zap/contents
 3. Official recursive repository tree: https://api.github.com/repos/hidecard/zap/git/trees/master?recursive=1
-4. Official repository: https://github.com/hidecard/zap
+4. Official repository: https://github.com/ZapLang-Dev/zap
 
 ## Decision
 

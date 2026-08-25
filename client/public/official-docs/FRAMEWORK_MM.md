@@ -160,5 +160,5 @@ Starter လေးခုလုံးတွင် valid manifest နှင့် l
 [6]: https://docs.zephyrproject.org/latest/ — Zephyr RTOS နှင့် embedded platform documentation
 [7]: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/ — Espressif ESP-IDF documentation
 [8]: https://embassy.dev/book/ — Embassy embedded async framework documentation
-[9]: https://github.com/hidecard/zap/blob/master/docs/ASYNC_BOUNDARIES_MM.md — Zap async boundary contract
-[10]: https://github.com/hidecard/zap/blob/master/SECURITY.md — Zap security policy နှင့် untrusted execution boundary
+[9]: https://github.com/ZapLang-Dev/zap/blob/master/docs/ASYNC_BOUNDARIES_MM.md — Zap async boundary contract
+[10]: https://github.com/ZapLang-Dev/zap/blob/master/SECURITY.md — Zap security policy နှင့် untrusted execution boundary

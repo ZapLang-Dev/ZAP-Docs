@@ -95,7 +95,7 @@ version = "0.1.0"
 description = "A small Zap application"
 authors = ["Zap Team"]
 license = "MIT"
-repository = "https://github.com/hidecard/zap"
+repository = "https://github.com/ZapLang-Dev/zap"
 checksum = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
 ```
 

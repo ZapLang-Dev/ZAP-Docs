@@ -47,7 +47,7 @@ say admin.role()
 
 ## Installation
 
-GitHub [Releases](https://github.com/hidecard/zap/releases) မှ သင့် operating system နှင့် architecture ကိုက်ညီသော archive ကို download လုပ်ပြီး extract လုပ်ပါ။
+GitHub [Releases](https://github.com/ZapLang-Dev/zap/releases) မှ သင့် operating system နှင့် architecture ကိုက်ညီသော archive ကို download လုပ်ပြီး extract လုပ်ပါ။
 
 Linux သို့မဟုတ် macOS တွင်—
 

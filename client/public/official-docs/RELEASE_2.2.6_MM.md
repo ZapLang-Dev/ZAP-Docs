@@ -4,7 +4,7 @@ Zap v2.2.6 သည် published v2.2.5 နောက်ပိုင်း non-fram
 
 ## Release provenance
 
-v2.2.6 release ကို published v2.2.5 release နောက်ပိုင်း `master` history မှ ပြင်ဆင်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ v2.2.4 သည် [`00d2847`](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2) တွင် immutable ဖြစ်ပြီး v2.2.5 သည် [`e5f3ea7`](https://github.com/hidecard/zap/commit/e5f3ea7195d4b8bb1e3c38c4618be834bf50c558) commit တွင် immutable ဖြစ်သည်။ အဆိုပါ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
+v2.2.6 release ကို published v2.2.5 release နောက်ပိုင်း `master` history မှ ပြင်ဆင်ထားသည်။ v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် immutable ဖြစ်ပြီး v2.2.1 သည် [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784) တွင် immutable ဖြစ်သည်။ v2.2.2 သည် [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698) တွင် immutable ဖြစ်ပြီး v2.2.3 သည် [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8) တွင် immutable ဖြစ်သည်။ v2.2.4 သည် [`00d2847`](https://github.com/ZapLang-Dev/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2) တွင် immutable ဖြစ်ပြီး v2.2.5 သည် [`e5f3ea7`](https://github.com/ZapLang-Dev/zap/commit/e5f3ea7195d4b8bb1e3c38c4618be834bf50c558) commit တွင် immutable ဖြစ်သည်။ အဆိုပါ tag၊ release၊ signed asset၊ checksum၊ provenance နှင့် release note များကို rewrite မလုပ်ထားပါ။
 
 ## Active runtime reliability baseline
 
@@ -28,7 +28,7 @@ English နှင့် Burmese README၊ navigation hub၊ syntax နှင့�
 
 ## Verification and dependency advisory status
 
-v2.2.6 release သည် strict formatting၊ warnings-denied Clippy၊ locked compilation၊ native unit/integration suite အပြည့်အစုံ၊ filesystem/process/network/security corpus၊ project/lockfile test၊ LSP နှင့် VS Code parity၊ documentation consistency၊ standard-library policy၊ ownership/parity/replay/async matrix၊ packaging နှင့် clean tagged-name release preflight များကို အောင်မြင်ခဲ့ပါသည်။ Release preflight နှင့် tag-triggered release workflow နှစ်ခုလုံးသည် `scripts/check_rustsec_audit.sh` နှင့် `RUN_CARGO_AUDIT=1` မှတစ်ဆင့် modern RustSec audit ကို enforce လုပ်ထားပြီး advisory များကို ignore မလုပ်သလို lockfile ကိုလည်း မပြောင်းလဲပါ။ ထုတ်ဝေထားသော locked graph တွင် `ureq 2.12.1`၊ `url 2.5.8`၊ `idna 1.1.0`၊ `rustls 0.23.40`၊ `rustls-webpki 0.103.15`၊ `rcgen 0.13.2` နှင့် development-only `time 0.3.47` တို့ ပါဝင်ပါသည်။ Strict `cargo-audit 0.22.2` scan သည် locked crate dependency ၈၇ ခုကို စစ်ဆေးပြီး unresolved advisory သုညခုကို report လုပ်ပါသည်။ `time 0.3.47` သည် Rust 1.88.0 လိုအပ်သောကြောင့် ထုတ်ဝေထားသော source နှင့် CI quality job တွင် Rust 1.88.0 ကို အသုံးပြုထားပါသည်။ ၎င်းသည် build toolchain ပြောင်းလဲမှုသာဖြစ်ပြီး Zap language contract ကို မပြောင်းလဲပါ။ Release workflow [32638479414](https://github.com/hidecard/zap/actions/runs/32638479414) သည် tagged commit [`d1d6816`](https://github.com/hidecard/zap/commit/d1d6816d7d39198b4a9778d531e29cd7b4e1f38a) မှ v2.2.6 ကို publish လုပ်ခဲ့ပြီး platform archive သုံးခုနှင့် signed release metadata အားလုံး၏ checksum/signature ကို သီးခြားစစ်ဆေးရာ pass ဖြစ်ပါသည်။
+v2.2.6 release သည် strict formatting၊ warnings-denied Clippy၊ locked compilation၊ native unit/integration suite အပြည့်အစုံ၊ filesystem/process/network/security corpus၊ project/lockfile test၊ LSP နှင့် VS Code parity၊ documentation consistency၊ standard-library policy၊ ownership/parity/replay/async matrix၊ packaging နှင့် clean tagged-name release preflight များကို အောင်မြင်ခဲ့ပါသည်။ Release preflight နှင့် tag-triggered release workflow နှစ်ခုလုံးသည် `scripts/check_rustsec_audit.sh` နှင့် `RUN_CARGO_AUDIT=1` မှတစ်ဆင့် modern RustSec audit ကို enforce လုပ်ထားပြီး advisory များကို ignore မလုပ်သလို lockfile ကိုလည်း မပြောင်းလဲပါ။ ထုတ်ဝေထားသော locked graph တွင် `ureq 2.12.1`၊ `url 2.5.8`၊ `idna 1.1.0`၊ `rustls 0.23.40`၊ `rustls-webpki 0.103.15`၊ `rcgen 0.13.2` နှင့် development-only `time 0.3.47` တို့ ပါဝင်ပါသည်။ Strict `cargo-audit 0.22.2` scan သည် locked crate dependency ၈၇ ခုကို စစ်ဆေးပြီး unresolved advisory သုညခုကို report လုပ်ပါသည်။ `time 0.3.47` သည် Rust 1.88.0 လိုအပ်သောကြောင့် ထုတ်ဝေထားသော source နှင့် CI quality job တွင် Rust 1.88.0 ကို အသုံးပြုထားပါသည်။ ၎င်းသည် build toolchain ပြောင်းလဲမှုသာဖြစ်ပြီး Zap language contract ကို မပြောင်းလဲပါ။ Release workflow [32638479414](https://github.com/ZapLang-Dev/zap/actions/runs/32638479414) သည် tagged commit [`d1d6816`](https://github.com/ZapLang-Dev/zap/commit/d1d6816d7d39198b4a9778d531e29cd7b4e1f38a) မှ v2.2.6 ကို publish လုပ်ခဲ့ပြီး platform archive သုံးခုနှင့် signed release metadata အားလုံး၏ checksum/signature ကို သီးခြားစစ်ဆေးရာ pass ဖြစ်ပါသည်။
 
 ## Historical release preservation
 
@@ -36,16 +36,16 @@ v2.2.6 maintenance အလုပ်များသည် ယခင် release tag
 
 ## Upgrade guidance
 
-Publication ပြီးနောက် target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.6 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.6) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.5 release](https://github.com/hidecard/zap/releases/tag/v2.2.5)၊ [v2.2.4 release](https://github.com/hidecard/zap/releases/tag/v2.2.4)၊ [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
+Publication ပြီးနောက် target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.6 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.6) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.5 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5)၊ [v2.2.4 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4)၊ [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3)၊ [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2)၊ [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
-[6]: https://github.com/hidecard/zap/releases/tag/v2.2.5 "Zap v2.2.5 release"
-[7]: https://github.com/hidecard/zap/commit/cf614e2 "Fix Windows legacy path fixture"
-[8]: https://github.com/hidecard/zap/commit/0b0e276 "Core hardening maintenance"
-[9]: https://github.com/hidecard/zap/commit/d5c2cde "Align grammar with cataloged sleep builtin"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
+[6]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5 "Zap v2.2.5 release"
+[7]: https://github.com/ZapLang-Dev/zap/commit/cf614e2 "Fix Windows legacy path fixture"
+[8]: https://github.com/ZapLang-Dev/zap/commit/0b0e276 "Core hardening maintenance"
+[9]: https://github.com/ZapLang-Dev/zap/commit/d5c2cde "Align grammar with cataloged sleep builtin"

@@ -2,7 +2,7 @@
 
 ## Official source of truth
 
-The curriculum is based on the official repository at https://github.com/hidecard/zap, especially the English and Burmese beginner guides and the English syntax guide. The repository describes Zap as a readable general-purpose language using `.zp` files, indentation-based blocks, explicit modules, optional annotations, Result/Option values, and a native Rust runtime. The current README reports the native CLI, `zap.toml` project manifest, Linux/Windows/macOS release targets, VS Code/LSP support, standard-library domains, diagnostics, async foundations, and package/registry work.
+The curriculum is based on the official repository at https://github.com/ZapLang-Dev/zap, especially the English and Burmese beginner guides and the English syntax guide. The repository describes Zap as a readable general-purpose language using `.zp` files, indentation-based blocks, explicit modules, optional annotations, Result/Option values, and a native Rust runtime. The current README reports the native CLI, `zap.toml` project manifest, Linux/Windows/macOS release targets, VS Code/LSP support, standard-library domains, diagnostics, async foundations, and package/registry work.
 
 ## Teaching sequence
 
@@ -18,8 +18,8 @@ Use a course index with chapter progress, a “Try it yourself” action on ever
 
 ## References
 
-[1]: https://github.com/hidecard/zap "Official Zap repository"
+[1]: https://github.com/ZapLang-Dev/zap "Official Zap repository"
 [2]: https://raw.githubusercontent.com/hidecard/zap/master/docs/LEARN_ZAP_EN.md "Learn Zap — English Guide"
 [3]: https://raw.githubusercontent.com/hidecard/zap/master/docs/LEARN_ZAP_MM.md "Learn Zap — Burmese Beginner Course"
 [4]: https://raw.githubusercontent.com/hidecard/zap/master/docs/SYNTAX_GUIDE_EN.md "Zap Syntax Reference — English"
-[5]: https://github.com/hidecard/zap/releases "Official Zap releases"
+[5]: https://github.com/ZapLang-Dev/zap/releases "Official Zap releases"

@@ -63,7 +63,7 @@ Release မတင်မီ native Cargo tests၊ Zap examples၊ `zap init` scaf
 
 ## Repository
 
-- Repository: https://github.com/hidecard/zap
+- Repository: https://github.com/ZapLang-Dev/zap
 - Release tag: `v0.5.0`
 - File extension: `.zp`
 - Project manifest: `zap.toml`

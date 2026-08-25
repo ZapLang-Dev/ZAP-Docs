@@ -8,8 +8,8 @@ This document records the current Zap capability baseline for the **v2.2.6** rel
 
 | Item | Current record |
 |---|---|
-| Repository | [hidecard/zap](https://github.com/hidecard/zap), default branch `master` |
-| Published baseline | [v2.2.6 tagged merge commit](https://github.com/hidecard/zap/commit/d1d6816d7d39198b4a9778d531e29cd7b4e1f38a) — published at the [v2.2.6 release](https://github.com/hidecard/zap/releases/tag/v2.2.6) after workflow [32638479414](https://github.com/hidecard/zap/actions/runs/32638479414) and independent artifact verification passed |
+| Repository | [hidecard/zap](https://github.com/ZapLang-Dev/zap), default branch `master` |
+| Published baseline | [v2.2.6 tagged merge commit](https://github.com/ZapLang-Dev/zap/commit/d1d6816d7d39198b4a9778d531e29cd7b4e1f38a) — published at the [v2.2.6 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.6) after workflow [32638479414](https://github.com/ZapLang-Dev/zap/actions/runs/32638479414) and independent artifact verification passed |
 | Runtime | Native Rust executable with canonical AST execution and compatibility-only legacy line execution for retained legacy function records |
 | Language surface | Variables, functions, closures, classes, single inheritance, local modules, Result/Option, `?`, JSON, bounded filesystem/network/process helpers, and deterministic language tasks |
 | Memory/concurrency boundary | Single-threaded `Rc`/`RefCell` object model, run-owned logical budgets, explicit `clear_object_fields()` cycle policy, and eager scheduled-value async semantics |
@@ -97,9 +97,9 @@ Zap သည် prototype အဆင့်ကို ကျော်လွန်လ�
 
 [5]: https://dart.dev/language/concurrency "Dart concurrency documentation"
 
-[6]: https://github.com/hidecard/zap "Zap repository"
+[6]: https://github.com/ZapLang-Dev/zap "Zap repository"
 
-[7]: https://github.com/hidecard/zap/commit/efe44a621251a1d61e85480fced6593b9bd27941 "Zap v2.2.6 release candidate commit"
+[7]: https://github.com/ZapLang-Dev/zap/commit/efe44a621251a1d61e85480fced6593b9bd27941 "Zap v2.2.6 release candidate commit"
 
 [8]: https://docs.python.org/3/library/asyncio.html "Python asyncio documentation"
 

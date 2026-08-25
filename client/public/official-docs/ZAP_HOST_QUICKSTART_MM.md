@@ -22,7 +22,7 @@ Crate ၏ pinned compatibility line နှင့် ကိုက်ညီသေ�
 Repository မရှိသေးလျှင် clone လုပ်ပြီး Framework branch သို့ ပြောင်းပါ။
 
 ```bash
-git clone https://github.com/hidecard/zap.git
+git clone https://github.com/ZapLang-Dev/zap.git
 cd zap
 git switch Framework
 ```

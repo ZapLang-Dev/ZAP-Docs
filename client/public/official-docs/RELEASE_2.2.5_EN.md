@@ -4,7 +4,7 @@ Zap v2.2.5 is a post-v2.2.4 non-framework reliability maintenance release. It ha
 
 ## Release provenance
 
-The v2.2.5 release is built from `master` history after the published v2.2.4 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/hidecard/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/hidecard/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); v2.2.3 remains immutable at [`758d9fa`](https://github.com/hidecard/zap/commit/758d9faf04154721788016937b0963bd9d0872a8); and v2.2.4 remains immutable at [`00d2847`](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
+The v2.2.5 release is built from `master` history after the published v2.2.4 release. The v2.2.0 tag and release remain immutable at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb); v2.2.1 remains immutable at [`201fad4`](https://github.com/ZapLang-Dev/zap/commit/201fad4c7fbee38e3fabf63bf17d50eb4d70f784); v2.2.2 remains immutable at [`f932e21`](https://github.com/ZapLang-Dev/zap/commit/f932e21d190f59e722bf17dfdc214cef75ade698); v2.2.3 remains immutable at [`758d9fa`](https://github.com/ZapLang-Dev/zap/commit/758d9faf04154721788016937b0963bd9d0872a8); and v2.2.4 remains immutable at [`00d2847`](https://github.com/ZapLang-Dev/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2). Their tags, releases, signed assets, checksums, provenance, and release notes are not rewritten.
 
 ## Active runtime reliability baseline
 
@@ -28,17 +28,17 @@ The focused HTTP-hardening validation passed strict formatting, Clippy with warn
 
 ## Historical release preservation
 
-The fresh no-framework audit found no remaining actionable TODO/FIXME marker, no new framework implementation, and no other production `unreachable!` or `todo!` path requiring correction after the HTTP invariant hardening. Remaining roadmap items are intentionally deferred architecture or governance scope and are not silently represented as completed implementation. The focused reliability correction is recorded in commit [`f4470ab`](https://github.com/hidecard/zap/commit/f4470abdcc314311cf759fa023bf497b1bdd2a94).
+The fresh no-framework audit found no remaining actionable TODO/FIXME marker, no new framework implementation, and no other production `unreachable!` or `todo!` path requiring correction after the HTTP invariant hardening. Remaining roadmap items are intentionally deferred architecture or governance scope and are not silently represented as completed implementation. The focused reliability correction is recorded in commit [`f4470ab`](https://github.com/ZapLang-Dev/zap/commit/f4470abdcc314311cf759fa023bf497b1bdd2a94).
 
 ## Upgrade guidance
 
-Download the archive matching the target platform from the [v2.2.5 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.5), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.4 release](https://github.com/hidecard/zap/releases/tag/v2.2.4), [v2.2.3 release](https://github.com/hidecard/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/hidecard/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) remain available without modification.
+Download the archive matching the target platform from the [v2.2.5 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.5), verify its published checksum and signature/provenance information, and follow the installation instructions in the [English README](../README.md) or [Burmese README](../README_MM.md). The published [v2.2.4 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4), [v2.2.3 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3), [v2.2.2 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2), [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), and historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) remain available without modification.
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
-[4]: https://github.com/hidecard/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
-[5]: https://github.com/hidecard/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
-[6]: https://github.com/hidecard/zap/commit/f4470ab "Harden HTTP URL invariants"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2 "Zap v2.2.2 release"
+[4]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.3 "Zap v2.2.3 release"
+[5]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4 "Zap v2.2.4 release"
+[6]: https://github.com/ZapLang-Dev/zap/commit/f4470ab "Harden HTTP URL invariants"

@@ -4,7 +4,7 @@ Zap v2.2.2 သည် published v2.2.1 release နောက်ပိုင်း 
 
 ## Release provenance
 
-Zap v2.2.2 ကို post-v2.2.1 `master` history မှ တည်ဆောက်ထားသည်။ Historical v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် signed asset၊ checksum၊ provenance နှင့် release note များနှင့်အတူ immutable အဖြစ် ဆက်ရှိသည်။ Published v2.2.1 tag နှင့် release ကိုလည်း မပြောင်းလဲထားပါ။ Historical tag သို့မဟုတ် asset တစ်ခုမျှ rewrite မလုပ်ထားပါ။
+Zap v2.2.2 ကို post-v2.2.1 `master` history မှ တည်ဆောက်ထားသည်။ Historical v2.2.0 tag နှင့် release သည် [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် signed asset၊ checksum၊ provenance နှင့် release note များနှင့်အတူ immutable အဖြစ် ဆက်ရှိသည်။ Published v2.2.1 tag နှင့် release ကိုလည်း မပြောင်းလဲထားပါ။ Historical tag သို့မဟုတ် asset တစ်ခုမျှ rewrite မလုပ်ထားပါ။
 
 ## Runtime borrow နှင့် cycle safety
 
@@ -28,15 +28,15 @@ English/Burmese README၊ release၊ standard-library၊ typecheck၊ runtime၊
 
 ## Verification နှင့် reproducibility
 
-Release candidate သည် complete serial native suite ဖြစ်သော unit test ၂၂၉ ခုနှင့် integration test ၂၅၆ ခု၊ warnings denied strict Clippy၊ formatting၊ LSP protocol synchronization၊ LSP semantic parity၊ canonical VS Code package contract၊ standard-library policy၊ parity/replay/async matrix၊ benchmark၊ packaging၊ documentation consistency နှင့် regression harness၊ specification ownership နှင့် `git diff --check` များကို အောင်မြင်ထားသည်။ Grammar-synchronized state အတွက် GitHub Actions run [`32584437606`](https://github.com/hidecard/zap/actions/runs/32584437606) သည် success ဖြင့် ပြီးစီးထားသည်။ Cargo.lock ကို regenerate/update မလုပ်ဘဲ `zap-native` package version stanza ကိုသာ 2.2.1 မှ 2.2.2 သို့ patch လုပ်ထားသည်။
+Release candidate သည် complete serial native suite ဖြစ်သော unit test ၂၂၉ ခုနှင့် integration test ၂၅၆ ခု၊ warnings denied strict Clippy၊ formatting၊ LSP protocol synchronization၊ LSP semantic parity၊ canonical VS Code package contract၊ standard-library policy၊ parity/replay/async matrix၊ benchmark၊ packaging၊ documentation consistency နှင့် regression harness၊ specification ownership နှင့် `git diff --check` များကို အောင်မြင်ထားသည်။ Grammar-synchronized state အတွက် GitHub Actions run [`32584437606`](https://github.com/ZapLang-Dev/zap/actions/runs/32584437606) သည် success ဖြင့် ပြီးစီးထားသည်။ Cargo.lock ကို regenerate/update မလုပ်ဘဲ `zap-native` package version stanza ကိုသာ 2.2.1 မှ 2.2.2 သို့ patch လုပ်ထားသည်။
 
 ## Upgrade guidance
 
-Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.2 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.2) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
+Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.2 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.2) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Published [v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) နှင့် historical [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) များကို ပြင်ဆင်ခြင်းမရှိဘဲ ဆက်လက်ရရှိနိုင်သည်။
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/commit/73a1fb5840af4e36789f9572078b0215282291ea "Checked EnvFrame borrows and explicit cycle policy"
-[4]: https://github.com/hidecard/zap/commit/4db20741a34100c99cacca1811eea551b2040ce5 "Builtin grammar catalog synchronization"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/commit/73a1fb5840af4e36789f9572078b0215282291ea "Checked EnvFrame borrows and explicit cycle policy"
+[4]: https://github.com/ZapLang-Dev/zap/commit/4db20741a34100c99cacca1811eea551b2040ce5 "Builtin grammar catalog synchronization"

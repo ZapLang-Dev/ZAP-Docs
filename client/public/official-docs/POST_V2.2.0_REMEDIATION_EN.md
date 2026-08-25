@@ -4,18 +4,18 @@
 
 ## Scope and provenance
 
-This record documents the corrective-release cycle initiated after the attached deep technical review of Zap v2.2.0. It is intentionally separate from the historical v2.2.0 release notes. The published **v2.2.0 tag remains immutable** at commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), and its successful release workflow is recorded at [GitHub Actions run 32546657968](https://github.com/hidecard/zap/actions/runs/32546657968). No later correction is being backported into, force-pushed onto, or represented as part of that historical tag.
+This record documents the corrective-release cycle initiated after the attached deep technical review of Zap v2.2.0. It is intentionally separate from the historical v2.2.0 release notes. The published **v2.2.0 tag remains immutable** at commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), and its successful release workflow is recorded at [GitHub Actions run 32546657968](https://github.com/ZapLang-Dev/zap/actions/runs/32546657968). No later correction is being backported into, force-pushed onto, or represented as part of that historical tag.
 
 The current `master` branch contains subsequent corrective commits. Those changes were packaged and published as **v2.2.1**. Users who install the v2.2.0 archives receive the v2.2.0-tagged behavior, while the v2.2.1 release contains the corrective behavior described below.
 
 | Provenance boundary | Commit or record | Meaning |
 |---|---|---|
-| Published v2.2.0 | [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) and [release v2.2.0](https://github.com/hidecard/zap/releases/tag/v2.2.0) | Historical release assets, checksums, provenance, and release notes; unchanged. |
-| LSP synchronization correction | [`c2a662f`](https://github.com/hidecard/zap/commit/c2a662f) | Standard full-document `didChange`, version tracking, accepted-buffer diagnostics, and safe rejection of unsupported range changes. |
-| Semantic rename correction | [`eed2dc4`](https://github.com/hidecard/zap/commit/eed2dc4) | File-local lexical binding resolution with shadowing, closures, parameters, and import aliases. |
-| LSP interoperability correction | [`cdf2aa1`](https://github.com/hidecard/zap/commit/cdf2aa1) | Negotiated position encoding, strict file URIs, workspace bounds, and encoding-aware ranges. |
-| VS Code delivery correction | [`f77f265`](https://github.com/hidecard/zap/commit/f77f265) | Canonical extension source, package validation, catalog-aligned assets, and a native-LSP rename provider. |
-| Standard-library determinism correction | [`2c4c928`](https://github.com/hidecard/zap/commit/2c4c928) | Schema-2 `determinism_class` taxonomy, legacy-boolean compatibility, explicit builtin exceptions, and bilingual policy updates. |
+| Published v2.2.0 | [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) and [release v2.2.0](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) | Historical release assets, checksums, provenance, and release notes; unchanged. |
+| LSP synchronization correction | [`c2a662f`](https://github.com/ZapLang-Dev/zap/commit/c2a662f) | Standard full-document `didChange`, version tracking, accepted-buffer diagnostics, and safe rejection of unsupported range changes. |
+| Semantic rename correction | [`eed2dc4`](https://github.com/ZapLang-Dev/zap/commit/eed2dc4) | File-local lexical binding resolution with shadowing, closures, parameters, and import aliases. |
+| LSP interoperability correction | [`cdf2aa1`](https://github.com/ZapLang-Dev/zap/commit/cdf2aa1) | Negotiated position encoding, strict file URIs, workspace bounds, and encoding-aware ranges. |
+| VS Code delivery correction | [`f77f265`](https://github.com/ZapLang-Dev/zap/commit/f77f265) | Canonical extension source, package validation, catalog-aligned assets, and a native-LSP rename provider. |
+| Standard-library determinism correction | [`2c4c928`](https://github.com/ZapLang-Dev/zap/commit/2c4c928) | Schema-2 `determinism_class` taxonomy, legacy-boolean compatibility, explicit builtin exceptions, and bilingual policy updates. |
 
 ## Corrective milestones
 
@@ -48,9 +48,9 @@ The published v2.2.1 notes summarize the corrected LSP synchronization, file-loc
 
 ## References
 
-1. [Published v2.2.0 tag](https://github.com/hidecard/zap/releases/tag/v2.2.0) and [immutable tag commit](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb).
-2. [Successful v2.2.0 release workflow](https://github.com/hidecard/zap/actions/runs/32546657968).
+1. [Published v2.2.0 tag](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) and [immutable tag commit](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb).
+2. [Successful v2.2.0 release workflow](https://github.com/ZapLang-Dev/zap/actions/runs/32546657968).
 3. [LSP synchronization contract](ASYNC_LSP_EN.md) and [protocol regression harness](../scripts/test_lsp_protocol_sync.sh).
 4. [Standard-library stability and determinism policy](STDLIB_POLICY_EN.md).
 5. [v2.2.0 historical release notes](RELEASE_2.2.0_EN.md); this record does not rewrite them.
-6. [Published v2.2.1 release](https://github.com/hidecard/zap/releases/tag/v2.2.1), [v2.2.1 release workflow](https://github.com/hidecard/zap/actions/runs/32575824809), and [v2.2.1 release notes](RELEASE_2.2.1_EN.md).
+6. [Published v2.2.1 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1), [v2.2.1 release workflow](https://github.com/ZapLang-Dev/zap/actions/runs/32575824809), and [v2.2.1 release notes](RELEASE_2.2.1_EN.md).

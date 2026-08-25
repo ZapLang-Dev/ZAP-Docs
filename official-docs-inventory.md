@@ -2,7 +2,7 @@
 
 ## Source of truth
 
-The ZAP-Docs site mirrors the official source repository at [github.com/hidecard/zap](https://github.com/hidecard/zap), using the `master` branch at commit `283c310792d69b467d61fa9df114b7b2ceef379d`. The current published baseline in the source repository is **v2.2.7**.
+The ZAP-Docs site mirrors the official source repository at [github.com/ZapLang-Dev/zap](https://github.com/ZapLang-Dev/zap), using the `master` branch at commit `283c310792d69b467d61fa9df114b7b2ceef379d`. The current published baseline in the source repository is **v2.2.7**.
 
 The synchronized local snapshot is stored under `client/public/official-docs/`. The root overview and English changelog are available as `client/public/official-README.md` and `client/public/official-CHANGELOG_EN.md`. `client/public/official-docs-manifest.json` records the source repository, branch, commit, synchronization timestamp, and file count.
 

@@ -26,7 +26,7 @@ The milestone passed Rust 1.75.0 formatting, strict Clippy with `-D warnings`, t
 
 ## Upgrade guidance
 
-Users can upgrade by downloading the archive for their operating system and architecture from the [v2.1.12 GitHub Release](https://github.com/hidecard/zap/releases/tag/v2.1.12). Verify the published checksum and signature before installation. No source-language migration is required for parser-owned programs; code depending on undocumented legacy line-interpreter fallback should be reviewed as compatibility-sensitive.
+Users can upgrade by downloading the archive for their operating system and architecture from the [v2.1.12 GitHub Release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.1.12). Verify the published checksum and signature before installation. No source-language migration is required for parser-owned programs; code depending on undocumented legacy line-interpreter fallback should be reviewed as compatibility-sensitive.
 
 ## Documentation
 

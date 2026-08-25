@@ -4,7 +4,7 @@ Zap v2.2.1 သည် published v2.2.0 release နောက်ပိုင်း 
 
 ## Release provenance
 
-Zap v2.2.1 ကို corrected post-v2.2.0 `master` history မှ တည်ဆောက်ထားသည်။ Published v2.2.0 tag သည် [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် signed asset၊ checksum၊ provenance နှင့် release note များနှင့်အတူ immutable အဖြစ် ဆက်ရှိသည်။ နောက်ပိုင်း fix များပါဝင်လာစေရန် v2.2.0 tag သို့မဟုတ် asset တစ်ခုမျှ rewrite မလုပ်ထားပါ။
+Zap v2.2.1 ကို corrected post-v2.2.0 `master` history မှ တည်ဆောက်ထားသည်။ Published v2.2.0 tag သည် [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb) commit တွင် signed asset၊ checksum၊ provenance နှင့် release note များနှင့်အတူ immutable အဖြစ် ဆက်ရှိသည်။ နောက်ပိုင်း fix များပါဝင်လာစေရန် v2.2.0 tag သို့မဟုတ် asset တစ်ခုမျှ rewrite မလုပ်ထားပါ။
 
 ## LSP document synchronization
 
@@ -40,10 +40,10 @@ Release candidate သည် pinned Rust formatting check၊ warnings denied stri
 
 ## Upgrade guidance
 
-Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.1 GitHub release](https://github.com/hidecard/zap/releases/tag/v2.2.1) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Historical v2.2.0 asset များကို လိုအပ်သူများသည် immutable [v2.2.0 release](https://github.com/hidecard/zap/releases/tag/v2.2.0) ကို ဆက်လက်အသုံးပြုနိုင်သည်။
+Target platform နှင့် ကိုက်ညီသော archive ကို [v2.2.1 GitHub release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1) မှ download လုပ်ပြီး published checksum နှင့် signature/provenance information ကို verify လုပ်ပါ။ ထို့နောက် [English README](../README.md) သို့မဟုတ် [Burmese README](../README_MM.md) ထဲရှိ installation instruction ကို လိုက်နာပါ။ Historical v2.2.0 asset များကို လိုအပ်သူများသည် immutable [v2.2.0 release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0) ကို ဆက်လက်အသုံးပြုနိုင်သည်။
 
 ## References
 
-[1]: https://github.com/hidecard/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
-[2]: https://github.com/hidecard/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
-[3]: https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb "Zap v2.2.0 tag commit"
+[1]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.0 "Zap v2.2.0 release"
+[2]: https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.1 "Zap v2.2.1 release"
+[3]: https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb "Zap v2.2.0 tag commit"

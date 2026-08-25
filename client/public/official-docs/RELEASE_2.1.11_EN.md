@@ -22,7 +22,7 @@ The release was validated with Rust 1.75.0 using `cargo fmt --check`, strict `ca
 
 ## Upgrade guidance
 
-Users can upgrade by downloading the archive for their operating system and architecture from the [v2.1.11 GitHub Release](https://github.com/hidecard/zap/releases/tag/v2.1.11). Verify the published checksum and signature before installation. No source-language migration is required for this release.
+Users can upgrade by downloading the archive for their operating system and architecture from the [v2.1.11 GitHub Release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.1.11). Verify the published checksum and signature before installation. No source-language migration is required for this release.
 
 ## Documentation
 

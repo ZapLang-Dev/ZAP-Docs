@@ -22,7 +22,7 @@
 ### Release engineering
 - Hardens filesystem confinement, locked-build validation, bounded builtins, URL parsing, test discovery, registry-test isolation, and cross-platform compatibility without adding framework work.
 - Updates the authorized remediation branch to `ureq 2.12.1`, `url 2.5.8`, `idna 1.1.0`, `rustls 0.23.40`, `rustls-webpki 0.103.15`, `rcgen 0.13.2`, and development-only `time 0.3.47`; strict `cargo-audit 0.22.2` reports zero unresolved advisories across 87 locked crate dependencies.
-- Pins Rust 1.88.0 for the released source and CI quality job because `time 0.3.47` requires it; v2.2.6 was published only after clean-commit, GitHub CI, final preflight, and signed-artifact verification gates passed. See the [published release](https://github.com/hidecard/zap/releases/tag/v2.2.6) and [release workflow run](https://github.com/hidecard/zap/actions/runs/32638479414).
+- Pins Rust 1.88.0 for the released source and CI quality job because `time 0.3.47` requires it; v2.2.6 was published only after clean-commit, GitHub CI, final preflight, and signed-artifact verification gates passed. See the [published release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.6) and [release workflow run](https://github.com/ZapLang-Dev/zap/actions/runs/32638479414).
 
 ## [2.2.5] — 2026-08-23
 
@@ -47,7 +47,7 @@
 ### Post-v2.2.0 corrective cycle
 - Completed LSP-SYNC-01, LSP-REN-01, LSP-INTEROP-01, and EXT-201 on `master`: standard full-document synchronization with versioned state, file-local scope-aware rename, negotiated UTF-8/UTF-16/UTF-32 positions, strict file URIs, bounded workspace indexing, and canonical VS Code packaging. Incremental range changes and cross-file rename remain unsupported.
 - Completed API-301 on post-release `master`: added schema-2 `determinism_class` values (`pure`, `input-deterministic`, `runtime-dependent`, and `external-io`) with explicit domain/builtin coverage and a compatibility-preserving legacy `deterministic` boolean.
-- DOC-401 records the provenance boundary: v2.2.0 remains immutable at tag commit [`7a2269b`](https://github.com/hidecard/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), and the corrected behavior is planned for the new v2.2.1 patch. See [`POST_V2.2.0_REMEDIATION_EN.md`](docs/POST_V2.2.0_REMEDIATION_EN.md).
+- DOC-401 records the provenance boundary: v2.2.0 remains immutable at tag commit [`7a2269b`](https://github.com/ZapLang-Dev/zap/commit/7a2269bfb70863608156484453576cbbe4376deb), and the corrected behavior is planned for the new v2.2.1 patch. See [`POST_V2.2.0_REMEDIATION_EN.md`](docs/POST_V2.2.0_REMEDIATION_EN.md).
 
 ## [2.2.1] — 2026-08-22
 

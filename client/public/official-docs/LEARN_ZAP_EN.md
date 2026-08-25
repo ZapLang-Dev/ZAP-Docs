@@ -10,7 +10,7 @@ Zap is a small, readable, general-purpose programming language using `.zp` sourc
 
 ## Before You Begin
 
-Download a release archive from the [GitHub Releases page](https://github.com/hidecard/zap/releases), extract it, and place the `zap` executable on your `PATH`. Verify the installation with:
+Download a release archive from the [GitHub Releases page](https://github.com/ZapLang-Dev/zap/releases), extract it, and place the `zap` executable on your `PATH`. Verify the installation with:
 
 ```bash
 zap --version

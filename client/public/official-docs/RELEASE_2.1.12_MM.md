@@ -26,7 +26,7 @@ Legacy line executor ကို pre-AST သို့မဟုတ် test-created 
 
 ## Upgrade guidance
 
-မိမိ operating system နှင့် architecture ကိုက်ညီသော archive ကို [v2.1.12 GitHub Release](https://github.com/hidecard/zap/releases/tag/v2.1.12) မှ download လုပ်၍ upgrade လုပ်နိုင်ပါသည်။ Install မလုပ်မီ published checksum နှင့် signature ကို verify လုပ်ပါ။ Parser ပိုင် program များအတွက် source-language migration မလိုအပ်ပါ။ သို့သော် undocumented legacy line-interpreter fallback ကို မှီခိုထားသော code များကို compatibility-sensitive အဖြစ် ပြန်လည်သုံးသပ်သင့်ပါသည်။
+မိမိ operating system နှင့် architecture ကိုက်ညီသော archive ကို [v2.1.12 GitHub Release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.1.12) မှ download လုပ်၍ upgrade လုပ်နိုင်ပါသည်။ Install မလုပ်မီ published checksum နှင့် signature ကို verify လုပ်ပါ။ Parser ပိုင် program များအတွက် source-language migration မလိုအပ်ပါ။ သို့သော် undocumented legacy line-interpreter fallback ကို မှီခိုထားသော code များကို compatibility-sensitive အဖြစ် ပြန်လည်သုံးသပ်သင့်ပါသည်။
 
 ## Documentation
 

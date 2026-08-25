@@ -51,4 +51,4 @@ The dedicated `ZapError` diagnostic boundary is now included. The remaining road
 
 ## Upgrade
 
-Download the archive for your operating system and CPU architecture from the [GitHub Releases page](https://github.com/hidecard/zap/releases). Existing `.zp` source files remain compatible with the v0.9.x release line, subject to the current language roadmap and documented behavior.
+Download the archive for your operating system and CPU architecture from the [GitHub Releases page](https://github.com/ZapLang-Dev/zap/releases). Existing `.zp` source files remain compatible with the v0.9.x release line, subject to the current language roadmap and documented behavior.

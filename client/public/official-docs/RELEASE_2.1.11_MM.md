@@ -22,7 +22,7 @@ Release ကို Rust 1.75.0 ဖြင့် `cargo fmt --check`၊ strict `car
 
 ## Upgrade guidance
 
-အသုံးပြုသူများသည် မိမိ operating system နှင့် architecture ကိုက်ညီသော archive ကို [v2.1.11 GitHub Release](https://github.com/hidecard/zap/releases/tag/v2.1.11) မှ download လုပ်၍ upgrade လုပ်နိုင်ပါသည်။ Install မလုပ်မီ published checksum နှင့် signature ကို verify လုပ်ပါ။ ဤ release အတွက် source-language migration မလိုအပ်ပါ။
+အသုံးပြုသူများသည် မိမိ operating system နှင့် architecture ကိုက်ညီသော archive ကို [v2.1.11 GitHub Release](https://github.com/ZapLang-Dev/zap/releases/tag/v2.1.11) မှ download လုပ်၍ upgrade လုပ်နိုင်ပါသည်။ Install မလုပ်မီ published checksum နှင့် signature ကို verify လုပ်ပါ။ ဤ release အတွက် source-language migration မလိုအပ်ပါ။
 
 ## Documentation
 

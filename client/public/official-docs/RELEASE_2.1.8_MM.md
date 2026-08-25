@@ -19,4 +19,4 @@ Zap v2.1.8 သည် release-integrity နှင့် documentation consistency
 
 ## Verification
 
-Master-branch validation run သည် version gate၊ regression harness၊ formatting၊ strict Clippy၊ Cargo check၊ native test suite ၂၅၄ ခုလုံး၊ focused conformance/security/async/parity/ownership gate များနှင့် Linux၊ Windows၊ macOS ARM64 build job များကို အောင်မြင်စွာ ပြီးစီးထားပါသည်။ အပြည့်အစုံ evidence ကို [GitHub Actions run](https://github.com/hidecard/zap/actions/runs/32505190955) တွင် ကြည့်ရှုနိုင်ပါသည်။
+Master-branch validation run သည် version gate၊ regression harness၊ formatting၊ strict Clippy၊ Cargo check၊ native test suite ၂၅၄ ခုလုံး၊ focused conformance/security/async/parity/ownership gate များနှင့် Linux၊ Windows၊ macOS ARM64 build job များကို အောင်မြင်စွာ ပြီးစီးထားပါသည်။ အပြည့်အစုံ evidence ကို [GitHub Actions run](https://github.com/ZapLang-Dev/zap/actions/runs/32505190955) တွင် ကြည့်ရှုနိုင်ပါသည်။

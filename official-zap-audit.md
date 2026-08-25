@@ -1,8 +1,8 @@
 # Official Zap repository audit — 2026-08-22
 
-Source repository: https://github.com/hidecard/zap
-Docs directory: https://github.com/hidecard/zap/tree/master/docs
-Releases: https://github.com/hidecard/zap/releases
+Source repository: https://github.com/ZapLang-Dev/zap
+Docs directory: https://github.com/ZapLang-Dev/zap/tree/master/docs
+Releases: https://github.com/ZapLang-Dev/zap/releases
 
 The official repository currently shows the `master` branch and latest commit `5cf2682dd14e62f13a0edba6df9718d76e83459e` (Fix stale active documentation baselines). The current release line is v2.2.3, while the existing ZAP-Docs hero/install references still use v2.0.4 and need an update after source verification.
 
@@ -28,4 +28,4 @@ The official repository `master` points to tag `v2.2.4` at commit `00d2847eaf149
 
 The release documentation emphasizes deterministic single-threaded runtime behavior, eager scheduled async values, explicit cancellation/timeout boundaries, structured diagnostics, deterministic parser/JSON/lockfile/security corpus gates, reproducible Unix and Windows packaging, uninstall/reinstall/upgrade verification, and LSP `textDocument/documentSymbol` support with nested symbols and deterministic ranges. Traits/interfaces/composition and tracing collectors remain proposals or deferred scope rather than released language features.
 
-Sources: [official v2.2.4 release note](https://github.com/hidecard/zap/blob/master/docs/RELEASE_2.2.4_EN.md), [Burmese v2.2.4 release note](https://github.com/hidecard/zap/blob/master/docs/RELEASE_2.2.4_MM.md), [v2.2.4 tag](https://github.com/hidecard/zap/releases/tag/v2.2.4), [v2.2.4 commit](https://github.com/hidecard/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2).
+Sources: [official v2.2.4 release note](https://github.com/ZapLang-Dev/zap/blob/master/docs/RELEASE_2.2.4_EN.md), [Burmese v2.2.4 release note](https://github.com/ZapLang-Dev/zap/blob/master/docs/RELEASE_2.2.4_MM.md), [v2.2.4 tag](https://github.com/ZapLang-Dev/zap/releases/tag/v2.2.4), [v2.2.4 commit](https://github.com/ZapLang-Dev/zap/commit/00d2847eaf149821c88f1ed060085972eca993b2).
